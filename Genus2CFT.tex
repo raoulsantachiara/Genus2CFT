@@ -398,7 +398,108 @@ for $c=1/2$, $h_1=h_2=1/16$ and $h_3=0$; the result is
  \frac{z^{1/72}}{\sqrt{2}}\left[1 + \frac{7}{108}z + \frac{1595}{46656}z^2 + \frac{118405}{5038848}z^3 + 
  \frac{26160455}{1451188224}z^4 + O(z^5)\right].
 \end{equation}
+\section{Higher genus conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
 
+In this Appendix, we discuss in more detail the expansion in Eq.~\eqref{expansion_sphere_conf_blocks} of the
+conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ in terms of the conformal 
+blocks on the sphere $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$.
+
+In each sheet of the orbifold theory $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$, we 
+can consider a copy $\boldsymbol{T}^{(j)}(z)$, $j=1,\dots, N$, of the stress-energy tensor of 
+the seed theory $\mathcal{C}$. Then the stress-energy tensor of the 
+orbifold theory $\boldsymbol{T}(z)$ is 
+\begin{equation}\label{hatT}
+ \boldsymbol{T}(z)=\sum_{j=1}^N \boldsymbol{T}^{(j)}(z).
+\end{equation}
+It generates transformations affecting all the sheets in the same way. 
+Its Fourier modes,
+\begin{equation}
+ \boldsymbol{L}_n=\oint_{C_0}\frac{dz}{2\pi i} z^{n+1}\boldsymbol{T}(z),
+\end{equation}
+where $C_0$ is a contour encircling the point $z=0$, are symmetric 
+under the exchange of sheets, 
+\begin{equation}
+ \boldsymbol{L}_n=\sum_{j=1}^N \boldsymbol{L}_n^{(j)}, \quad 
+ \boldsymbol{L}_n^{(j)}=\mathbb{I}\otimes \overset{j}{\cdots} \otimes L_{n}\otimes \cdots \otimes \mathbb{I},
+\end{equation}
+and form a Virasoro algebra, 
+\begin{equation}\label{symm_virasoro_alg}
+ [\boldsymbol{L}_n, \boldsymbol{L}_{m}]=(n-m)\boldsymbol{L}_{n+m}+\frac{Nc}{12}n(n^2-1)\delta_{n+m, 0},
+\end{equation}
+with central charge $Nc$.
+
+The conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ is associated with 
+the field $\Phi_{\boldsymbol{h}}=\phi_{h_1}\otimes\cdots\otimes \phi_{h_N}$, where $\phi_{h_j}$ are 
+primaries of $\mathcal{C}$ with chiral dimension $h_j$, and its descendents. 
+Note that $\boldsymbol{L}_n\Phi_{\boldsymbol{h}}=0$ for all $n>0$ and $\boldsymbol{L}_0\Phi_{\boldsymbol{h}}=|\boldsymbol{h}| \Phi_{\boldsymbol{h}}$.
+Then the contribution to $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ of the 
+state $\Phi_{\boldsymbol{h}}$ and its \textit{symmetric} descendents $\boldsymbol{L}_{-M}\Phi_{\boldsymbol{h}}$ is given by 
+the sphere conformal block $\mathcal{F}_{Nc, |\boldsymbol{h}|}(z)$, the first term
+in the expansion of Eq.~\eqref{expansion_sphere_conf_blocks}. However, the states 
+$\boldsymbol{L}_{-M}\Phi_{\boldsymbol{h}}$ do not span the full space of descendents of $\Phi_{\boldsymbol{h}}$ at each level. This is the reason why
+other blocks appear in Eq.~\eqref{expansion_sphere_conf_blocks}. In fact, if we denote by $\mathfrak{p}(l)$
+the number of partitions of the integer $l$, then there are $\mathfrak{p}(l)$ symmetric
+descendents at level $l$. However, assumming that there are no null vectors, it is easy to check that 
+at level $l$ the total number $\mathcal{N}_{N, l}$ of linear independent descendents of $\Phi_{\boldsymbol{h}}$ is
+\begin{equation}
+ \mathcal{N}_{N, l}=\sum_{\substack{Y, |Y|=l \\ |j_Y|\leq N}}\frac{N!}{(N-|j_Y|)!
+ \prod_{i=1}^{|i_Y|}d_Y(i)!}\prod_{j=1}^{|j_Y|}\mathfrak{p}(i_Y(j)),
+\end{equation}
+where $Y$ denotes a partition of $l$. If we consider the Young tableau
+associated to $Y$, then $|i_Y|$ and  $|j_Y|$ denote its number of columns and
+rows respectively, $i_Y(j)$ is the number of columns in the row $j$ and 
+$d_Y(i)$ is the number of rows with $i$ columns.
+
+
+For example, let us consider the first level, $l=1$, of the orbifold theory 
+with $N=3$. In this case, $\Phi_{\boldsymbol{h}}=\phi_{h_1}\otimes\phi_{h_2}\otimes\phi_{h_3}$ 
+and we have a symmetric descendent $\boldsymbol{L}_{-1}\Phi_{\boldsymbol{h}}$. Since $\mathcal{N}_{3,1}=3$, 
+we need two other states to form a basis for this level. Let us take them 
+orthogonal to $\boldsymbol{L}_{-1}\Phi_{\boldsymbol{h}}$. The states orthogonal to it have the form
+\begin{equation}
+ \Psi(\lambda)=\left[\boldsymbol{L}_{-1}^{(1)}+\lambda \boldsymbol{L}_{-1}^{(2)}
+ -\frac{h_1+\lambda h_2}{h_3} \boldsymbol{L}_{-1}^{(3)}\right]\Phi_{\boldsymbol{h}},
+\end{equation}
+where $\lambda$ is a complex parameter. One can check
+that any vector in this orthogonal space is a primary, 
+i.e. $\boldsymbol{L}_n \Psi(\lambda)=0$ for all $n>0$
+and $\boldsymbol{L}_0\Psi(\lambda) = (h_1+h_2+h_3+1)\Psi(\lambda)$.
+The contribution of these states and their symmetric descendents $\boldsymbol{L}_{-M}\Psi(\lambda)$
+in the genus two conformal block $\mathcal{G}_{c, h_1, h_2, h_3}^{(3)}(z)$
+is given by the sphere conformal block $\mathcal{F}_{3c, h_1+h_2+h_3+1}(z)$,
+that is the second term in the expansion of Eq.~\eqref{expansion_sphere_conf_blocks}. In order to 
+determine the corresponding structure constant $\alpha_{1}^{h_1, h_2, h_3}$, 
+we choose and orthonormal basis $\{\Psi_1, \Psi_2\}$ of 
+this orthogonal space. Then
+\begin{eqnarray}
+ \alpha_1^{h_1, h_2, h_3}&=&\frac{1}{|C_3^{\Phi_{\boldsymbol{h}}}|^2}\sum_{j, k=1}^2
+ C_3^{\Psi_j}\left[C_3^{\Psi_k}\right]^*\\
+ &=& \frac{1}{54}\left[\frac{(h_1-h_2)^2}{h_3}+\frac{(h_1-h_3)^2}{h_2}+\frac{(h_2-h_3)^2}{h_1}\right],
+\end{eqnarray}
+where $C_{N}^\Psi$ is the orbifold three-point correlation function $C_{N}^\Psi=\langle \Psi|\sigma_N(1)|\bar{\sigma}_N\rangle$.
+
+The previous analysis may be extended to deeper levels and generalized to
+any number of copies $N$. In general, at level $l$, we will find a set of 
+$\tilde{\mathcal{N}}_{N,l}$ orthonormal fields $\{\Psi_j\}$, $j=1,\dots, \tilde{\mathcal{N}}_{N,l}$,
+such that $\boldsymbol{L}_0\Psi_j=(|\boldsymbol{h}|+l)\Psi_j$ and are primaries,
+$\boldsymbol{L}_n\Psi_j=0$ for all $n>0$. These primaries have associated the 
+sphere conformal block $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$, which gives the 
+contribution of these vectors and their symmetric descendents $\boldsymbol{L}_{-M}\Psi_j$
+to the genus $N-1$ conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, 
+according to Eq.~\eqref{expansion_sphere_conf_blocks}. The corresponding structure constant $\alpha_l^{\boldsymbol{h}}$
+is given by
+\begin{equation}
+ \alpha_l^{\boldsymbol{h}}=\frac{1}{|C_N^{\Phi_{\boldsymbol{h}}}|^2}\sum_{j, k=1}^{\tilde{\mathcal{N}}_{N,l}}
+ C_N^{\Psi_{j}}\left[C_N^{\Psi_{k}}\right]^*.
+\end{equation}
+The primary fields at 
+different levels, as well as their descendents, are orthogonal
+since they belong to different representations of the Virasoro algebra of Eq.~\eqref{symm_virasoro_alg}, t
+If there are no null vectors, then the number of primaries at level $l$ is
+\begin{equation}
+ \tilde{\mathcal{N}}_{N, l}=\mathcal{N}_{N, l}
+ -\sum_{m=0}^{l-1}\tilde{\mathcal{N}}_{N, m}\mathfrak{p}(l-m).
+\end{equation}
 \section{Numerical bootstrap}\label{sec:num_bootstrap}
 In the previous sections, we have seen how to decompose in terms of conformal blocks 
 the partition function of a CFT on a compact Riemann surface with $\mathbb{Z}_N$ symmetry. 
@@ -720,108 +821,7 @@ We recall that the Virasoro operators $L_n$ satisfy the commutation relations
 \end{equation}
 
 
-\section{Higher genus conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
 
-In this Appendix, we discuss in more detail the expansion in Eq.~\eqref{expansion_sphere_conf_blocks} of the
-conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ in terms of the conformal 
-blocks on the sphere $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$.
-
-In each sheet of the orbifold theory $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$, we 
-can consider a copy $\boldsymbol{T}^{(j)}(z)$, $j=1,\dots, N$, of the stress-energy tensor of 
-the seed theory $\mathcal{C}$. Then the stress-energy tensor of the 
-orbifold theory $\boldsymbol{T}(z)$ is 
-\begin{equation}\label{hatT}
- \boldsymbol{T}(z)=\sum_{j=1}^N \boldsymbol{T}^{(j)}(z).
-\end{equation}
-It generates transformations affecting all the sheets in the same way. 
-Its Fourier modes,
-\begin{equation}
- \boldsymbol{L}_n=\oint_{C_0}\frac{dz}{2\pi i} z^{n+1}\boldsymbol{T}(z),
-\end{equation}
-where $C_0$ is a contour encircling the point $z=0$, are symmetric 
-under the exchange of sheets, 
-\begin{equation}
- \boldsymbol{L}_n=\sum_{j=1}^N \boldsymbol{L}_n^{(j)}, \quad 
- \boldsymbol{L}_n^{(j)}=\mathbb{I}\otimes \overset{j}{\cdots} \otimes L_{n}\otimes \cdots \otimes \mathbb{I},
-\end{equation}
-and form a Virasoro algebra, 
-\begin{equation}\label{symm_virasoro_alg}
- [\boldsymbol{L}_n, \boldsymbol{L}_{m}]=(n-m)\boldsymbol{L}_{n+m}+\frac{Nc}{12}n(n^2-1)\delta_{n+m, 0},
-\end{equation}
-with central charge $Nc$.
-
-The conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ is associated with 
-the field $\Phi_{\boldsymbol{h}}=\phi_{h_1}\otimes\cdots\otimes \phi_{h_N}$, where $\phi_{h_j}$ are 
-primaries of $\mathcal{C}$ with chiral dimension $h_j$, and its descendents. 
-Note that $\boldsymbol{L}_n\Phi_{\boldsymbol{h}}=0$ for all $n>0$ and $\boldsymbol{L}_0\Phi_{\boldsymbol{h}}=|\boldsymbol{h}| \Phi_{\boldsymbol{h}}$.
-Then the contribution to $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ of the 
-state $\Phi_{\boldsymbol{h}}$ and its \textit{symmetric} descendents $\boldsymbol{L}_{-M}\Phi_{\boldsymbol{h}}$ is given by 
-the sphere conformal block $\mathcal{F}_{Nc, |\boldsymbol{h}|}(z)$, the first term
-in the expansion of Eq.~\eqref{expansion_sphere_conf_blocks}. However, the states 
-$\boldsymbol{L}_{-M}\Phi_{\boldsymbol{h}}$ do not span the full space of descendents of $\Phi_{\boldsymbol{h}}$ at each level. This is the reason why
-other blocks appear in Eq.~\eqref{expansion_sphere_conf_blocks}. In fact, if we denote by $\mathfrak{p}(l)$
-the number of partitions of the integer $l$, then there are $\mathfrak{p}(l)$ symmetric
-descendents at level $l$. However, assumming that there are no null vectors, it is easy to check that 
-at level $l$ the total number $\mathcal{N}_{N, l}$ of linear independent descendents of $\Phi_{\boldsymbol{h}}$ is
-\begin{equation}
- \mathcal{N}_{N, l}=\sum_{\substack{Y, |Y|=l \\ |j_Y|\leq N}}\frac{N!}{(N-|j_Y|)!
- \prod_{i=1}^{|i_Y|}d_Y(i)!}\prod_{j=1}^{|j_Y|}\mathfrak{p}(i_Y(j)),
-\end{equation}
-where $Y$ denotes a partition of $l$. If we consider the Young tableau
-associated to $Y$, then $|i_Y|$ and  $|j_Y|$ denote its number of columns and
-rows respectively, $i_Y(j)$ is the number of columns in the row $j$ and 
-$d_Y(i)$ is the number of rows with $i$ columns.
-
-
-For example, let us consider the first level, $l=1$, of the orbifold theory 
-with $N=3$. In this case, $\Phi_{\boldsymbol{h}}=\phi_{h_1}\otimes\phi_{h_2}\otimes\phi_{h_3}$ 
-and we have a symmetric descendent $\boldsymbol{L}_{-1}\Phi_{\boldsymbol{h}}$. Since $\mathcal{N}_{3,1}=3$, 
-we need two other states to form a basis for this level. Let us take them 
-orthogonal to $\boldsymbol{L}_{-1}\Phi_{\boldsymbol{h}}$. The states orthogonal to it have the form
-\begin{equation}
- \Psi(\lambda)=\left[\boldsymbol{L}_{-1}^{(1)}+\lambda \boldsymbol{L}_{-1}^{(2)}
- -\frac{h_1+\lambda h_2}{h_3} \boldsymbol{L}_{-1}^{(3)}\right]\Phi_{\boldsymbol{h}},
-\end{equation}
-where $\lambda$ is a complex parameter. One can check
-that any vector in this orthogonal space is a primary, 
-i.e. $\boldsymbol{L}_n \Psi(\lambda)=0$ for all $n>0$
-and $\boldsymbol{L}_0\Psi(\lambda) = (h_1+h_2+h_3+1)\Psi(\lambda)$.
-The contribution of these states and their symmetric descendents $\boldsymbol{L}_{-M}\Psi(\lambda)$
-in the genus two conformal block $\mathcal{G}_{c, h_1, h_2, h_3}^{(3)}(z)$
-is given by the sphere conformal block $\mathcal{F}_{3c, h_1+h_2+h_3+1}(z)$,
-that is the second term in the expansion of Eq.~\eqref{expansion_sphere_conf_blocks}. In order to 
-determine the corresponding structure constant $\alpha_{1}^{h_1, h_2, h_3}$, 
-we choose and orthonormal basis $\{\Psi_1, \Psi_2\}$ of 
-this orthogonal space. Then
-\begin{eqnarray}
- \alpha_1^{h_1, h_2, h_3}&=&\frac{1}{|C_3^{\Phi_{\boldsymbol{h}}}|^2}\sum_{j, k=1}^2
- C_3^{\Psi_j}\left[C_3^{\Psi_k}\right]^*\\
- &=& \frac{1}{54}\left[\frac{(h_1-h_2)^2}{h_3}+\frac{(h_1-h_3)^2}{h_2}+\frac{(h_2-h_3)^2}{h_1}\right],
-\end{eqnarray}
-where $C_{N}^\Psi$ is the orbifold three-point correlation function $C_{N}^\Psi=\langle \Psi|\sigma_N(1)|\bar{\sigma}_N\rangle$.
-
-The previous analysis may be extended to deeper levels and generalized to
-any number of copies $N$. In general, at level $l$, we will find a set of 
-$\tilde{\mathcal{N}}_{N,l}$ orthonormal fields $\{\Psi_j\}$, $j=1,\dots, \tilde{\mathcal{N}}_{N,l}$,
-such that $\boldsymbol{L}_0\Psi_j=(|\boldsymbol{h}|+l)\Psi_j$ and are primaries,
-$\boldsymbol{L}_n\Psi_j=0$ for all $n>0$. These primaries have associated the 
-sphere conformal block $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$, which gives the 
-contribution of these vectors and their symmetric descendents $\boldsymbol{L}_{-M}\Psi_j$
-to the genus $N-1$ conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, 
-according to Eq.~\eqref{expansion_sphere_conf_blocks}. The corresponding structure constant $\alpha_l^{\boldsymbol{h}}$
-is given by
-\begin{equation}
- \alpha_l^{\boldsymbol{h}}=\frac{1}{|C_N^{\Phi_{\boldsymbol{h}}}|^2}\sum_{j, k=1}^{\tilde{\mathcal{N}}_{N,l}}
- C_N^{\Psi_{j}}\left[C_N^{\Psi_{k}}\right]^*.
-\end{equation}
-The primary fields at 
-different levels, as well as their descendents, are orthogonal
-since they belong to different representations of the Virasoro algebra of Eq.~\eqref{symm_virasoro_alg}, t
-If there are no null vectors, then the number of primaries at level $l$ is
-\begin{equation}
- \tilde{\mathcal{N}}_{N, l}=\mathcal{N}_{N, l}
- -\sum_{m=0}^{l-1}\tilde{\mathcal{N}}_{N, m}\mathfrak{p}(l-m).
-\end{equation}
 
 \section{Zamolodchikov recursion for sphere conformal blocks}\label{app_zamolodchikov}
 The sphere conformal block $\mathcal{F}_{Nc, h}(z)$
