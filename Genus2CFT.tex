@@ -63,54 +63,57 @@ using the conformal bootstrap.}
 \section{Introduction}
 \label{sec:intro}
 
-\section{Partition functions on Riemann surfaces and orbifold CFT}
+\section{CFT partition functions on Renyi surfaces}
 Let us consider a conformal field theory, which will 
 be denoted by $\mathcal{C}$, with central charge 
-$c$. We are interested in calculating its 
-partition function $Z_g$ 
-on a compact Riemann surface of genus $g$.  In particular, we consider the family of Riemann surfaces $\Sigma_g(x)$ of 
+$c$. We are interested in calculating its partition function on on a compact Riemann surface of genus $g$.
+In particular, we consider the family of Renyi Riemann surfaces $\Sigma_g(x)$ of 
 genus $g=N-1$ described by the  complex algebraic curve
 \begin{equation}\label{riemann_surf}
- w^N=\frac{z(z-1)}{z-x},
+\Sigma_{N-1}(x): \quad  w^N=\frac{z(z-1)}{z-x},
 \end{equation}
-which has branch points of order $N$ at $z=0$, $x$, $1$, and $\infty$. For a visualization of the surface on $\mathbb C^2$ we refer to~\cite{Dubrovin}.
-Note that these Riemann surfaces, which are parametrized by  
-the complex number $x$, present an additional symmetry $\mathbb{Z}_N$ since 
+which has branch points of order $N$ at $z_{\text{branch}}=0$, $x$, $1$, and $\infty$. The Eq.~\eqref{riemann_surf} can be interpreted as an $N$-sheet cover of the Riemann sphere $\mathbb{S}= \mathbb C\cup \{\infty\}$ parametrized by $z$. For a visualization of the surface on $\mathbb C^2$ we refer to~\cite{Dubrovin}. These Riemann surfaces are parametrized by  
+the complex number $x$ and enjoy a symmetry $\mathbb{Z}_N$ since 
 Eq.~\eqref{riemann_surf} is invariant under the transformation 
 $w\mapsto e^{\frac{2\pi i k}{N}}w$, with $k\in\mathbb{N}$. 
-The transformation amounts to a cyclic permutation of the $N$ sheets of the surface, where each sheet is labelled by the choice of the branch of the $N$-root in Eq.~\eqref{riemann_surf}.
-
-The case $N=2$ corresponds to a flat torus of modulus 
+This transformation amounts to a cyclic permutation of the $N$ sheets of the surface, where each sheet is labelled by the choice of the branch of the $N$-root in Eq.~\eqref{riemann_surf}. The case $N=2$ is conformally equivalent, under the Abel-Jacobi map, to a flat torus of modulus 
 \begin{equation}\label{tau}
  \tau(x)=i\frac{K(1-x)}{K(x)}, 
 \end{equation}
 where $K(x)$ is the complete elliptic integral of first 
-kind~\cite{Whittaker}. The other case of our interest will be $N=3$, that
-is a compact surface with two holes. 
-Eq.~\eqref{riemann_surf} can be interpreted as an $N$-sheet cover of the complex plane $\mathbb C$ parametrized by $z$. To calculate the CFT partition function on $\Sigma_g(x)$, following~\cite{Lunin}, we consider a $N$-fold replicated CFT denoted by $\mathcal{C}^{\otimes N}$ defined on $\mathbb C$. The $k$-th factor of the tensor product, i.e. $k$-th replica, contains fields in the $k$-th sheet of the Riemann surface. 
-Due to $\mathbb Z_N$ symmetry under cyclic permutation of each replica, the  QFT associated to the Riemann surface $\Sigma_g(x)$ is the orbifold $\mathcal{C}^{\otimes N}/\mathbb Z_N$~\cite{Dixon, Knizhnik}. 
-In the orbifold theory, the multivaluedness of the correlation functions under the analytic continuation $(z-a)\mapsto e^{2\pi i}(z-a)$, where $a$ is a branch point of the map in Eq.~\eqref{riemann_surf}, is implemented by the non-locality properties of the so-called twist fields. A $\mathbb Z_N$ twist field, denoted by $\sigma_N$, is  a spinless primary field of conformal dimension~\cite{Knizhnik}
+kind~\cite{Whittaker}. 
+
+In the following we consider the following quantity:
 \begin{equation}
- h_{\sigma_N}=\bar{h}_{\sigma_N}=\frac{c}{24}\left(N-\frac{1}{N}\right),
+\mathcal{Z}_{N-1}(x)=\text{Partition function of $\mathcal{C}$ on the surface  $\Sigma_{N-1}(x)$, defined in \ref{riemann_surf}}.
+ \end{equation}
+The case of our interest will be in particular the case $N=3$, that is a compact surface with two holes. 
+ 
+A very useful observation is that the CFT partition function on $\Sigma_g(x)$ is strictly related to the orbiforld CFT $\mathcal{C}^{\otimes N}/Z_N$ living on the sphere  $\mathbb S$. This relation can be understood from the fact that the fields in the $k$-th replica correspond to the ones living on the $k$-th sheet of $\Sigma_g$ while the orbifold takes into account to previously mentioned $Z_N$ symmetry of $\Sigma_g(x)$\cite{Dixon, Knizhnik}. 
+In the orbifold theory a crucial role is played by the $\mathbb Z_N$ twist fields $\sigma_N$, that are  spinless primary field of conformal dimension~\cite{Knizhnik}
+\begin{equation}
+ h_{\sigma_N}=\bar{h}_{\sigma_N}=\frac{c}{24}\left(N-\frac{1}{N}\right);
 \end{equation}
-which is inserted at the branch points of Eq.~\eqref{riemann_surf}.
-If $\boldsymbol{O}^{(k)}(z)=\mathbb I\otimes\mathbb I\dots\otimes O(z)\otimes\dots\otimes\mathbb I$ is then a field in $\mathcal C^{\otimes N}$, which is not trivial only on the $k$-th factor of the tensor product, one requires that, inside correlation functions, under analytic continuation
+Given for instance a  $\mathcal C^{\otimes N}$ primary $\boldsymbol{O}^{(k)}(z)=\mathbb I^{(1)}\otimes\mathbb I\dots\otimes O^{(k)}(z)\otimes\dots\otimes\mathbb I^{(N)}$, the multivaluedness of its correlation functions under the analytic continuation $(z-z_{\text{branch}})\mapsto e^{2\pi i}(z-z_{\text{branch}})$ is implemented by the twist field inserted at the branch point:
 \begin{equation}
 \label{nonloc}
- \boldsymbol {O}^{(k)}(e^{2\pi i}(z-a))\sigma_N(a)\mapsto \boldsymbol{O}^{(k+1)}(z-a)\sigma_N(a).
+ \boldsymbol {O}^{(k)}(e^{2\pi i}(z-z_{\text{branch}}))\sigma_N(z_{\text{branch}})\mapsto \boldsymbol{O}^{(k+1)}(z-z_{\text{branch}})\sigma_N(z_{\text{branch}}).
 \end{equation}
-Analogously, it is possible to define an anti-twist field $\bar{\sigma}_N(a)$ that under analytic continuation $(z-a)\mapsto e^{2\pi i}(z-a)$ implements an anticyclic permutation of each factor of the tensor product. 
+Analogously, the anti-twist field $\bar{\sigma}_N(a)$, with the same conformal dimensions as $\sigma_N$, implements an anticyclic permutation:
+ \begin{equation}
+\label{anonloc}
+ \boldsymbol {O}^{(k)}(e^{2\pi i}(z-z_{\text{branch}}))\bar{\sigma}_N(z_{\text{branch}})\mapsto \boldsymbol{O}^{(k-1)}(z-z_{\text{branch}})\bar{\sigma}_N(z_{\text{branch}}).
+\end{equation}
 
-Within the $\mathbb{Z}_N$-orbifold formalism, the partition function $Z_g$ of $\mathcal{C}$  on $\Sigma_g(x)$ can be calculated as the four-point function of twist field~\cite{Lunin}
+\noindent Following~\cite{Lunin}, the partition function $Z_g$ can be calculated as the four-point function of twist field~\cite{Lunin}
 \begin{equation}\label{partition_twist_correl}
- Z_g=e^{cS_{\text{anom.}}}\langle \sigma_N| \bar{\sigma}_N(1)\sigma_N(x, \bar{x})|\bar{\sigma}_N\rangle.
+ \mathcal{Z}_{N-1}(x)=e^{cS_{\text{anom.}}(x)}\langle \sigma_N| \bar{\sigma}_N(1)\sigma_N(x,\bar{x})|\bar{\sigma}_N\rangle.
 \end{equation}
-
 As usual, one defines $\langle \sigma_N |\equiv\lim_{z\rightarrow\infty}z^{2h_{\sigma_{N}}}\langle 0|\sigma_N(z)$ and $|\sigma_{N}\rangle\equiv\lim_{z\rightarrow 0}\sigma_{N}(z)|0\rangle$, with $|0\rangle$ the vacumm in $\mathcal{C}^{\otimes N}$.
-The prefactor $e^{cS_{\text{anom.}}}$ in Eq.~\eqref{partition_twist_correl} is the Weyl anomaly. It takes into account that in the orbifold approach the metric employed to determine the partition function on $\Sigma_g(x)$ is a flat metric on each sheet of the surface with conical singularities at the branch points of the covering map. The partition function with a flat metric $Z_g$ is then related to the latter by  the prefactor in Eq.~\eqref{partition_twist_correl} which can be explicitely calculated.  For instance, the CFT partition function on a flat torus 
+The prefactor $e^{cS_{\text{anom.}}(x)}$ in Eq.~\eqref{partition_twist_correl} is the Weyl anomaly. It takes into account that in the orbifold approach the metric employed to determine the partition function on $\Sigma_{N-1}(x)$ is a flat metric on each sheet of the surface with conical singularities at the branch points of the covering map. The partition function with a flat metric $\mathcal{Z}_{N-1}$ is then related to the latter by  the prefactor in Eq.~\eqref{partition_twist_correl} which can be explicitely calculated.  For instance, the CFT partition function on a flat torus 
 with modulus $\tau$, see Eq.~\eqref{tau}, is~\cite{Lunin}
 \begin{equation}\label{partition_torus_twist}
- Z_1=|2^8 x(1-x)|^{c/12}\langle \sigma_2|\bar{\sigma}_2(1)\sigma_2(x, \bar{x})|\bar{\sigma}_2\rangle.
+ \mathcal{Z}_1(x)=|2^8 x(1-x)|^{c/12}\langle \sigma_2|\bar{\sigma}_2(1)\sigma_2(x, \bar{x})|\bar{\sigma}_2\rangle.
 \end{equation}
 Finally, the partition function on a compact Riemann surface must be invariant 
 under modular transformations~\cite{CardyMod, Cappelli, Cappelli2}.  For the class of surfaces $\Sigma_g(x)$, the moduli space is one-dimensional and modular invariance implies the crossing
@@ -199,7 +202,7 @@ in Eq.~\eqref{orbifold_three-point} is then the $N$-point function in the seed t
 \end{equation}
 For rational theories with $c<1$, such a $N$-point correlation function can be in principle be calculated from the Ward identity~\cite{BPZ}. 
 We now pass to illustrate some explict calculations of Eq.~\eqref{conformal_block_decomposition} for $N=2$ and $N=3$. The study of the $N=2$ case already allows us to formulate a criterium to eliminate null vector contributions from the sum in Eq.~\eqref{conformal_block_decomposition} that can be easily generalized to  higher genus.
-\subsection{Handling null vectors: Genus one}
+
 We now illustrate an application of Eq.~\eqref{conformal_block_decomposition} to a flat torus. For $N=2$, the three-point function of Eq.~\eqref{orbifold_three-point} 
 can be calculated by considering the  one-to-two map
 \begin{equation}\label{g_one_covering_map}
@@ -290,10 +293,14 @@ matrix products. This observation, which helps with the organization of the book
 \caption{On the left: Matrix product representation of the genus one conformal block in Eq.~\eqref{genus_one_conf_block}. On the right: Matrix product representation of the genus two conformal block in Eq.~\eqref{genus_two_conf_block}.}
 \label{fig-g1}
 \end{figure}
+
+\subsection{Handling null vectors: Genus one}
 As it is well known, some of the Virasoro Verma modules with $c<1$  have 
 null vectors  that must be eliminated to construct irreducible (also called degenerate~\cite{Ribault}) representations of the minimal model conformal algebra.
 Contributions of spurious null vectors 
 are nevertheless present in the expansion of Eq.~\eqref{genus_one_conf_block}, since the latter includes \textit{a priori} all the states within a Verma module. Therefore, a correct definition of higher genus conformal blocks for a rational seed CFTs  must be supplemented with a regularization scheme that removes them. A simple procedure is outlined in the following. 
+
+
 
 Let us assume that the Virasoro representation labelled by $(c, h)$
 contains a null vector, and suppose to choose a basis  that   includes it. The null vector and its descendent are orthogonal to all 
@@ -399,6 +406,16 @@ for $c=1/2$, $h_1=h_2=1/16$ and $h_3=0$; the result is
  \frac{26160455}{1451188224}z^4 + O(z^5)\right].
 \end{equation}
 \section{Higher genus conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
+
+In order to drastically improve the converge of the numerical bootstrap, it is necessary to expand the higher-genus conformal blocks $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ as a linear combination of sphere conformal blocks with central charge $Nc$. More specifically, we shall expect
+\begin{equation}\label{expansion_sphere_conf_blocks}
+ \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=\sum_{l=0}^{\infty}\alpha_{l}^{\boldsymbol{h}}
+ \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z).
+\end{equation}
+In Eq.~\eqref{expansion_sphere_conf_blocks} above,  $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ is the sphere conformal block 
+with central charge $Nc$, internal channel of conformal dimension $|\boldsymbol{h}|+l$, where $|\boldsymbol{h}|\equiv \sum_{j=1}^N h_j$, and external legs with fixed dimension 
+$h_{\sigma_N}$. This function can be calculated
+recursively by means of Zamolodchikov formula~\cite{Zamolodchikov2, Zamolodchikov}, see Appendix~\ref{app_zamolodchikov}.
 
 In this Appendix, we discuss in more detail the expansion in Eq.~\eqref{expansion_sphere_conf_blocks} of the
 conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ in terms of the conformal 
@@ -541,15 +558,7 @@ Now~\cite{SR} let us draw uniformly $N_c$ random points $\{z_{j}\}$ in the squar
 where $\kappa$ is an arbitrary positive number (which we will fix later). By imposing Eq.~\eqref{cross_symmetry_1} at each $z=z_j$, one obtains a linear system with $N_c$ unknowns and $N_c$ equations. By truncating the expansion of the conformal blocks $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$
 at level $\ell$, it is possible to obtain a set of structure constants $D_{\boldsymbol{h},\boldsymbol{\bar{h}}}(\ell)$ for any random realization of the points $\{z_j\}$. If the bootstrap converges,  we expect that the variance of the solutions $D_{\boldsymbol{h},\boldsymbol{\bar{h}}}(\ell)$ will be small and that $D_{\boldsymbol{h},\boldsymbol{\bar{h}}}(\ell)\to D_{\boldsymbol{h},\boldsymbol{\bar{h}}}$, for $\ell\to \infty$. 
 
-In order to drastically improve the converge of the numerical bootstrap, it is necessary to expand the higher-genus conformal blocks $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ as a linear combination of sphere conformal blocks with central charge $Nc$. More specifically, we shall expect
-\begin{equation}\label{expansion_sphere_conf_blocks}
- \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=\sum_{l=0}^{\infty}\alpha_{l}^{\boldsymbol{h}}
- \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z).
-\end{equation}
-In Eq.~\eqref{expansion_sphere_conf_blocks} above,  $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ is the sphere conformal block 
-with central charge $Nc$, internal channel of conformal dimension $|\boldsymbol{h}|+l$, where $|\boldsymbol{h}|\equiv \sum_{j=1}^N h_j$, and external legs with fixed dimension 
-$h_{\sigma_N}$. This function can be calculated
-recursively by means of Zamolodchikov formula~\cite{Zamolodchikov2, Zamolodchikov}, see Appendix~\ref{app_zamolodchikov}. The conformal block   $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ resums the contribution of the conformal family generated by a field with conformal dimension $|\boldsymbol{h}|+l$, primary with respect to the Virasoro algebra generated by the symmetric stress enery tensor in Eq.~\eqref{hatT}. The coefficients $\alpha_l^{\boldsymbol{h}}$
+ The conformal block   $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ resums the contribution of the conformal family generated by a field with conformal dimension $|\boldsymbol{h}|+l$, primary with respect to the Virasoro algebra generated by the symmetric stress enery tensor in Eq.~\eqref{hatT}. The coefficients $\alpha_l^{\boldsymbol{h}}$
 can be directly determined by expanding in power series both $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}$ 
 and $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ and identifying order by order the two 
 sides of Eq.~\eqref{expansion_sphere_conf_blocks}. 
