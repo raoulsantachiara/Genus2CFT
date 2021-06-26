@@ -64,15 +64,14 @@ using the conformal bootstrap.}
 \label{sec:intro}
 
 \section{CFT partition functions on Renyi surfaces}
-Let us consider a conformal field theory, which will 
-be denoted by $\mathcal{C}$, with central charge 
-$c$. We are interested in calculating its partition function on on a compact Riemann surface of genus $g$.
+Let us consider a conformal field theory $\mathcal{C}$, with central charge 
+$c$, living on a Riemann surface $\Sigma_g$ of genus $g$.
 In particular, we consider the family of Renyi Riemann surfaces $\Sigma_g(x)$ of 
 genus $g=N-1$ described by the  complex algebraic curve
 \begin{equation}\label{riemann_surf}
 \Sigma_{N-1}(x): \quad  w^N=\frac{z(z-1)}{z-x},
 \end{equation}
-which has branch points of order $N$ at $z_{\text{branch}}=0$, $x$, $1$, and $\infty$. The Eq.~\eqref{riemann_surf} can be interpreted as an $N$-sheet cover of the Riemann sphere $\mathbb{S}= \mathbb C\cup \{\infty\}$ parametrized by $z$. For a visualization of the surface on $\mathbb C^2$ we refer to~\cite{Dubrovin}. These Riemann surfaces are parametrized by  
+which has branch points of order $N$ at $z_{\text{branch}}=0$, $x$, $1$, and $\infty$. The Eq.~\eqref{riemann_surf} can be interpreted as an $N$-sheet cover of the Riemann sphere $\mathbb C\cup \{\infty\}$ parametrized by $z$. For a visualization of the surface on $\mathbb C^2$ we refer to~\cite{Dubrovin}. These Riemann surfaces are parametrized by  
 the complex number $x$ and enjoy a symmetry $\mathbb{Z}_N$ since 
 Eq.~\eqref{riemann_surf} is invariant under the transformation 
 $w\mapsto e^{\frac{2\pi i k}{N}}w$, with $k\in\mathbb{N}$. 
@@ -83,37 +82,40 @@ This transformation amounts to a cyclic permutation of the $N$ sheets of the sur
 where $K(x)$ is the complete elliptic integral of first 
 kind~\cite{Whittaker}. 
 
-In the following we consider the following quantity:
+\noindent In the following we consider the following quantity:
 \begin{equation}
 \mathcal{Z}_{N-1}(x)=\text{Partition function of $\mathcal{C}$ on the surface  $\Sigma_{N-1}(x)$, defined in \ref{riemann_surf}}.
  \end{equation}
-The case of our interest will be in particular the case $N=3$, that is a compact surface with two holes. 
- 
-A very useful observation is that the CFT partition function on $\Sigma_g(x)$ is strictly related to the orbiforld CFT $\mathcal{C}^{\otimes N}/Z_N$ living on the sphere  $\mathbb S$. This relation can be understood from the fact that the fields in the $k$-th replica correspond to the ones living on the $k$-th sheet of $\Sigma_g$ while the orbifold takes into account to previously mentioned $Z_N$ symmetry of $\Sigma_g(x)$\cite{Dixon, Knizhnik}. 
-In the orbifold theory a crucial role is played by the $\mathbb Z_N$ twist fields $\sigma_N$, that are  spinless primary field of conformal dimension~\cite{Knizhnik}
+The CFT partition function on $\Sigma_{N-1}(x)$ is strictly related to the orbiforld CFT $\mathcal{C}^{\otimes N}/Z_N$ living on the plane $z$ \cite{Dixon, Knizhnik}. In this respect a crucial role is played by the $\mathbb Z_N$ twist and anti-twist field $\sigma_N$ and $\bar{\sigma}_N$, that are  spinless primary field of conformal dimension~\cite{Knizhnik}
 \begin{equation}
  h_{\sigma_N}=\bar{h}_{\sigma_N}=\frac{c}{24}\left(N-\frac{1}{N}\right);
 \end{equation}
-Given for instance a  $\mathcal C^{\otimes N}$ primary $\boldsymbol{O}^{(k)}(z)=\mathbb I^{(1)}\otimes\mathbb I\dots\otimes O^{(k)}(z)\otimes\dots\otimes\mathbb I^{(N)}$, the multivaluedness of its correlation functions under the analytic continuation $(z-z_{\text{branch}})\mapsto e^{2\pi i}(z-z_{\text{branch}})$ is implemented by the twist field inserted at the branch point:
+\noindent More specifically, the partition function $\mathcal{Z}_{N-1}(x)$ is given by the four-point function of twist fields  
 \begin{equation}
-\label{nonloc}
- \boldsymbol {O}^{(k)}(e^{2\pi i}(z-z_{\text{branch}}))\sigma_N(z_{\text{branch}})\mapsto \boldsymbol{O}^{(k+1)}(z-z_{\text{branch}})\sigma_N(z_{\text{branch}}).
-\end{equation}
-Analogously, the anti-twist field $\bar{\sigma}_N(a)$, with the same conformal dimensions as $\sigma_N$, implements an anticyclic permutation:
- \begin{equation}
-\label{anonloc}
- \boldsymbol {O}^{(k)}(e^{2\pi i}(z-z_{\text{branch}}))\bar{\sigma}_N(z_{\text{branch}})\mapsto \boldsymbol{O}^{(k-1)}(z-z_{\text{branch}})\bar{\sigma}_N(z_{\text{branch}}).
-\end{equation}
+\mathcal{Z}_{N-1}(x)=\langle \sigma_N| \bar{\sigma}_N(1)\sigma_N(x,\bar{x})|\bar{\sigma}_N\rangle,
+ \end{equation}
+where $\langle \sigma_N |\equiv\lim_{z\rightarrow\infty}z^{2h_{\sigma_{N}}}\langle 0|\sigma_N(z)$ and $|\sigma_{N}\rangle\equiv\lim_{z\rightarrow 0}\sigma_{N}(z)|0\rangle$, with $|0\rangle$ the vacumm in $\mathcal{C}^{\otimes N}$.
+%Given for instance a  $\mathcal C^{\otimes N}$ primary $\boldsymbol{O}^{(k)}(z)=\mathbb I^{(1)}\otimes\mathbb I\dots\otimes O^{(k)}(z)\otimes\dots\otimes\mathbb I^{(N)}$, the multivaluedness of its correlation functions under the analytic continuation $(z-z_{\text{branch}})\mapsto e^{2\pi i}(z-z_{\text{branch}})$ is implemented by the twist field inserted at the branch point:
+%\begin{equation}
+%\label{nonloc}
+% \boldsymbol {O}^{(k)}(e^{2\pi i}(z-z_{\text{branch}}))\sigma_N(z_{\text{branch}})\mapsto \boldsymbol{O}^{(k+1)}(z-z_{\text{branch}})\sigma_N(z_{\text{branch}}).
+%\end{equation}
+%Analogously, the anti-twist field $\bar{\sigma}_N(a)$, with the same conformal dimensions as $\sigma_N$, implements an anticyclic permutation:
+% \begin{equation}
+%\label{anonloc}
+% \boldsymbol {O}^{(k)}(e^{2\pi i}(z-z_{\text{branch}}))\bar{\sigma}_N(z_{\text{branch}})\mapsto \boldsymbol{O}^{(k-1)}(z-z_{\text{branch}})\bar{\sigma}_N(z_{\text{branch}}).
+%\end{equation}
 
-\noindent Following~\cite{Lunin}, the partition function $Z_g$ can be calculated as the four-point function of twist field~\cite{Lunin}
+\noindent Following~\cite{Lunin}, the partition function $\mathcal{Z}_{N-1}$ can be put in relation to the $\mathcal{C}$ partition function $\mathcal{\hat{Z}}_{N-1}$ on a Riemann surfaces with a flat metric:  
 \begin{equation}\label{partition_twist_correl}
- \mathcal{Z}_{N-1}(x)=e^{cS_{\text{anom.}}(x)}\langle \sigma_N| \bar{\sigma}_N(1)\sigma_N(x,\bar{x})|\bar{\sigma}_N\rangle.
+ \mathcal{\hat{Z}}_{N-1}(x)=e^{cS_{\text{anom.}}(x)} \mathcal{Z}_{N-1}(x),
 \end{equation}
-As usual, one defines $\langle \sigma_N |\equiv\lim_{z\rightarrow\infty}z^{2h_{\sigma_{N}}}\langle 0|\sigma_N(z)$ and $|\sigma_{N}\rangle\equiv\lim_{z\rightarrow 0}\sigma_{N}(z)|0\rangle$, with $|0\rangle$ the vacumm in $\mathcal{C}^{\otimes N}$.
-The prefactor $e^{cS_{\text{anom.}}(x)}$ in Eq.~\eqref{partition_twist_correl} is the Weyl anomaly. It takes into account that in the orbifold approach the metric employed to determine the partition function on $\Sigma_{N-1}(x)$ is a flat metric on each sheet of the surface with conical singularities at the branch points of the covering map. The partition function with a flat metric $\mathcal{Z}_{N-1}$ is then related to the latter by  the prefactor in Eq.~\eqref{partition_twist_correl} which can be explicitely calculated.  For instance, the CFT partition function on a flat torus 
+where the prefactor $e^{cS_{\text{anom.}}(x)}$ in Eq.~\eqref{partition_twist_correl} is the Weyl anomaly originating from the Weyl transformation between the different metrics.
+%It takes into account that in the orbifold approach the metric employed to determine the partition function on $\Sigma_{N-1}(x)$ is a flat metric on each sheet of the surface with conical singularities at the branch points of the covering map. The partition function with a flat metric $\mathcal{Z}_{N-1}$ is then related to the latter by  the prefactor in Eq.~\eqref{partition_twist_correl} which can be explicitely calculated.  
+\noindent The Weyl anomaly can be explictely calculated. For instance, for $N=2$, the CFT partition function on a flat torus 
 with modulus $\tau$, see Eq.~\eqref{tau}, is~\cite{Lunin}
 \begin{equation}\label{partition_torus_twist}
- \mathcal{Z}_1(x)=|2^8 x(1-x)|^{c/12}\langle \sigma_2|\bar{\sigma}_2(1)\sigma_2(x, \bar{x})|\bar{\sigma}_2\rangle.
+ \mathcal{\hat{Z}}_1(x)=|2^8 x(1-x)|^{c/12}\langle \sigma_2|\bar{\sigma}_2(1)\sigma_2(x, \bar{x})|\bar{\sigma}_2\rangle.
 \end{equation}
 Finally, $\mathcal{Z}_{N-1}$ must be invariant  
 under modular transformations~\cite{CardyMod, Cappelli, Cappelli2}.  For the class of surfaces $\Sigma_{N-1}(x)$, the moduli space is one-dimensional and modular invariance implies the crossing
