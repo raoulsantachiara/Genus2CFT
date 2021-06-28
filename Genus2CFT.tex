@@ -180,6 +180,8 @@ one obtains the power series representation for the higher genus conformal block
  \mathcal{G}_{c,\boldsymbol{h}}(z)=
  z^{-2h_{\sigma_N}}\sum_{\boldsymbol{M}, \boldsymbol{M}'} z^{h_{\boldsymbol{X}}}[\langle \boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}|\sigma_N(1)|\bar{\sigma}_N\rangle]^*[\boldsymbol{G}_{XY}]^{-1}\langle \boldsymbol{Y}_{\boldsymbol{h}}^{\boldsymbol{M}'}| \sigma_N(1)|\bar{\sigma}_N\rangle.
 \end{equation}
+\subsection{Unfolding the three point functions}
+
 To compute the orbifold three-point function
 \begin{equation}\label{orbifold_three-point}
  C_N^{\boldsymbol{h},\boldsymbol{M}}:=\langle \boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}| \sigma_N(1)|\bar{\sigma}_N\rangle.
@@ -192,16 +194,26 @@ That is, the $t$-surface must be a $N$-sheet cover with genus zero (a Riemann sp
 $(0,1)$. Moreover, the point $z=\infty$, where the field $\boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}$ in Eq.~\eqref{orbifold_three-point} is inserted,
 must be mapped to $N$ different points $t_\infty=\{t_1, \dots, t_N\}$ in 
 the covering space. Let us denote by $\mathcal{X}_{h_j}^{M_j}(t_j)$ one of the images
-of the operator $X_{h_j}^{M_j}(\infty)$ under the covering map $z=f(t)$. The  orbifold  three-point 
+of the operator $X_{h_j}^{M_j}(\infty)$ under the covering map $z=f(t)$:
+\begin{equation}
+\boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}(\infty)\mapsto \{\mathcal{X}_{h_j}^{M_j}(t_j)\}_{j=1,\cdots,N}= \{\boldsymbol{\mathcal{L}}_{-M_j}(t_j)\phi_{h}(t_j)\}_{j=1,\cdots,N},
+\end{equation}
+where the $\boldsymbol{\mathcal{L}}_{-M_j}(t_j)$ are the transformed Virasoro generators acting on the $t-$ surface, see Appendix..
+ The  orbifold  three-point 
 function  is then the $N$-point function of the seed theory $\mathcal{C}$ on the sphere:
 \begin{equation}\label{N-point}
  C_N^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}^{M_1}_{h_1}(t_1)\cdots\mathcal{X}_{h_N}^{M_N}(t_N)\rangle.
 \end{equation}
-\noindent Let us illustrate some explict calculations of Eq.~\eqref{conformal_block_decomposition} for $N=2$ and $N=3$. The study of the $N=2$ case already allows us to formulate a criterium to eliminate null vector contributions from the sum in Eq.~\eqref{conformal_block_decomposition} that can be easily generalized to  higher genus.
 
+\noindent Let us illustrate explicit calculations of Eq.~\eqref{conformal_block_decomposition} for $N=2$ and $N=3$. 
 
-According to Eq.~\eqref{N-point}, for $N=2$, the orbifold three-point function
-$C_2^{\boldsymbol{h},\boldsymbol{M}}$ is then simply
+\subsection{ The case $N=2$}
+In the case $N=2$, we can use the map
+\begin{equation}\label{g_one_covering_map}
+ z(t)=\frac{(t+1)^2}{4t},
+\end{equation}
+according to which the point $z=\infty$ is mapped on $t_1=\infty$ and $t_2=0$, $z\mapsto t_{\infty}=\{0,\infty\}$.
+Then Eq.~\eqref{N-point} becomes for $N=2$:
 \begin{equation}\label{C_2_X}
  C_2^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}_{h_1}^{M_1} | \mathcal{X}_{h_2}^{M_2}\rangle_{\rm{sphere}}=
  \delta_{h_1, h_2}\delta_{|M_1|,|M_2|}2^{-4h}\rho^h_{M_1,M_2},
@@ -209,9 +221,9 @@ $C_2^{\boldsymbol{h},\boldsymbol{M}}$ is then simply
 where $\rho$ is the symmetric $|M_1|\times|M_1|$ matrix
 \begin{equation}
 \label{rho}
- \rho^h_{M_1,M_2}:=\langle\boldsymbol{\mathcal{L}}_{-M_1}(\infty)\phi_{h}(\infty)|\boldsymbol{\mathcal{L}}_{-M_2}(0)\phi_{h}(0)\rangle,
+ \rho^h_{M_1,M_2}:=\langle\boldsymbol{\mathcal{L}}_{-M_1}\phi_{h}|\boldsymbol{\mathcal{L}}_{-M_2}\phi_{h}\rangle.
 \end{equation}
-and $\boldsymbol{\mathcal{L}}_{-M}(t)$ is defined as in Eq.~\eqref{desc}. Given Eqs.~\eqref{g1_1} and~\eqref{g1_2}, the matrix $\rho^h$  in Eq.~\eqref{rho} above can be calculated by exploiting the Virasoro algebra commutation relations.
+The explicit expression of $\boldsymbol{\mathcal{L}}_{-M}(\infty)$and  $\boldsymbol{\mathcal{L}}_{-M}(0)$ have been explicitely computed in  Appendix... Given Eqs.~\eqref{g1_1} and~\eqref{g1_2}, the matrix $\rho^h$  in Eq.~\eqref{rho} above can be calculated by exploiting the Virasoro algebra commutation relations.
 Eq.~\eqref{C_2_X} shows that the number of genus one conformal blocks is
 the same as the number of conformal families of the seed theory $\mathcal{C}$.
 This conclusion is of course consistent with the well known construction of the CFT torus partition function as a sesquilinear form of irreducible Virasoro characters~\cite{Cappelli, Cappelli2}. The number of different characters needed to build the torus partition function  is  the same as the number of conformal families. A direct link between the genus one conformal block and the character is provided in Eq.~\eqref{character_conf_block}.
@@ -811,10 +823,8 @@ where $\{z(t),t\}$ is the Shwartzian derivative,  in the Eq.(\ref{vir_ln}), one 
  \end{aligned}
 \end{equation}
 We now illustrate an application of Eq.~\eqref{conformal_block_decomposition} to a flat torus. For $N=2$, the three-point function of Eq.~\eqref{orbifold_three-point} 
-can be calculated by considering the  one-to-two map
-\begin{equation}\label{g_one_covering_map}
- z(t)=\frac{(t+1)^2}{4t}.
-\end{equation}
+can be calculated by considering the  one-to-two map (\ref{g_one_covering_map})
+
 which transforms $z=\infty$ into $t_{\infty}=\{0,\infty\}$
 in the $t$-plane and has branch points of order two at $z_b=\{0,1\}$.  For the mapping in Eq.~\eqref{g_one_covering_map}, 
 we can write down  the expansion of the Virasoro descendents in Eq.~\eqref{Virasoro_transf};
