@@ -22,7 +22,7 @@
 \newcommand{\eeq}{\end{equation}}
 
 
-\title{\boldmath Bootstrapping conformal minimal models on genus two Riemann surfaces}
+\title{\boldmath  On the crossing symmetry properties of twist fields correlation functions associated to genus 2 Riemann surfaces}
 
 
 %% %simple case: 2 authors, same institution
@@ -65,8 +65,8 @@ using the conformal bootstrap.}
 
 \section{CFT partition functions on Renyi surfaces}
 Let us consider a conformal field theory $\mathcal{C}$, with central charge 
-$c$, living on a Riemann surface $\Sigma_g$ of genus $g$.
-In particular, we consider the family of Renyi Riemann surfaces $\Sigma_g(x)$ of 
+$c$, living on a Riemann surface $\Sigma_g$ of genus $g$. In the following we will refer to $\mathcal{C}$ as the seed theory. 
+Let us consider the family of Renyi Riemann surfaces $\Sigma_g(x)$ of 
 genus $g=N-1$ described by the  complex algebraic curve
 \begin{equation}\label{riemann_surf}
 \Sigma_{N-1}(x): \quad  w^N=\frac{z(z-1)}{z-x},
@@ -75,18 +75,13 @@ which has branch points of order $N$ at $z_{\text{branch}}=0$, $x$, $1$, and $\i
 the complex number $x$ and enjoy a symmetry $\mathbb{Z}_N$ since 
 Eq.~\eqref{riemann_surf} is invariant under the transformation 
 $w\mapsto e^{\frac{2\pi i k}{N}}w$, with $k\in\mathbb{N}$. 
-This transformation amounts to a cyclic permutation of the $N$ sheets of the surface, where each sheet is labelled by the choice of the branch of the $N$-root in Eq.~\eqref{riemann_surf}. The case $N=2$ is conformally equivalent, under the Abel-Jacobi map, to a flat torus of modulus 
-\begin{equation}\label{tau}
- \tau(x)=i\frac{K(1-x)}{K(x)}, 
-\end{equation}
-where $K(x)$ is the complete elliptic integral of first 
-kind~\cite{Whittaker}. 
+This transformation amounts to a cyclic permutation of the $N$ sheets of the surface, where each sheet is labelled by the choice of the branch of the $N$-root in Eq.~\eqref{riemann_surf}. 
 
 \noindent In the following we consider the following quantity:
 \begin{equation}
 \mathcal{Z}_{N-1}(x)=\text{Partition function of $\mathcal{C}$ on the surface  $\Sigma_{N-1}(x)$, defined in \ref{riemann_surf}}.
  \end{equation}
-The CFT partition function on $\Sigma_{N-1}(x)$ is strictly related to the orbiforld CFT $\mathcal{C}^{\otimes N}/Z_N$ living on the plane $z$ \cite{Dixon, Knizhnik}. In this respect a crucial role is played by the $\mathbb Z_N$ twist and anti-twist field $\sigma_N$ and $\bar{\sigma}_N$, that are  spinless primary field of conformal dimension~\cite{Knizhnik}
+The CFT partition function on $\Sigma_{N-1}(x)$ is strictly related to the orbiforld CFT $\mathcal{C}^{\otimes N}/Z_N$ that lives on the Riemann sphere $z$ \cite{Dixon, Knizhnik}. In this respect a crucial role is played by the $\mathbb Z_N$ twist and anti-twist field $\sigma_N$ and $\bar{\sigma}_N$, that are  spinless primary fields of conformal dimension~\cite{Knizhnik}
 \begin{equation}
  h_{\sigma_N}=\bar{h}_{\sigma_N}=\frac{c}{24}\left(N-\frac{1}{N}\right);
 \end{equation}
@@ -106,16 +101,21 @@ where $\langle \sigma_N |\equiv\lim_{z\rightarrow\infty}z^{2h_{\sigma_{N}}}\lang
 % \boldsymbol {O}^{(k)}(e^{2\pi i}(z-z_{\text{branch}}))\bar{\sigma}_N(z_{\text{branch}})\mapsto \boldsymbol{O}^{(k-1)}(z-z_{\text{branch}})\bar{\sigma}_N(z_{\text{branch}}).
 %\end{equation}
 
-\noindent Following~\cite{Lunin}, the partition function $\mathcal{Z}_{N-1}$ can be put in relation to the $\mathcal{C}$ partition function $\mathcal{\hat{Z}}_{N-1}$ on a Riemann surfaces with a flat metric:  
+\noindent Note that, due to the tranformation Eq.(\ref{riemann_surf}), the metric in $\Sigma_{N-1}(x)$ is non trivial.  Via a Weyl transformation, the corresponding partition function $\mathcal{Z}_{N-1}$ can then be put in relation to the partition function $\mathcal{\hat{Z}}_{N-1}$ on a Riemann surfaces with a flat metric\cite{Lunin}:  
 \begin{equation}\label{partition_twist_correl}
  \mathcal{\hat{Z}}_{N-1}(x)=e^{cS_{\text{anom.}}(x)} \mathcal{Z}_{N-1}(x),
 \end{equation}
-where the prefactor $e^{cS_{\text{anom.}}(x)}$ in Eq.~\eqref{partition_twist_correl} is the Weyl anomaly originating from the Weyl transformation between the different metrics.
+where the prefactor $e^{cS_{\text{anom.}}(x)}$ in Eq.~\eqref{partition_twist_correl} is the Weyl anomaly originating from the metric transformation.
 %It takes into account that in the orbifold approach the metric employed to determine the partition function on $\Sigma_{N-1}(x)$ is a flat metric on each sheet of the surface with conical singularities at the branch points of the covering map. The partition function with a flat metric $\mathcal{Z}_{N-1}$ is then related to the latter by  the prefactor in Eq.~\eqref{partition_twist_correl} which can be explicitely calculated.  
-\noindent The Weyl anomaly can be explictely calculated. For instance, for $N=2$, the CFT partition function on a flat torus 
-with modulus $\tau$, see Eq.~\eqref{tau}, is~\cite{Lunin}
+\noindent The Weyl anomaly can be explictely calculated. Take for instance the case $N=2$, where, under the Abel-Jacobi map, $\Sigma_{1}(x)$ is conformally equivalent to a flat torus of modulus 
+\begin{equation}\label{tau}
+ \tau(x)=i\frac{K(1-x)}{K(x)}, 
+\end{equation}
+where $K(x)$ is the complete elliptic integral of first 
+kind~\cite{Whittaker}. Correspondingly, the CFT partition function $\mathcal{\hat{Z}}_1(x)$ on a flat torus 
+with modulus $\tau(x)$ is~\cite{Lunin}
 \begin{equation}\label{partition_torus_twist}
- \mathcal{\hat{Z}}_1(x)=|2^8 x(1-x)|^{c/12}\langle \sigma_2|\bar{\sigma}_2(1)\sigma_2(x, \bar{x})|\bar{\sigma}_2\rangle.
+ \mathcal{\hat{Z}}_1(x)=|2^8 x(1-x)|^{c/12} \mathcal{Z}_{N-1}(x)=|2^8 x(1-x)|^{c/12} \langle \sigma_2|\bar{\sigma}_2(1)\sigma_2(x, \bar{x})|\bar{\sigma}_2\rangle.
 \end{equation}
 Finally, $\mathcal{Z}_{N-1}$ must be invariant  
 under modular transformations~\cite{CardyMod, Cappelli, Cappelli2}.  For the class of surfaces $\Sigma_{N-1}(x)$, the moduli space is one-dimensional and modular invariance implies the crossing
@@ -127,115 +127,79 @@ symmetry of the twist field four-point correlation function~\cite{Cardy},
 For example, if we consider a torus with modulus $\tau$ that of Eq.~\eqref{tau},
 then the modular transformation $\tau\mapsto-1/\tau$ induces the change
 $x\mapsto 1-x$. An analogous observation holds for $\Sigma_{2}(x)$, as discussed in~\cite{Cardy}.
-The rest of the paper will be devoted to expansion of the twist field four-point 
-function in terms of modular conformal blocks. We will focus in particular on 
-the symmetry $x\mapsto 1-x$. 
+ We will focus in particular on 
+the symmetry $x\mapsto 1-x$ of the twist field correlation function for $N=3$. 
 %The idea of using the crossing simmetry of the twist field correlation function to calculate higher genus CFT partition function was firstly  proposed in~\cite{ZamolodchikovAT}.
 
 
-\section{Higher genus conformal blocks}\label{sec:conf_blocks}
-The twist field four-point function in the $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$ 
-orbifold can be decomposed in conformal blocks as
+\section{Modular conformal blocks}\label{sec:conf_blocks}
+The twist fields four-point 
+function of the orbifold theory admit the following expansion:
 \begin{equation}\label{conformal_block_decomposition_0}
  \langle \sigma_N | \bar{\sigma}_N(1) \sigma_N (z, \bar{z})|\bar{\sigma}_N\rangle=
  \sum_{\boldsymbol{h},\boldsymbol{\bar{h}}} D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)\mathcal{G}_{c,\boldsymbol{\bar{h}}}^{(N)}(\bar{z}),
 \end{equation}
-where $\boldsymbol{h}\equiv\{h_1, \dots, h_N\}$, and $h_j$ labels an irreducible
-representation of the Virasoro algebra in the seed theory $\mathcal{C}$. The complex 
-coefficients  $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$ in Eq.~\eqref{conformal_block_decomposition_0} 
-are the structure constants and will be determined through the numerical bootstrap in Sec.~\ref{sec:num_bootstrap}.
+where $\boldsymbol{h}\equiv\{h_1, \dots, h_N\}$ with $h_j$ being the conformal dimension of  
+a primary in the seed theory. 
+The function $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, discussed below, are the so-called modular conformal blocks. The $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ are fixed by the orbifold symmetry algebra  and they encode therefore the universal part of the orbifold correlation functions. On the other hand, the structure constants  $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$  characterize the specific bootstrap solution under consideration. 
 
-In this section, we will provide a general algorithm to calculate power series representation about $z=0$ of the functions  $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$. In particular, we will focus on rational seed CFTs  with central charge $c<1$. On the sphere, these theories are built by removing zero-norm states and their descendents from the Verma modules of the Virasoro algebra.  As a consequence, they contain only a finite number of primary fields and are known as minimal models~\cite{BPZ}. 
-
- Given an holomorphic primary field $\phi_{h}(z)$ with conformal dimension $h$ in $\mathcal{C}$ and a partition $M\equiv\{m_1,\dots,m_q\}$ of the integer $|M|$ into integers $0<m_1\leq m_2\dots\leq m_q$, a descendent field is defined by~\cite{BPZ}
+\noindent Let us first review the procedure, as  given in \cite{Collier}, to obtain the small $z$ expansion  of  $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$.  The Hilbert space of the seed theory is formed by the primary fields $\phi_{h}(z)$  and its descendants ~\cite{BPZ}. Given a partition  $M\equiv\{m_1,\dots,m_q\}$ of the integer  $|M|$, the space of descendants of $\phi_{h}(z)$ at level $|M|$ is spanned by the fields
 \begin{equation}
 \label{desc}
  X_{h}^{M}(z):=\boldsymbol{L}_{-M}(z)\phi_h(z)~~{\rm{where}}~~ \boldsymbol{L}_{-M}(z):=L_{-m_1}(z)\dots L_{-m_q}(z).
  \end{equation}
-The operators $L_{-m}(z)$ are Virasoro raising operators, as reminded in Appendix~\ref{app_ward}, and $|M|$ is called level; the conformal dimension of $X_{h}^{M}$ is $h+|M|$. The descendent states that correspond to the fields in Eq.~\eqref{desc} form a (not orthormal) basis for the Verma module of the Virasoro algebra. If $c<1$, they might have zero norm and in that case must be removed from the basis in order to build an irreducible representation~\cite{BPZ, Friedan, Ribault}. For the moment, let us ignore this issue.
- Holomorphic fields in $\mathcal{C}^{\otimes N}$ are then tensor products of Virasoro descendents as in Eq.~\eqref{desc}, one for each copy. They will be denoted by
- $\boldsymbol{X}^{\boldsymbol{M}}_{\boldsymbol{h}}(z)$, where $\boldsymbol{h}$ labels a set of (would-be) irreducible representations
-of the Virasoro algebra as previously stated and $\boldsymbol{M}\equiv\{M_1,\dots,M_N\}$ is a collection of $N$ partitions of the  integers $|M_1|,\dots, |M_N|$. Explicitely, the field is 
-\begin{equation}
+ of conformal dimension $h+|M|$. In the above expression the  $L_{-m}(z)$ are Virasoro generators applied to a field sitting at $z$, see Appendix~\ref{app_ward}.   
+ 
+ A descendant $\boldsymbol{X}^{\boldsymbol{M}}_{\boldsymbol{h}}(z)$ in the replicated theory  $\mathcal{C}^{\otimes N}$ will take the form:
+ \begin{equation}
  \boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}(z)=X_{h_1}^{M_1}(z)\otimes \dots \otimes X_{h_N}^{M_N}(z),
 \end{equation}
-and has conformal dimension  $h_{\boldsymbol{\boldsymbol{X}}}=\sum_{j=1}^N(h_j+|M_j|)$, where we  dropped the indexes to lighten the notation. The scalar product between two holomorphic fields $\boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}(z)$ and $\boldsymbol{Y}_{\boldsymbol{h}'}^{\boldsymbol{M}'}(z')$ in $\mathcal{C}^{\otimes N}$ is defined from the scalar product in $\mathcal{C}$ as
+where $\boldsymbol{M}\equiv\{M_1,\dots,M_N\}$ is a collection of $N$ partitions of the  integers $|M_1|,\dots, |M_N|$ and $\boldsymbol{h}$ is the one appearing in Eq.(\ref{conformal_block_decomposition_0}). The field $\boldsymbol{X}^{\boldsymbol{M}}_{\boldsymbol{h}}(z)$ has  
+conformal dimension  $h_{\boldsymbol{\boldsymbol{X}}}=\sum_{j=1}^N(h_j+|M_j|)$. The scalar product between two holomorphic fields $\boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}(z)$ and $\boldsymbol{Y}_{\boldsymbol{h}'}^{\boldsymbol{M}'}(z')$ in $\mathcal{C}^{\otimes N}$ is defined from the scalar product in $\mathcal{C}$ as
 \begin{equation}
 \label{scal}
  \boldsymbol{G}_{\boldsymbol{X}\boldsymbol{Y}}:=\langle \boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}} | \boldsymbol{Y}_{\boldsymbol{h}'}^{\boldsymbol{M}'}\rangle=\prod_{j=1}^N G^{h_j}_{M_j,M_j'}.
 \end{equation}
-In particular, the matrix $G^{h}_{M,M'}:=\langle X_{h}^{M}|Y_{h'}^{M'}\rangle$ is the usual Gram matrix of the seed CFT and within each replica  one has $G^{h_j}_{M_j,M_j'}\propto\delta_{h_j,h_j'}\delta_{|M_j|,|M_j'|}$. Therefore $\boldsymbol{G}$ in Eq.~\eqref{scal} has (at most) dimensions  $\prod_{j=1}^{N}|M_j|^2$. Its  matrix elements can be calculated with the aid of a computer algebra systems such as \texttt{Mathematica}~{\color{red}[?]}.
+In particular, the matrix $G^{h}_{M,M'}:=\langle X_{h}^{M}|Y_{h'}^{M'}\rangle$ is the usual Gram matrix of the seed CFT and within each replica  one has $G^{h_j}_{M_j,M_j'}\propto\delta_{h_j,h_j'}\delta_{|M_j|,|M_j'|}$. Therefore $\boldsymbol{G}$ in Eq.~\eqref{scal} has (at most) dimensions  $\prod_{j=1}^{N}|M_j|^2$. 
 
-Let us now restrict to the holomorphic factor of the twist field four-point function in Eq.~\eqref{conformal_block_decomposition_0}. In the $\mathbb Z_N$ orbifold and again using a simplified notation,  we have the twist field/anti-twist field OPE
+\noindent   The twist field/anti-twist field OPE reads in the holomorphic sector:
 \begin{equation}
 \label{OPE}
  \sigma_N(z)|\bar{\sigma}_N\rangle=\sum_{\boldsymbol{h},\boldsymbol{M}} z^{h_{\boldsymbol{X}}-2h_{\sigma_N}}\beta_{\boldsymbol{X}}|\boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}\rangle,
 \end{equation}
-where the coefficient $\beta_{\boldsymbol{X}}$ can be extracted by taking a scalar product as in Eq.~\eqref{scal}. It turns out
+where the coefficient $\beta_{\boldsymbol{X}}$ are given by:
 \begin{equation}
 \label{beta}
  \beta_{\boldsymbol{X}}=\sum_{\boldsymbol{M}'} [\boldsymbol{G_{\boldsymbol{X}\boldsymbol{Y}}}]^{-1}\langle \boldsymbol{Y}_{\boldsymbol{h}}^{\boldsymbol{M}'}|\sigma_N(1)|\bar{\sigma}_N\rangle.
 \end{equation}
-Notice that there is no summation over $\boldsymbol{h}'$ since the Gram matrix only couples descendents within each copy that have the same level and belong to the same Verma module of the Virasoro algebra.
+Notice that there is no summation over $\boldsymbol{h}'$ since the Gram matrix only couples descendents within each copy that have the same level and same conformal dimension.
 Substituting back Eq.~\eqref{beta} into Eq.~\eqref{OPE} and comparing with Eq.~\eqref{conformal_block_decomposition_0} 
 one obtains the power series representation for the higher genus conformal block 
 \begin{equation}\label{conformal_block_decomposition}
  \mathcal{G}_{c,\boldsymbol{h}}(z)=
  z^{-2h_{\sigma_N}}\sum_{\boldsymbol{M}, \boldsymbol{M}'} z^{h_{\boldsymbol{X}}}[\langle \boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}|\sigma_N(1)|\bar{\sigma}_N\rangle]^*[\boldsymbol{G}_{XY}]^{-1}\langle \boldsymbol{Y}_{\boldsymbol{h}}^{\boldsymbol{M}'}| \sigma_N(1)|\bar{\sigma}_N\rangle.
 \end{equation}
-The combinatorial expansion  in Eq.~\eqref{conformal_block_decomposition} needs as input the orbifold three-point function
+To compute the orbifold three-point function
 \begin{equation}\label{orbifold_three-point}
  C_N^{\boldsymbol{h},\boldsymbol{M}}:=\langle \boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}| \sigma_N(1)|\bar{\sigma}_N\rangle.
 \end{equation}
-This $\mathbb C$-number can be calculated~\cite{Lunin} by considering a one-to-$N$ conformal map
-$z=f(t)$ with branch points at $z_b=\{0, 1\}$ such that, near 
-these points, it behaves as $z-z_b=a_b(t-t_b)^N+o((t-t_b)^N)$.
+one usually considers a one-to-$N$ conformal map
+$z=f(t)$ with branch points at $z_{\text{branch}}=\{0, 1\}$ such that, near 
+these points, it behaves as $z-z_{\text{branch}}=a_b(t-t_{\text{branch}})^N+o((t-t_{\text{branch}})^N)$~\cite{Lunin}.
 That is, the $t$-surface must be a $N$-sheet cover with genus zero (a Riemann sphere)
  of the $z$-Riemann sphere with a branch cut along 
 $(0,1)$. Moreover, the point $z=\infty$, where the field $\boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}$ in Eq.~\eqref{orbifold_three-point} is inserted,
 must be mapped to $N$ different points $t_\infty=\{t_1, \dots, t_N\}$ in 
 the covering space. Let us denote by $\mathcal{X}_{h_j}^{M_j}(t_j)$ one of the images
-of the operator $X_{h_j}^{M_j}(\infty)$ under the covering map $z=f(t)$. The three-point 
-function of the orbifold $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$ 
-in Eq.~\eqref{orbifold_three-point} is then the $N$-point function in the seed theory $\mathcal{C}$
+of the operator $X_{h_j}^{M_j}(\infty)$ under the covering map $z=f(t)$. The  orbifold  three-point 
+function  is then the $N$-point function of the seed theory $\mathcal{C}$ on the sphere:
 \begin{equation}\label{N-point}
- C_N^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}^{M_1}_{h_1}(t_1)\cdots\mathcal{X}_{h_N}^{M_N}(t_N)\rangle_{\rm{sphere}}.
+ C_N^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}^{M_1}_{h_1}(t_1)\cdots\mathcal{X}_{h_N}^{M_N}(t_N)\rangle.
 \end{equation}
-For rational theories with $c<1$, such a $N$-point correlation function can be in principle be calculated from the Ward identity~\cite{BPZ}. 
-We now pass to illustrate some explict calculations of Eq.~\eqref{conformal_block_decomposition} for $N=2$ and $N=3$. The study of the $N=2$ case already allows us to formulate a criterium to eliminate null vector contributions from the sum in Eq.~\eqref{conformal_block_decomposition} that can be easily generalized to  higher genus.
+\noindent Let us illustrate some explict calculations of Eq.~\eqref{conformal_block_decomposition} for $N=2$ and $N=3$. The study of the $N=2$ case already allows us to formulate a criterium to eliminate null vector contributions from the sum in Eq.~\eqref{conformal_block_decomposition} that can be easily generalized to  higher genus.
 
-We now illustrate an application of Eq.~\eqref{conformal_block_decomposition} to a flat torus. For $N=2$, the three-point function of Eq.~\eqref{orbifold_three-point} 
-can be calculated by considering the  one-to-two map
-\begin{equation}\label{g_one_covering_map}
- z(t)=\frac{(t+1)^2}{4t}.
-\end{equation}
-which transforms $z=\infty$ into $t_{\infty}=\{0,\infty\}$
-in the $t$-plane and has branch points of order two at $z_b=\{0,1\}$. In the original $z$-plane, one has
-\begin{equation}
-\label{vir_infty}
- L_{-n}(z=\infty)=-\oint_{C_{\infty}}\frac{dz}{2\pi i}z^{n+1}~T(z),
-\end{equation}
-where $T(z)$ is the stress energy tensor of the seed theory. Under the conformal map of
-Eq.~\eqref{g_one_covering_map}, the Virasoro descendent in Eq.~\eqref{vir_infty}
-is then transformed into the linear combination of descendents in the $t$-plane
-\begin{equation}\label{Virasoro_transf}
- \mathcal{L}_{-n}(t_{\infty})=-\oint_{C_{t_{\infty}}}\frac{dt}{2\pi i}
- \left(\frac{dz}{dt}\right)^{-1}[z(t)]^{n+1}
- \left[T(t)-\frac{c}{12}\{z(t), t\}\right],
-\end{equation}
-where $C_{t_{\infty}}$ is a contour encircling the point $t_{\infty}$. For the mapping in Eq.~\eqref{g_one_covering_map}, 
-we can write down  the expansion of the Virasoro descendents in Eq.~\eqref{Virasoro_transf};
-if $n\geq 1$ it reads
-\begin{equation}
-\label{g1_1}
- \mathcal{L}_{-n}(t_{\infty})=\sum_{m\geq -n} a_{nm} L_{m}(t=t_{\infty})+\frac{c}{32}(n-1), \quad t_{\infty}=\{0,\infty\},
-\end{equation}
-with
-\begin{equation}
-\label{g1_2}
- a_{nm}=\frac{1}{4^n}\left[2^{2n+1}-\binom{2n+1}{m+n+1}{}_2F_1(1, m-n, m+n+2, -1)\right].
-\end{equation}
+
 According to Eq.~\eqref{N-point}, for $N=2$, the orbifold three-point function
 $C_2^{\boldsymbol{h},\boldsymbol{M}}$ is then simply
 \begin{equation}\label{C_2_X}
@@ -297,6 +261,7 @@ matrix products. This observation, which helps with the organization of the book
 \end{figure}
 
 \subsection{Handling null vectors: Genus one}
+We discuss now the case of where the seed theory is a Virasoro minimal model. These theories are built by removing zero-norm states and their descendents from the Verma modules of the Virasoro algebra.  As a consequence, they contain only a finite number of primary fields and are known as minimal models~\cite{BPZ}. 
 As it is well known, some of the Virasoro Verma modules with $c<1$  have 
 null vectors  that must be eliminated to construct irreducible (also called degenerate~\cite{Ribault}) representations of the minimal model conformal algebra.
 Contributions of spurious null vectors 
@@ -811,8 +776,68 @@ There are a couple of possibile future directions that are worth to be mentioned
 Also it will be important to understand if a recursive formula for higher genus conformal blocks, such as that put forward in~\cite{Cho}, can be effectively implemented when $c<1$, due to the additional null vector resonances.
 
 \appendix
-\section{Ward identities}\label{app_ward}
+\section{Recults from Virasoro algebra}\label{app_ward}
 
+Consider a CFT on the Riemann sphere parameterized by $z$.
+The Virasoro generators are defined by their action on the fields:
+\begin{equation}
+\label{vir_ln}
+ L_{-n}(z)X^{M}_h(z)=-\oint_{C_{z}}\frac{dz'}{2\pi i}(z'-z)^{n+1}~T(z')~X^{M}_h(z),
+\end{equation}
+where $C_{z}$ is a closed contour containing $z$ and $T(z)$ is the stress energy tensor. 
+From the current-current OPE
+\begin{equation}
+T(z) T(0)= \frac{c}{z^4}+ \frac{2}{z^2} T(0)+\frac{1}{z}\partial T (0)+\text{regular terms},
+\end{equation} 
+one obtains the  Virasoro algebra
+\begin{equation}
+ [L_n(0), L_{m}(0)]X^{M}_h(0) =\left[(n-m) L_{n+m}(0)+\frac{c}{12}n(n^2-1)\delta_{n+m, 0}\right]X^{M}_h(0).
+\end{equation}
+
+We want to show now how the descendant fields transforms under a conformal map:
+\begin{equation}
+t \mapsto z(t)
+\end{equation}
+To do that, by using the transformation of the stress energy tensor under a conformal map,
+\begin{equation}
+T(z)\mapsto \left(\frac{d z}{d t}\right)^{-2} T(z(t))-\frac{c}{12}\left\{z(t),t\right\},
+\end{equation}
+where $\{z(t),t\}$ is the Shwartzian derivative,  in the Eq.(\ref{vir_ln}), one obtains the relation between the modes $L_{n}$ on the $z$ plane and the modes $\mathcal{L}_n(t)$ on the t plane:
+\begin{equation}\label{gengen}
+\begin{aligned}
+ \mathcal{L}_{n}(t)&=\frac{c}{12} \oint_{\mathcal{C}_t}\frac{d t'}{2\pi i}\, (t'-t)^{n+1}\left\{z(t'),t'\right\} +\\
+ & +\left(\frac{d z(t)}{d t}\right)^{-n} L_n^{(z(t))}
+ +\frac{1-n}{2}\frac{\left.\frac{d^2 z(t)}{d t^2}\right|_{t=t'}}{\left(\frac{d z(t)}{d t}\right)^{n+2}}L_{n+1}^{(z(t))}+\cdots
+ \end{aligned}
+\end{equation}
+We now illustrate an application of Eq.~\eqref{conformal_block_decomposition} to a flat torus. For $N=2$, the three-point function of Eq.~\eqref{orbifold_three-point} 
+can be calculated by considering the  one-to-two map
+\begin{equation}\label{g_one_covering_map}
+ z(t)=\frac{(t+1)^2}{4t}.
+\end{equation}
+which transforms $z=\infty$ into $t_{\infty}=\{0,\infty\}$
+in the $t$-plane and has branch points of order two at $z_b=\{0,1\}$.  For the mapping in Eq.~\eqref{g_one_covering_map}, 
+we can write down  the expansion of the Virasoro descendents in Eq.~\eqref{Virasoro_transf};
+if $n\geq 1$ it reads
+\begin{equation}
+\label{g1_1}
+ \mathcal{L}_{-n}(t_{\infty})=\sum_{m\geq -n} a_{nm} L_{m}(t=t_{\infty})+\frac{c}{32}(n-1), \quad t_{\infty}=\{0,\infty\},
+\end{equation}
+with
+\begin{equation}
+\label{g1_2}
+ a_{nm}=\frac{1}{4^n}\left[2^{2n+1}-\binom{2n+1}{m+n+1}{}_2F_1(1, m-n, m+n+2, -1)\right].
+\end{equation}
+
+Under the conformal map of
+Eq.~\eqref{g_one_covering_map}, the Virasoro descendent in Eq.~\eqref{vir_infty}
+is then transformed into the linear combination of descendents in the $t$-plane
+\begin{equation}\label{Virasoro_transf}
+ \mathcal{L}_{-n}(t_{\infty})=-\oint_{C_{t_{\infty}}}\frac{dt}{2\pi i}
+ \left(\frac{dz}{dt}\right)^{-1}[z(t)]^{n+1}
+ \left[T(t)-\frac{c}{12}\{z(t), t\}\right],
+\end{equation}
+where $C_{t_{\infty}}$ is a contour encircling the point $t_{\infty}$.
 The three-point correlations on the sphere which appear 
 in the expansion in Eq.~\eqref{genus_two_conf_block} of the genus two conformal block can be 
 computed recursively by employing the following Ward identities~\cite{Teschner},
@@ -832,10 +857,7 @@ and
  \langle \phi_{h_1}|\phi_{h_2}(1)|L_{-n}\phi_{h_3}\rangle=
  \langle L_{-n}\phi_{h_3}|\phi_{h_2}(1)|\phi_{h_1}\rangle.
 \end{equation}
-We recall that the Virasoro operators $L_n$ satisfy the commutation relations
-\begin{equation}
- [L_n, L_{m}]=(n-m) L_{n+m}+\frac{c}{12}n(n^2-1)\delta_{n+m, 0}.
-\end{equation}
+
 
 
 
