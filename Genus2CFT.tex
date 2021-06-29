@@ -85,8 +85,9 @@ The CFT partition function on $\Sigma_{N-1}(x)$ is strictly related to the orbif
 \begin{equation}
  h_{\sigma_N}=\bar{h}_{\sigma_N}=\frac{c}{24}\left(N-\frac{1}{N}\right);
 \end{equation}
-\noindent More specifically, the partition function $\mathcal{Z}_{N-1}(x)$ is given by the four-point function of twist fields  
+\noindent More specifically, the partition function $\mathcal{Z}_{N-1}(x)$ is given by the four-point function of twist fields inserted at the branch points $z=z_{branch}=\{0,1,x,\infty\}$: 
 \begin{equation}
+\label{geom_inter}
 \mathcal{Z}_{N-1}(x)=\langle \sigma_N| \bar{\sigma}_N(1)\sigma_N(x,\bar{x})|\bar{\sigma}_N\rangle,
  \end{equation}
 where $\langle \sigma_N |\equiv\lim_{z\rightarrow\infty}z^{2h_{\sigma_{N}}}\langle 0|\sigma_N(z)$ and $|\sigma_{N}\rangle\equiv\lim_{z\rightarrow 0}\sigma_{N}(z)|0\rangle$, with $|0\rangle$ the vacumm in $\mathcal{C}^{\otimes N}$.
@@ -141,7 +142,7 @@ function of the orbifold theory admit the following expansion:
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)\mathcal{G}_{c,\boldsymbol{\bar{h}}}^{(N)}(\bar{z}),
 \end{equation}
 where $\boldsymbol{h}\equiv\{h_1, \dots, h_N\}$ with $h_j$ being the conformal dimension of  
-a primary in the seed theory. 
+a primary in the seed theory. In the above expression we inserted one twist field at a general point $(z,\bar{z})$ on the Riemann sphere to stress the fact we are computing a standard CFT correlation function on the $z$-sphere. To recover the geometric interpretations encoded in Eq.~\eqref{riemann_surf} and in Eq.~\eqref{geom_inter}, one sets $z,\bar{z}\to x,\bar{x}$.
 The function $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, discussed below, are the so-called modular conformal blocks. The $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ are fixed by the orbifold symmetry algebra  and they encode therefore the universal part of the orbifold correlation functions. On the other hand, the structure constants  $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$  characterize the specific bootstrap solution under consideration. 
 
 \noindent Let us first review the procedure, as  given in \cite{Collier}, to obtain the small $z$ expansion  of  $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$.  The Hilbert space of the seed theory is formed by the primary fields $\phi_{h}(z)$  and its descendants ~\cite{BPZ}. Given a partition  $M\equiv\{m_1,\dots,m_q\}$ of the integer  $|M|$, the space of descendants of $\phi_{h}(z)$ at level $|M|$ is spanned by the fields
@@ -180,40 +181,38 @@ one obtains the power series representation for the higher genus conformal block
  \mathcal{G}_{c,\boldsymbol{h}}(z)=
  z^{-2h_{\sigma_N}}\sum_{\boldsymbol{M}, \boldsymbol{M}'} z^{h_{\boldsymbol{X}}}[\langle \boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}|\sigma_N(1)|\bar{\sigma}_N\rangle]^*[\boldsymbol{G}_{XY}]^{-1}\langle \boldsymbol{Y}_{\boldsymbol{h}}^{\boldsymbol{M}'}| \sigma_N(1)|\bar{\sigma}_N\rangle.
 \end{equation}
-\subsection{Unfolding the three point functions}
-
+\subsection{Computing the three point functions by unfolding}
 To compute the orbifold three-point function
 \begin{equation}\label{orbifold_three-point}
  C_N^{\boldsymbol{h},\boldsymbol{M}}:=\langle \boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}| \sigma_N(1)|\bar{\sigma}_N\rangle.
 \end{equation}
-one usually considers a one-to-$N$ conformal map
-$z=f(t)$ with branch points at $z_{\text{branch}}=\{0, 1\}$ such that, near 
-these points, it behaves as $z-z_{\text{branch}}=a_b(t-t_{\text{branch}})^N+o((t-t_{\text{branch}})^N)$~\cite{Lunin}.
-That is, the $t$-surface must be a $N$-sheet cover with genus zero (a Riemann sphere)
+one usually considers a $N$-to-one conformal map
+$t\mapsto z(t)$ with branch points at $z_{\text{branch}}=\{0, 1\}$ such that, near 
+these points, it behaves as $z-z_{\text{branch}}\sim (t-t_{\text{branch}})^N$~\cite{Lunin}.
+That is, the $t$-surface is a $N$-sheet cover with genus zero (a Riemann sphere)
  of the $z$-Riemann sphere with a branch cut along 
-$(0,1)$. Moreover, the point $z=\infty$, where the field $\boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}$ in Eq.~\eqref{orbifold_three-point} is inserted,
-must be mapped to $N$ different points $t_\infty=\{t_1, \dots, t_N\}$ in 
+$(0,1)$. The point $z=\infty$, where the field $\boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}$ in Eq.~\eqref{orbifold_three-point} is inserted, is mapped to $N$ different points $t_\infty=\{t_1, \dots, t_N\}$ in 
 the covering space. Let us denote by $\mathcal{X}_{h_j}^{M_j}(t_j)$ one of the images
-of the operator $X_{h_j}^{M_j}(\infty)$ under the covering map $z=f(t)$:
+of the operator $X_{h_j}^{M_j}(\infty)$ under the covering map $t\mapsto z(t)$:
 \begin{equation}
-\boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}(\infty)\mapsto \{\mathcal{X}_{h_j}^{M_j}(t_j)\}_{j=1,\cdots,N}= \{\boldsymbol{\mathcal{L}}_{-M_j}(t_j)\phi_{h}(t_j)\}_{j=1,\cdots,N},
+\{\mathcal{X}_{h_j}^{M_j}(t_j)\}_{j=1,\cdots,N} \{\boldsymbol{\mathcal{L}}_{-M_j}(t_j)\phi_{h}(t_j)\}_{j=1,\cdots,N}\mapsto \boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}(\infty),
 \end{equation}
-where the $\boldsymbol{\mathcal{L}}_{-M_j}(t_j)$ are the transformed Virasoro generators acting on the $t-$ surface, see Appendix..
- The  orbifold  three-point 
-function  is then the $N$-point function of the seed theory $\mathcal{C}$ on the sphere:
+where the $\boldsymbol{\mathcal{L}}_{-M_j}(t_j)$ are the transformed Virasoro generators living on the $t$- surface, see Appendix..
+ The  orbifold  three-point function (\ref{orbifold_three-point})  is then transformed into the $N$-point function on $t$-sphere:
 \begin{equation}\label{N-point}
  C_N^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}^{M_1}_{h_1}(t_1)\cdots\mathcal{X}_{h_N}^{M_N}(t_N)\rangle.
 \end{equation}
+{\bf Raoul: The Weyl anomaly is trivial or not tken into account?}
 
-\noindent Let us illustrate explicit calculations of Eq.~\eqref{conformal_block_decomposition} for $N=2$ and $N=3$. 
+ 
 
-\subsection{ The case $N=2$}
-In the case $N=2$, we can use the map
+\subsection{ Explicit calculations of modular conformal blocks: the case $N=2$}
+In the case $N=2$, we can use the unfolding  map
 \begin{equation}\label{g_one_covering_map}
  z(t)=\frac{(t+1)^2}{4t},
 \end{equation}
-according to which the point $z=\infty$ is mapped on $t_1=\infty$ and $t_2=0$, $z\mapsto t_{\infty}=\{0,\infty\}$.
-Then Eq.~\eqref{N-point} becomes for $N=2$:
+according to which $t_{\infty}=\{0,\infty\}\mapsto z=\infty$.
+Then Eq.~\eqref{N-point} then becomes:
 \begin{equation}\label{C_2_X}
  C_2^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}_{h_1}^{M_1} | \mathcal{X}_{h_2}^{M_2}\rangle_{\rm{sphere}}=
  \delta_{h_1, h_2}\delta_{|M_1|,|M_2|}2^{-4h}\rho^h_{M_1,M_2},
@@ -223,10 +222,13 @@ where $\rho$ is the symmetric $|M_1|\times|M_1|$ matrix
 \label{rho}
  \rho^h_{M_1,M_2}:=\langle\boldsymbol{\mathcal{L}}_{-M_1}\phi_{h}|\boldsymbol{\mathcal{L}}_{-M_2}\phi_{h}\rangle.
 \end{equation}
-The explicit expression of $\boldsymbol{\mathcal{L}}_{-M}(\infty)$and  $\boldsymbol{\mathcal{L}}_{-M}(0)$ have been explicitely computed in  Appendix... Given Eqs.~\eqref{g1_1} and~\eqref{g1_2}, the matrix $\rho^h$  in Eq.~\eqref{rho} above can be calculated by exploiting the Virasoro algebra commutation relations.
+Once the $\boldsymbol{\mathcal{L}}_{-M}(\infty)$and  $\boldsymbol{\mathcal{L}}_{-M}(0)$ are expressed in terms of the $L_{n}$ generators on the Riemann sphere, see Eqs.~\eqref{g1_1} and~\eqref{g1_2}, the matrix $\rho^h$  can be easily computed from Virasoro algebra. 
 Eq.~\eqref{C_2_X} shows that the number of genus one conformal blocks is
 the same as the number of conformal families of the seed theory $\mathcal{C}$.
-This conclusion is of course consistent with the well known construction of the CFT torus partition function as a sesquilinear form of irreducible Virasoro characters~\cite{Cappelli, Cappelli2}. The number of different characters needed to build the torus partition function  is  the same as the number of conformal families. A direct link between the genus one conformal block and the character is provided in Eq.~\eqref{character_conf_block}.
+The torus partiction $\mathcal{\hat{Z}}_1(x)$ is a sesquilinear form of irreducible Virasoro characters $\chi_{h}(\tau(x))$~\cite{Cappelli, Cappelli2}. By comparing this expression  to Eqs.~\eqref{partition_torus_twist}  and (\ref{conformal_block_decomposition_0}), one indeed identifies 
+\begin{equation}\label{character_conf_block}
+\mathcal{G}_{c, h}^{(2)}(x)=2^{-c/3}[x(1-x)]^{-c/24}\chi_{h}(\tau(x)).
+\end{equation}
 
 From Eq.~\eqref{conformal_block_decomposition} and \eqref{g_one_covering_map}, we finally obtain 
 an expression for the genus one conformal block as sum over four positive integer partitions $M_1,~M_2$ and $N_1,~N_2$,
@@ -308,10 +310,7 @@ The coefficient of the $O(z^4)$ term will be different if the regularization
 scheme is not implemented. Indeed the Verma module $(c=1/2,h=1/16)$ has a null vector at level two. If this vector was selected on both replicas of the seed theory, i.e. in the sector $|M_1|=|M_2|=2$ of Eq.~\eqref{genus_two_conf_block}, its contribution would be $O(1)$ in the expansion.
 The power series of the regularized conformal block reproduces the expansion of the character $\chi_{c,h}(q)$ of the irreducible representation $(c,h)$. As usual, we defined $q(z)=e^{i\pi \tau(z)}$ with $\tau(z)$ given in Eq.~\eqref{tau}
 
-By comparing the expression for the diagonal CFT partition function~\cite{Cappelli, Cappelli2} on a flat torus with Eq.~\eqref{partition_torus_twist} one indeed identifies 
-\begin{equation}\label{character_conf_block}
- \tilde{\mathcal{G}}_{c, h}^{(2)}(z)=2^{-c/3}[z(1-z)]^{-c/24}\chi_{c,h}(q).
-\end{equation}
+
 It can be checked that the power series expansion about $z=0$ of the functions in Eq.~\eqref{character_conf_block} coincides order by order. For the case of the identity, $h=0$, we can follow a similar strategy but 
 modifying in Eq.~\eqref{genus_one_conf_block} the dependence of the matrices $G^h$ and 
 $\rho^h$ on $h$ instead of $c$ such as
