@@ -142,8 +142,12 @@ function of the orbifold theory admit the following expansion:
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)\mathcal{G}_{c,\boldsymbol{\bar{h}}}^{(N)}(\bar{z}),
 \end{equation}
 where $\boldsymbol{h}\equiv\{h_1, \dots, h_N\}$ with $h_j$ being the conformal dimension of  
-a primary in the seed theory. In the above expression we inserted one twist field at a general point $(z,\bar{z})$ on the Riemann sphere to stress the fact we are computing a standard CFT correlation function on the $z$-sphere. To recover the geometric interpretations encoded in Eq.~\eqref{riemann_surf} and in Eq.~\eqref{geom_inter}, one sets $z,\bar{z}\to x,\bar{x}$.
-The function $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, discussed below, are the so-called modular conformal blocks. The $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ are fixed by the orbifold symmetry algebra  and they encode therefore the universal part of the orbifold correlation functions. On the other hand, the structure constants  $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$  characterize the specific bootstrap solution under consideration. 
+a primary in the seed theory.
+The function $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, discussed below, are the so-called modular conformal blocks. The $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, normalized such that: 
+\begin{equation}
+\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=z^{\;h -2\; h_{\sigma_N}}\left(1+ O(z)\right),
+\end{equation}
+are the so called modular conformal blocks and are fixed by the orbifold symmetry algebra. These functions encode therefore the universal part of the orbifold correlation functions. On the other hand, the structure constants  $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$  characterize the specific bootstrap solution under consideration. Finally note that in Eq.\eqref{conformal_block_decomposition_0}, we inserted one twist field at a general point $(z,\bar{z})$ on the Riemann sphere to stress the fact we are computing a standard CFT correlation function on the $z$-sphere. To recover the geometric interpretations encoded in Eq.~\eqref{riemann_surf} and in Eq.~\eqref{geom_inter}, one sets $z,\bar{z}\to x,\bar{x}$.
 
 \noindent Let us first review the procedure, as  given in \cite{Collier}, to obtain the small $z$ expansion  of  $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$.  The Hilbert space of the seed theory is formed by the primary fields $\phi_{h}(z)$  and its descendants ~\cite{BPZ}. Given a partition  $M\equiv\{m_1,\dots,m_q\}$ of the integer  $|M|$, the space of descendants of $\phi_{h}(z)$ at level $|M|$ is spanned by the fields
 \begin{equation}
@@ -178,7 +182,7 @@ Notice that there is no summation over $\boldsymbol{h}'$ since the Gram matrix o
 Substituting back Eq.~\eqref{beta} into Eq.~\eqref{OPE} and comparing with Eq.~\eqref{conformal_block_decomposition_0} 
 one obtains the power series representation for the higher genus conformal block 
 \begin{equation}\label{conformal_block_decomposition}
- \mathcal{G}_{c,\boldsymbol{h}}(z)=
+ \mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)=
  z^{-2h_{\sigma_N}}\sum_{\boldsymbol{M}, \boldsymbol{M}'} z^{h_{\boldsymbol{X}}}[\langle \boldsymbol{X}_{\boldsymbol{h}}^{\boldsymbol{M}}|\sigma_N(1)|\bar{\sigma}_N\rangle]^*[\boldsymbol{G}_{XY}]^{-1}\langle \boldsymbol{Y}_{\boldsymbol{h}}^{\boldsymbol{M}'}| \sigma_N(1)|\bar{\sigma}_N\rangle.
 \end{equation}
 \subsection{Computing the three point functions by unfolding}
@@ -206,7 +210,7 @@ where the $\boldsymbol{\mathcal{L}}_{-M_j}(t_j)$ are the transformed Virasoro ge
 
  
 
-\subsection{ Explicit calculations of modular conformal blocks: the case $N=2$}
+\subsection{Explicit calculations of modular conformal blocks: the case $N=2$}
 In the case $N=2$, we can use the unfolding  map
 \begin{equation}\label{g_one_covering_map}
  z(t)=\frac{(t+1)^2}{4t},
@@ -214,7 +218,7 @@ In the case $N=2$, we can use the unfolding  map
 according to which $t_{\infty}=\{0,\infty\}\mapsto z=\infty$.
 Then Eq.~\eqref{N-point} then becomes:
 \begin{equation}\label{C_2_X}
- C_2^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}_{h_1}^{M_1} | \mathcal{X}_{h_2}^{M_2}\rangle_{\rm{sphere}}=
+ C_2^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}_{h_1}^{M_1} | \mathcal{X}_{h_2}^{M_2}\rangle=
  \delta_{h_1, h_2}\delta_{|M_1|,|M_2|}2^{-4h}\rho^h_{M_1,M_2},
 \end{equation}
 where $\rho$ is the symmetric $|M_1|\times|M_1|$ matrix
@@ -227,11 +231,12 @@ Eq.~\eqref{C_2_X} shows that the number of genus one conformal blocks is
 the same as the number of conformal families of the seed theory $\mathcal{C}$.
 The torus partiction $\mathcal{\hat{Z}}_1(x)$ is a sesquilinear form of irreducible Virasoro characters $\chi_{h}(\tau(x))$~\cite{Cappelli, Cappelli2}. By comparing this expression  to Eqs.~\eqref{partition_torus_twist}  and (\ref{conformal_block_decomposition_0}), one indeed identifies 
 \begin{equation}\label{character_conf_block}
-\mathcal{G}_{c, h}^{(2)}(x)=2^{-c/3}[x(1-x)]^{-c/24}\chi_{h}(\tau(x)).
+\mathcal{G}_{c,h}^{(2)}(x)=2^{-c/3}[x(1-x)]^{-c/24}\chi_{h}(\tau(x)), 
 \end{equation}
 
-From Eq.~\eqref{conformal_block_decomposition} and \eqref{g_one_covering_map}, we finally obtain 
-an expression for the genus one conformal block as sum over four positive integer partitions $M_1,~M_2$ and $N_1,~N_2$,
+{\bf Raoul: to fix the good normalization and then the structire constants}
+
+Using Eq.\eqref{C_2_X} in  Eq.~\eqref{conformal_block_decomposition}, one obtains the following expression:
 \begin{equation}\label{genus_one_conf_block}
  \mathcal{G}_{c, h}^{(2)}(z)=2^{-8h}\sum_{M_1, M_2}\sum_{N_1, N_2}
  z^{2h-c/8+|M_1|+|M_2|}[G^{h}_{M_1,N_1}]^{-1}[G^{h}_{ M_2,N_2}]^{-1}
@@ -239,7 +244,7 @@ an expression for the genus one conformal block as sum over four positive intege
 \end{equation}
 By recalling that the matrices $G^h$ and $\rho^h$ are symmetric, the coefficients of the combinatorial 
 expansion in Eq.~\eqref{genus_one_conf_block} can be organized as 
-matrix products. This observation, which helps with the organization of the bookkeeping of the states, is translated  into  the diagram of Fig.~\ref{fig-g1}. 
+matrix products, represented in the diagram of Fig.~\ref{fig-g1}. 
 
 \begin{figure}[t]
 \centering
@@ -273,6 +278,51 @@ matrix products. This observation, which helps with the organization of the book
 \caption{On the left: Matrix product representation of the genus one conformal block in Eq.~\eqref{genus_one_conf_block}. On the right: Matrix product representation of the genus two conformal block in Eq.~\eqref{genus_two_conf_block}.}
 \label{fig-g1}
 \end{figure}
+\subsection{Explicit calculations of modular conformal blocks: the case $N=2$}
+
+For $N=3$, the orbifold three-point correlation 
+function of Eq.~\eqref{orbifold_three-point} can be computed 
+by considering the three-to-one map~\cite{Collier}
+\begin{equation}\label{g_two_covering_map}
+ t\mapsto z =\frac{(t+\omega)^3}{3\omega(1-\omega)t(t-1)},\quad \omega=e^{\frac{2\pi i}{3}}.
+\end{equation}
+This transformation has branch points of order three at 
+$z=0$ and $1$ and maps $z=\infty$  to the set of points 
+$t_{\infty}=\{0, 1, \infty\}$ in the $t$-space.
+The images $\mathcal{L}_{-n}(t_{\infty})$ of the Virasoro descendent $L_{-n}(z=\infty)$ 
+under Eq.~\eqref{g_two_covering_map} can be obtained, as in the 
+case of genus one, by using Eq.~\eqref{Virasoro_transf}.
+Then we have, for $n\geq 1$,
+\begin{equation}
+ \mathcal{L}_{-n}(t_{\infty})=\sum_{m\geq -n} a_{nm}^{t_{\infty}}L_m(t=t_\infty)+\frac{c}{27}(n-1),
+\end{equation}
+where the coefficients $a_{nm}^{t_{\infty}}$ can be determined in closed form from the residue theorem, see also Eq.~(2.9)
+of Ref.~\cite{Collier}. The $\mathbb{C}$-number $C_3^{\boldsymbol{h},\boldsymbol{M}}$ in Eq.~\eqref{conformal_block_decomposition} is the three-point function on the $t$-sphere:
+\begin{equation}\label{C_3_X}
+ C_3^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}_{h_1}|\mathcal{X}_{h_2}(1)|\mathcal{X}_{h_3} 
+ =[3\omega(1-\omega)]^{-h_1-h_2-h_3}C_{h_1h_2h_3}\rho_{M1,M2,M3}^{h_1,h_2,h_3}
+\end{equation}
+where $C_{h_1 h_2 h_3}=\langle \phi_{h_1}|\phi_{h_2}(1)|\phi_{h_3}\rangle$ is a structure constant in the seed CFT, while the symmetric tensor $\rho^{h_1,h_2,h_3}$ is 
+\begin{equation}
+ \rho^{h_1,h_2,h_3}_{M_1,M_2,M_3}:=
+ \frac{\langle \boldsymbol{\mathcal{L}}_{-M_1}\phi_{h_1}|\boldsymbol{\mathcal{L}}_{-M_2}(1)\phi_{h_2}(1)|\boldsymbol{\mathcal{L}}_{-M_3}\phi_{h_3}\rangle}
+ { \langle \phi_{h_1}|\phi_{h_2}(1)|\phi_{h_3}\rangle}.
+\end{equation}
+
+From Eq.~\eqref{C_3_X}, it follows that the number of genus two conformal block is in one-to-one correspondence~\cite{Cardy, Collier} with the number of non-zero structure constants of $\mathcal{C}$.
+From Eq.~\eqref{conformal_block_decomposition}, we can eventually deduce the following matrix-product representation
+for the genus two conformal block \cite{Collier}
+\begin{equation}\label{genus_two_conf_block}
+ \mathcal{G}_{c, h_1, h_2, h_3}^{(3)}(z)=
+ 2^{-4\sum\limits_{j=1}^3h_j}
+ \sum_{\{M_j\}}\sum_{\{N_j\}}
+ z^{-2c/9+\sum\limits_{j=1}^3(h_j+|M_j|)}
+ \prod_{j=1}^3 [G_{M_j,N_j}^{h_j}]^{-1}
+ \rho^{h_1,h_2,h_3}_{M_1,M_2,M_3}[\rho_{N_1,N_2,N_3}^{h_1,h_2,h_3}]^*,
+\end{equation}
+which is also illustrated in Fig.~\ref{fig-g1}.
+The conformal block $\mathcal{G}_{c, h_1, h_2, h_3}^{(3)}$ in Eq.~\eqref{genus_two_conf_block} is
+manifestly symmetric under permutations of $h_1$, $h_2$ and $h_3$, consistently with the $\mathbb Z_3$ (in fact $S_3$) symmetry of the untwisted orbifold sector.
 
 \subsection{Handling null vectors: Genus one}
 We discuss now the case of where the seed theory is a Virasoro minimal model. These theories are built by removing zero-norm states and their descendents from the Verma modules of the Virasoro algebra.  As a consequence, they contain only a finite number of primary fields and are known as minimal models~\cite{BPZ}. 
@@ -321,51 +371,6 @@ with $\mu>0$. Then the limit $\mu\to 0$ produces the regularized
 conformal block $\tilde{\mathcal{G}}_{c, 0}^{(2)}(z)$ that
 provides, using Eq.~\eqref{character_conf_block}, the  character of the irreducible representation of the identity.
 
-\subsection{Genus two}
-
-For $N=3$, the orbifold three-point correlation 
-function of Eq.~\eqref{orbifold_three-point} can be computed 
-by considering the one-to-three conformal map~\cite{Collier}
-\begin{equation}\label{g_two_covering_map}
- z(t)=\frac{(t+\omega)^3}{3\omega(1-\omega)t(t-1)},
-\end{equation}
-where $\omega=e^{\frac{2\pi i}{3}}$. This transformation has branch points of order three at 
-$z=0$ and $1$ and maps $z=\infty$  to the set of points 
-$t_{\infty}=\{0, 1, \infty\}$ in the $t$-space.
-The images $\mathcal{L}_{-n}(t_{\infty})$ of the Virasoro descendent $L_{-n}(z=\infty)$ 
-under the conformal map in Eq.~\eqref{g_two_covering_map} can be obtained, as in the 
-case of genus one, by using Eq.~\eqref{Virasoro_transf}.
-Then we have, for $n\geq 1$,
-\begin{equation}
- \mathcal{L}_{-n}(t_{\infty})=\sum_{m\geq -n} a_{nm}^{t_{\infty}}L_m(t=t_\infty)+\frac{c}{27}(n-1),
-\end{equation}
-where the coefficients $a_{nm}^{t_{\infty}}$ can be determined in closed form from the residue theorem, see also Eq.~(2.9)
-of Ref.~\cite{Collier}. Finally, the $\mathbb{C}$-number $C_3^{\boldsymbol{h},\boldsymbol{M}}$ in Eq.~\eqref{conformal_block_decomposition} is the sphere three-point function
-\begin{equation}\label{C_3_X}
- C_3^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}_{h_1}|\mathcal{X}_{h_2}(1)|\mathcal{X}_{h_3}\rangle_{\text{sphere}} 
- =[3\omega(1-\omega)]^{-h_1-h_2-h_3}C_{h_1h_2h_3}\rho_{M1,M2,M3}^{h_1,h_2,h_3}
-\end{equation}
-where $C_{h_1 h_2 h_3}=\langle \phi_{h_1}|\phi_{h_2}(1)|\phi_{h_3}\rangle$ is a structure constant in the seed CFT, while the symmetric tensor $\rho^{h_1,h_2,h_3}$ is 
-\begin{equation}
- \rho^{h_1,h_2,h_3}_{M_1,M_2,M_3}:=
- \frac{\langle \boldsymbol{\mathcal{L}}_{-M_1}(\infty)\phi_{h_1}(\infty)|\boldsymbol{\mathcal{L}}_{-M_2}(1)\phi_{h_2}(1)|\boldsymbol{\mathcal{L}}_{-M_3}(0)\phi_{h_3}(0)\rangle}
- { \langle \phi_{h_1}(\infty)|\phi_{h_2}(1)|\phi_{h_3}(0)\rangle}.
-\end{equation}
-The latter can be calculated by implementing in a computer algebra system, such as \texttt{Mathematica}, the Ward identities of Appendix~\ref{app_ward}.
-From Eq.~\eqref{C_3_X}, it follows that the number of genus two conformal block is in one-to-one correspondence~\cite{Cardy, Collier} with the number of non-zero structure constants of $\mathcal{C}$. For rational CFTs, this number is finite and this property will help convergence of the numerical genus two modular bootstrap, as  discussed in Sec.~\ref{sec:num_bootstrap}.
-From Eq.~\eqref{conformal_block_decomposition}, we can eventually deduce the following matrix-product representation
-for the genus two conformal block \cite{Collier}
-\begin{equation}\label{genus_two_conf_block}
- \mathcal{G}_{c, h_1, h_2, h_3}^{(3)}(z)=
- 2^{-4\sum\limits_{j=1}^3h_j}
- \sum_{\{M_j\}}\sum_{\{N_j\}}
- z^{-2c/9+\sum\limits_{j=1}^3(h_j+|M_j|)}
- \prod_{j=1}^3 [G_{M_j,N_j}^{h_j}]^{-1}
- \rho^{h_1,h_2,h_3}_{M_1,M_2,M_3}[\rho_{N_1,N_2,N_3}^{h_1,h_2,h_3}]^*,
-\end{equation}
-which is also illustrated in Fig.~\ref{fig-g1}.
-The conformal block $\mathcal{G}_{c, h_1, h_2, h_3}^{(3)}$ in Eq.~\eqref{genus_two_conf_block} is
-manifestly symmetric under permutations of $h_1$, $h_2$ and $h_3$, consistently with the $\mathbb Z_3$ (in fact $S_3$) symmetry of the untwisted orbifold sector.
 
 In the case of minimal models with $c<1$, we also have to remove from the expansion in
 Eq.~\eqref{genus_two_conf_block} the contribution of null vectors. We can eliminate it by
