@@ -343,21 +343,15 @@ manifestly symmetric under permutations of $h_1$, $h_2$ and $h_3$, consistently 
 
 \subsection{Handling null vectors}
 \label{null_vec1}
-We discuss now the case of where the seed theory is a Virasoro minimal model. These theories are built by removing zero-norm states and their descendents from the Verma modules of the Virasoro algebra.  As a consequence, they contain only a finite number of primary fields and are known as minimal models~\cite{BPZ}. 
-As it is well known, some of the Virasoro Verma modules with $c<1$  have 
-null vectors  that must be eliminated to construct irreducible (also called degenerate~\cite{Ribault}) representations of the minimal model conformal algebra.
-Contributions of spurious null vectors 
-are nevertheless present in the expansion of Eq.~\eqref{genus_one_conf_block}, since the latter includes \textit{a priori} all the states within a Verma module. Therefore, a correct definition of higher genus conformal blocks for a rational seed CFTs  must be supplemented with a regularization scheme that removes them. A simple procedure is outlined in the following. 
+We consider now the case where the seed theory contains Virasoro representation with vanishing null-vector states \cite{BPZ}. 
+An exemple of such theories are the minimal models, that are rational CFT with $c<1$.  
+When vanishing null-cector states are present, the modular conformal block is  still given by an expanion of the form Eq.~\eqref{genus_one_conf_block}, but the null vector and their descendants do not contribute. For instance,  the sum in Eq.~\eqref{genus_one_conf_block} cannot in general over all the possible partitions of a given level, as the number of non vanishing descendants at that level is smaller. One way to proceed would be to find the basis of non-vanishing descendants and to sum over these. 
+However, even if there are closed expressions for the null vectors,  it is quite complicated to implement numerically. 
+Here we show that, via a careful limiting  procedure,outlined in the following,  there is however one numerical efficient way to use the form Eq.~\eqref{genus_one_conf_block} to compute the modular conformal block for minimal model.  Note that this regularization is in the same spirit of the one used for instance to apply the AGT relation to the minimal models...
 
 
 
-Let us assume that the Virasoro representation labelled by $(c, h)$
-contains a null vector, and suppose to choose a basis  that   includes it. The null vector and its descendent are orthogonal to all 
-vectors of the basis, thus the representation is reducible.  Observe now, see also Fig.~\ref{fig-g1}, that the inverse of the Gram matrix appears twice in the
-genus one conformal block of Eq.~\eqref{genus_one_conf_block}. The 
-entries of the inverse Gram matrix are proportional to $[\det(G^h)]^{-1}$ 
-and, therefore, are singular when the null vector is among the basis 
-elements. As already emphasized, the scalar products $\rho^h$ in Eq.~\eqref{genus_one_conf_block} 
+\noindent Let us illustrate this procedure in the $N=2$ case.  From Fig.~\ref{fig-g1}, one observes that the inverse of the Gram matrix appears twice. The  entries of the inverse Gram matrix are singular when there is  a null vector in the representation. As already emphasized, the scalar products $\rho^h$ in Eq.~\eqref{genus_one_conf_block} 
 vanish instead. In order to eliminate the null vector contribution from Eq.~\eqref{genus_one_conf_block} is then
 enough, if $h\neq0$, to modify the central charge dependence of both 
 $\rho^h$ and $G^h$ as follows 
