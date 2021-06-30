@@ -310,41 +310,35 @@ by considering the three-to-one map~\cite{Collier}
  t\mapsto z =\frac{(t+\omega)^3}{3\omega(1-\omega)t(t-1)},\quad \omega=e^{\frac{2\pi i}{3}}.
 \end{equation}
 This transformation has branch points of order three at 
-$z=0$ and $1$ and maps $z=\infty$  to the set of points 
-$t_{\infty}=\{0, 1, \infty\}$ in the $t$-space.
+$z=0$ and $1$ and maps $t_{\infty}=\{0, 1, \infty\} \mapsto z=\infty$ 
 The images $\mathcal{L}_{-n}(t_{\infty})$ of the Virasoro descendent $L_{-n}(z=\infty)$ 
 under Eq.~\eqref{g_two_covering_map} can be obtained, as in the 
-case of genus one, by using Eq.~\eqref{Virasoro_transf}.
-Then we have, for $n\geq 1$,
-\begin{equation}
- \mathcal{L}_{-n}(t_{\infty})=\sum_{m\geq -n} a_{nm}^{t_{\infty}}L_m(t=t_\infty)+\frac{c}{27}(n-1),
-\end{equation}
-where the coefficients $a_{nm}^{t_{\infty}}$ can be determined in closed form from the residue theorem, see also Eq.~(2.9)
-of Ref.~\cite{Collier}. The $\mathbb{C}$-number $C_3^{\boldsymbol{h},\boldsymbol{M}}$ in Eq.~\eqref{conformal_block_decomposition} is the three-point function on the $t$-sphere:
-\begin{equation}\label{C_3_X}
- C_3^{\boldsymbol{h},\boldsymbol{M}}=\langle \mathcal{X}_{h_1}|\mathcal{X}_{h_2}(1)|\mathcal{X}_{h_3} 
- =[3\omega(1-\omega)]^{-h_1-h_2-h_3}C_{h_1h_2h_3}\rho_{M1,M2,M3}^{h_1,h_2,h_3}
-\end{equation}
-where $C_{h_1 h_2 h_3}=\langle \phi_{h_1}|\phi_{h_2}(1)|\phi_{h_3}\rangle$ is a structure constant in the seed CFT, while the symmetric tensor $\rho^{h_1,h_2,h_3}$ is 
+case of genus one, by using Eq.~\eqref{Virasoro_transf}, see also Eq.~(2.9)
+of Ref.~\cite{Collier}. We have 
+\begin{align}\label{C_3_X}
+ \langle \boldsymbol{\phi}^{\{M_1,M_2,M_3\}}_{\{h_1,h_2,h_3\}}(\infty) \sigma_{N}(1)\bar{\sigma}_{N}(0)\rangle &=\langle \tilde{\phi}_{h_1}^{M_1} (\infty) \tilde{\phi}_{h_2}^{M_2}(1) \tilde{\phi}_{h_3}^{M_3}(0)\rangle
+ = \\
+ &=[3\omega(1-\omega)]^{-h_1-h_2-h_3}C_{h_1h_2h_3}\rho_{M1,M2,M3}^{h_1,h_2,h_3}
+\end{align}
+where $C_{h_1 h_2 h_3}=\langle \phi_{h_1}(\infty)\phi_{h_2}(1)\phi_{h_3}(0)\rangle$ is a structure constant in the seed CFT, while the symmetric tensor $\rho^{h_1,h_2,h_3}$ is 
 \begin{equation}
  \rho^{h_1,h_2,h_3}_{M_1,M_2,M_3}:=
- \frac{\langle \boldsymbol{\mathcal{L}}_{-M_1}\phi_{h_1}|\boldsymbol{\mathcal{L}}_{-M_2}(1)\phi_{h_2}(1)|\boldsymbol{\mathcal{L}}_{-M_3}\phi_{h_3}\rangle}
+ \frac{\langle \mathcal{L}_{-M_1}\phi_{h_1}|\mathcal{L}_{-M_2}(1)\phi_{h_2}(1)|\mathcal{L}_{-M_3}\phi_{h_3}\rangle}
  { \langle \phi_{h_1}|\phi_{h_2}(1)|\phi_{h_3}\rangle}.
 \end{equation}
 
-From Eq.~\eqref{C_3_X}, it follows that the number of genus two conformal block is in one-to-one correspondence~\cite{Cardy, Collier} with the number of non-zero structure constants of $\mathcal{C}$.
-From Eq.~\eqref{conformal_block_decomposition}, we can eventually deduce the following matrix-product representation
+From Eq.~\eqref{C_3_X}, it follows a genus two conformal block is in one-to-one correspondence~\cite{Cardy, Collier} with the number of non-zero structure constants of $\mathcal{C}$.
+After unfolding, the Eq.~\eqref{conformal_block_decomposition} has, in the case $N=3$, the  following matrix-product representation
 for the genus two conformal block \cite{Collier}
 \begin{equation}\label{genus_two_conf_block}
- \mathcal{G}_{c, h_1, h_2, h_3}^{(3)}(z)=
- 2^{-4\sum\limits_{j=1}^3h_j}
- \sum_{\{M_j\}}\sum_{\{N_j\}}
- z^{-2c/9+\sum\limits_{j=1}^3(h_j+|M_j|)}
+ \mathcal{G}_{c, \{h_1, h_2, h_3\}}^{(3)}(z)=
+z^{\sum_{j=1}^3 h_j-\frac{2c}{9}}\sum_{\substack{\{M_j\}, \{N_j\}\\|M_j|+|N_j|}}
+ z^{\sum\limits_{j=1}^3 |M_j|}
  \prod_{j=1}^3 [G_{M_j,N_j}^{h_j}]^{-1}
- \rho^{h_1,h_2,h_3}_{M_1,M_2,M_3}[\rho_{N_1,N_2,N_3}^{h_1,h_2,h_3}]^*,
+ \rho^{h_1,h_2,h_3}_{M_1,M_2,M_3}\rho_{N_3,N_2,N_1}^{h_3,h_2,h_1},
 \end{equation}
 which is also illustrated in Fig.~\ref{fig-g1}.
-The conformal block $\mathcal{G}_{c, h_1, h_2, h_3}^{(3)}$ in Eq.~\eqref{genus_two_conf_block} is
+The conformal block $\mathcal{G}_{c, \{h_1, h_2, h_3\}}^{(3)}$ in Eq.~\eqref{genus_two_conf_block} is
 manifestly symmetric under permutations of $h_1$, $h_2$ and $h_3$, consistently with the $\mathbb Z_3$ (in fact $S_3$) symmetry of the untwisted orbifold sector.
 
 \subsection{Handling null vectors}
