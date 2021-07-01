@@ -250,19 +250,19 @@ Using Eq.\eqref{C_2_X} in Eq.\eqref{conformal_block_decomposition}, one arrives 
  z^{2h-\frac{c}{8}+|M_1|+|M_2|}[G^{h}_{M_1,N_1}]^{-1}[G^{h}_{ M_2,N_2}]^{-1}
  \rho^h_{M_2,M_1}\rho^h_{N_2,N_1}.
 \end{equation}
-By recalling that the matrices $G^h$ and $\rho^h$ are symmetric, the coefficients of the combinatorial 
+The matrices $G^h$ and $\rho^h$ are symmetric, the coefficients of the combinatorial 
 expansion in Eq.~\eqref{genus_one_conf_block} can be organized as 
 matrix products, presented in the diagram of Fig.~\ref{fig-g1}. 
 
-\noindent Let recall that the torus partiction $\mathcal{\hat{Z}}_1(x)$ is a sesquilinear form of irreducible Virasoro characters $\chi_{h}(\tau(x))$~\cite{Cappelli, Cappelli2}:
+\noindent Let recall that the $\mathcal{C}$ partition function $\mathcal{\hat{Z}}_1(x)$ on a flat torus is a sesquilinear form of Virasoro characters $\chi_{h}(\tau(x))$~\cite{Cappelli, Cappelli2}:
 \begin{equation}
 \mathcal{\hat{Z}}_1(x) = \sum_{h,\bar{h}} \chi_{h}(\tau(x)) \chi_{\bar{h}}(\bar{\tau}(x)),
 \end{equation}
-where 
+that behave asymptotically as:
 \begin{equation}
-\chi_{h}(\tau(x)) = e^{2\pi i \tau(x)\left(h-\frac{c}{24}\right)}\left(1+ o\left(e^{2\pi i \tau(x)}\right)\right) \sim \left(\frac{x}{16}\right)^{ 2 h-\frac{c}{12}}, \quad \text{for}\; x<<1
+\chi_{h}(\tau(x)) = e^{2\pi i \tau(x)\left(h-\frac{c}{24}\right)}\left(1+ o\left(e^{2\pi i \tau(x)}\right)\right) \sim \left(\frac{x}{16}\right)^{ 2 h-\frac{c}{12}}, \quad \text{for}\; x<<1.
 \end{equation}
- By comparing this expression  to Eqs.~\eqref{partition_torus_twist}  and (\ref{conformal_block_decomposition_0}), one indeed identifies 
+ By comparing the above expressions with Eqs.~\eqref{partition_torus_twist}  and (\ref{conformal_block_decomposition_0}), one identifies 
 \begin{equation}\label{character_conf_block}
 \mathcal{G}_{c,h}^{(2)}(x)=2^{-c/3}[x(1-x)]^{-c/24}\chi_{h}(\tau(x)),\quad  D_{\{ h_1, h_2 \}, \{ \bar{h}_1,\bar{h}_2\} } =\delta_{h_1,h_2}\;\delta_{\bar{h}_1,\bar{h}_2} \;2^{-8 (h_1+\bar{h}_1)}
 \end{equation}
@@ -341,41 +341,32 @@ which is also illustrated in Fig.~\ref{fig-g1}.
 The conformal block $\mathcal{G}_{c, \{h_1, h_2, h_3\}}^{(3)}$ in Eq.~\eqref{genus_two_conf_block} is
 manifestly symmetric under permutations of $h_1$, $h_2$ and $h_3$, consistently with the $\mathbb Z_3$ (in fact $S_3$) symmetry of the untwisted orbifold sector.
 
-\subsection{Handling null vectors}
+\subsection{Handling null vectors in minimal model theories }
 \label{null_vec1}
-We consider now the case where the seed theory contains Virasoro representation with vanishing null-vector states \cite{BPZ}. 
-An exemple of such theories are the minimal models, that are rational CFT with $c<1$.  
-When vanishing null-cector states are present, the modular conformal block is  still given by an expanion of the form Eq.~\eqref{genus_one_conf_block}, but the null vector and their descendants do not contribute. For instance,  the sum in Eq.~\eqref{genus_one_conf_block} cannot in general over all the possible partitions of a given level, as the number of non vanishing descendants at that level is smaller. One way to proceed would be to find the basis of non-vanishing descendants and to sum over these. 
-However, even if there are closed expressions for the null vectors,  it is quite complicated to implement numerically. 
-Here we show that, via a careful limiting  procedure,outlined in the following,  there is however one numerical efficient way to use the form Eq.~\eqref{genus_one_conf_block} to compute the modular conformal block for minimal model.  Note that this regularization is in the same spirit of the one used for instance to apply the AGT relation to the minimal models...
-
-
-
-\noindent Let us illustrate this procedure in the $N=2$ case.  From Fig.~\ref{fig-g1}, one observes that the inverse of the Gram matrix appears twice. The  entries of the inverse Gram matrix are singular when there is  a null vector in the representation. As already emphasized, the scalar products $\rho^h$ in Eq.~\eqref{genus_one_conf_block} 
-vanish instead. In order to eliminate the null vector contribution from Eq.~\eqref{genus_one_conf_block} is then
-enough, if $h\neq0$, to modify the central charge dependence of both 
-$\rho^h$ and $G^h$ as follows 
-\begin{equation}\label{regularization}
- \rho^h|_{c+\varepsilon^2}, G^h|_{c+\varepsilon},
-\end{equation}
-with $\varepsilon>0$. In this way, in the limit $\varepsilon\to 0$, the matrix elements of $\rho^h$ between a null vector and any other basis state is $O(\varepsilon^2)$ while the determinant of $G^h$ is $O(\varepsilon)$. Therefore null vectors contributions are at most $O(\varepsilon^2)$ and drop in the $\varepsilon\rightarrow 0$ limit, see also~\cite{SV, Javerzat, Alkalaev}.
-
-We denote by $\tilde{\mathcal{G}}_{c, h}^{(2)}(z)$ the regularized conformal 
-block obtained by the prescription in Eq.~\eqref{regularization} in the limit $\varepsilon\to 0$. 
-For instance  for $c=1/2$ and $h=1/16$, the first few terms in the regularized expansion of Eq.~\eqref{genus_one_conf_block} about $z=0$ are
+We consider now the case where the seed theory has representation with {\it vanishing} null-vector states \cite{BPZ}. 
+We will focus in the following on an  important example of such theories, the minimal models $\mathcal{M}_{p,q}$ that have central  charge:
 \begin{equation}
- \tilde{\mathcal{G}}_{\frac{1}{2},\frac{1}{16}}^{(2)}(z)=
- \frac{z^{1/8}}{\sqrt{2}}\left[1+\frac{z}{16}+\frac{17 z^2}{512}
- +\frac{187 z^3}{8192}+\frac{9163 z^4}{524288}+O(z^5)\right].
+c=c_{p,q}= 1 -6\frac{ (p-q)^2}{p q}, \quad p,q \in \mathbb{N}^*, \gcd(p,q)=1.
 \end{equation}
-The coefficient of the $O(z^4)$ term will be different if the regularization
-scheme is not implemented. Indeed the Verma module $(c=1/2,h=1/16)$ has a null vector at level two. If this vector was selected on both replicas of the seed theory, i.e. in the sector $|M_1|=|M_2|=2$ of Eq.~\eqref{genus_two_conf_block}, its contribution would be $O(1)$ in the expansion.
-The power series of the regularized conformal block reproduces the expansion of the character $\chi_{c,h}(q)$ of the irreducible representation $(c,h)$. As usual, we defined $q(z)=e^{i\pi \tau(z)}$ with $\tau(z)$ given in Eq.~\eqref{tau}
+ The minimal model are rational CFT, i.e. are built on a  finite set of representation $\phi_{h^{p,q}_{r,s}}$ that is closed under OPE:
+ \begin{equation}
+ h^{p,q}_{r,s}=\frac{(q + p (-1 + r) - q s) (p (1 + r) - q (1 + s)}{4 p q}, \quad 1\leq r\leq q-1,  1\leq s\leq p-1,
+ \end{equation}
+Due also to the resonance $h_{r,s}=h_{q-r,p-s}$, the representation $\phi_{h^{p,q}_{r,s}}$ has actually an infinite series of vanishing null-vectors at level $r s, (q-r)(p-s), \cdots$.  A modular conformal block having $\phi_{h^{p,q}_{rs}}$ is still given by an expansion of the form Eq.~\eqref{genus_one_conf_block} if a basis of non-vanishing descendants in the internal channel Verma module is used. However, even if there are closed expressions for the null vectors, it is quite complicated to implement this method, in particular considering the chain of resonances occuring at $c=c_{p,q}$. We refer the reader to \cite{Javerzat} to where this particular issue is discussed. The sum in Eq.~\eqref{genus_one_conf_block}, that is built on the standard basis of irreducible Verma modules,  is not defined for minimal models. Indeed, consider  $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ in  Eq.~\eqref{genus_one_conf_block},  where the vector $\boldsymbol{h}=\{h^{p,q}_{r_i,s_i}\}$ is fixed to contain some set of $N$ dimensions $h^{p.q}_{r_i,s_i}$ while the central charge $c$ can vary.  This modular blocks  has then $0/0$ type of singularities. Indeed poles $\sim (c-c_{p,q})^{-1}$ appear in the scalar product matrix  $\left[\boldsymbol{G}^{\boldsymbol{h}}\right]^{-1}$, due to the presence of null-vector states while terms $\sim(c-c_{p,q})$ are expected to appear in the matrix elements $\Gamma_{\boldsymbol{h}}$ and $\Gamma^{*}_{\boldsymbol{h}}$ due, for general $N\geq 3$ to the fusion rules associated to each null-vector. Here we propose a simple regularization scheme for $N=2$ and $N=3$ that assures that the contribution of the null-vectors and its descendants are  vanishing. This regularization is in the same spirit of the one used for instance to apply the AGT relation to the minimal models...
 
 
-It can be checked that the power series expansion about $z=0$ of the functions in Eq.~\eqref{character_conf_block} coincides order by order. For the case of the identity, $h=0$, we can follow a similar strategy but 
-modifying in Eq.~\eqref{genus_one_conf_block} the dependence of the matrices $G^h$ and 
-$\rho^h$ on $h$ instead of $c$ such as
+
+\noindent Let us illustrate this procedure in the $N=2$ case.  From Fig.~\ref{fig-g1}, one first observes that poles come from the inverse of the Gram matrix and zeros from the $\rho^h$. In order to eliminate the null vector contribution from Eq.~\eqref{genus_one_conf_block} is then
+enough, if $\boldsymbol{h}\neq {0,0}$ to regularize  the central charge differentely in the  
+$\rho^h$ and in the $G^h$. In particular if  
+\begin{equation}\label{regularization}
+ \rho^h|_{c_{p,q}+\varepsilon^2}, G^h|_{c_{p,q}+\varepsilon},
+\end{equation}
+with $\varepsilon>0$, the singularity associated to each null vectors are regularizied to $\varepsilon^4/\varepsilon^2$, such that in the limit $\varepsilon\to 0$ the total term vanishes, see also~\cite{SV, Alkalaev}.
+
+The case of the identity is a litlle bit different as it contains a null-vector at level one for any valu of the central charge. So, 
+for the case of the identity  we can follow a similar strategy but regulirizing  the $G^h$ and 
+$\rho^h$ by varying  $h$ instead of $c$ such as
 \begin{equation}\label{regularization_identity}
  \rho^{h=\mu^2}, G^{h=\mu},
 \end{equation}
@@ -383,23 +374,9 @@ with $\mu>0$. Then the limit $\mu\to 0$ produces the regularized
 conformal block $\tilde{\mathcal{G}}_{c, 0}^{(2)}(z)$ that
 provides, using Eq.~\eqref{character_conf_block}, the  character of the irreducible representation of the identity.
 
+The case $N=3$ works analogously. From Fig.~\ref{fig-g1}, one observes that you have three $G^{-1}$ and two $\pho$. Using the scheme \eqref{regularization} one regularizes the terms associated to the null- vectors as $\varepsilon^4/\varepsilon^3$, so vanishing in the limit $\varepsilon \to 0$. Explicit examples of $N=2$ and $N=3$ minimal models are given in Appendix.. 
 
-In the case of minimal models with $c<1$, we also have to remove from the expansion in
-Eq.~\eqref{genus_two_conf_block} the contribution of null vectors. We can eliminate it by
-applying the same regularization prescription discussed in Eq.~\eqref{regularization}. In particular, the descendent three-point function $\rho^{h_1,h_2,h_3}$ will be $O(\varepsilon)$ when one of the states considered  has zero norm. This observation was already present in~\cite{Zamolodchikov2}.
-Moreover, for $h_1=h_2=h_3=0$, we must apply the regularization 
-scheme of Eq.~\eqref{regularization_identity}. Note that, according to Eq.~\eqref{C_3_X},
-if the identity representation appears in only one of the copies, e.g. $h_1=0$, then 
-we have to consider the same conformal family in the other two copies, i.e. $h_2=h_3$. In order 
-to obtain the correct conformal block in this situation, one must take first $h_2=h_3$, with $h_1\neq0$,
-and then perform the limit $h_1\to 0$.  As an example, let us consider the regularized 
-genus two conformal block, which will be denoted by $\tilde{\mathcal{G}}_{c, h_1, h_2, h_3}^{(3)}(z)$,
-for $c=1/2$, $h_1=h_2=1/16$ and $h_3=0$; the result is
-\begin{equation}
- \tilde{\mathcal{G}}_{\frac{1}{2}, \frac{1}{16}, \frac{1}{16}, 0}^{(3)}(z)=
- \frac{z^{1/72}}{\sqrt{2}}\left[1 + \frac{7}{108}z + \frac{1595}{46656}z^2 + \frac{118405}{5038848}z^3 + 
- \frac{26160455}{1451188224}z^4 + O(z^5)\right].
-\end{equation}
+
 \section{Higher genus conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
 
 In order to drastically improve the converge of the numerical bootstrap, it is necessary to expand the higher-genus conformal blocks $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ as a linear combination of sphere conformal blocks with central charge $Nc$. More specifically, we shall expect
