@@ -201,7 +201,7 @@ one has:
 \subsection{Computing the three point functions by unfolding}
 The computation of the orbifold correlation function reduces then to the one of the three-point function
 \begin{equation}\label{orbifold_three-point}
- \Gamma_{\boldsymbol{h},\boldsymbol{M}} \;C_{\boldsymbol{h},\boldsymbol{h}} = \langle \boldsymbol{\phi}^{\boldsymbol{M},\boldsymbol{0}}_{\boldsymbol{h}}(\infty) \sigma_{N}(1)\bar{\sigma}_{N}(0)\rangle.
+ \Gamma_{\boldsymbol{h},\boldsymbol{M}} \;C_{\boldsymbol{h},\boldsymbol{h}} = \langle \boldsymbol{\phi}^{\boldsymbol{M},\boldsymbol{0}}_{\boldsymbol{h},\boldsymbol{h}}(\infty) \sigma_{N}(1)\bar{\sigma}_{N}(0)\rangle.
 \end{equation}
 In this respect, it is very useful, especially for $N=2$ and $N=3$,  to consider a $N$-to-one conformal map
 $t\mapsto z(t)$ with branch points at $z_{\text{branch}}=\{0, 1\}$  that behaves as $z-z_{\text{branch}}\sim (t-t_{\text{branch}})^N$~\cite{Lunin}.
@@ -246,8 +246,8 @@ where $\rho$ is the symmetric $|M_1|\times|M_1|$ matrix
 In the above expression,  the $\mathcal{L}_M$ generators are meant to be expressed in terms of the $L$  ones, see Eqs.~\eqref{g1_1} and~\eqref{g1_2},/ The matrix $\rho^h$  can be easily computed using the Virasoro scalar products.
 Using Eq.\eqref{C_2_X} in Eq.\eqref{conformal_block_decomposition}, one arrives at the expression
 \begin{equation}\label{genus_one_conf_block}
- \mathcal{G}_{c, h}^{(2)}(z)=\sum_{M_1, M_2}\sum_{N_1, N_2}
- z^{2h-\frac{c}{8}+|M_1|+|M_2|}[G^{h}_{M_1,N_1}]^{-1}[G^{h}_{ M_2,N_2}]^{-1}
+ \mathcal{G}_{c, h}^{(2)}(z)=z^{2h-\frac{c}{8}}\sum_{M_1, M_2}\sum_{N_1, N_2}
+ z^{|M_1|+|M_2|}[G^{h}_{M_1,N_1}]^{-1}[G^{h}_{ M_2,N_2}]^{-1}
  \rho^h_{M_2,M_1}\rho^h_{N_2,N_1}.
 \end{equation}
 The matrices $G^h$ and $\rho^h$ are symmetric, the coefficients of the combinatorial 
@@ -264,7 +264,7 @@ that behave asymptotically as:
 \end{equation}
  By comparing the above expressions with Eqs.~\eqref{partition_torus_twist}  and (\ref{conformal_block_decomposition_0}), one identifies 
 \begin{equation}\label{character_conf_block}
-\mathcal{G}_{c,h}^{(2)}(x)=2^{-c/3}[x(1-x)]^{-c/24}\chi_{h}(\tau(x)),\quad  D_{\{ h_1, h_2 \}, \{ \bar{h}_1,\bar{h}_2\} } =\delta_{h_1,h_2}\;\delta_{\bar{h}_1,\bar{h}_2} \;2^{-8 (h_1+\bar{h}_1)}
+\mathcal{G}_{c,h}^{(2)}(x)=2^{-c/3+4 h}[x(1-x)]^{-c/24}\chi_{h}(\tau(x)),\quad  D_{\{ h_1, h_2 \}, \{ \bar{h}_1,\bar{h}_2\} } =\delta_{h_1,h_2}\;\delta_{\bar{h}_1,\bar{h}_2} \;2^{-8 (h_1+\bar{h}_1)}
 \end{equation}
 
 
@@ -374,7 +374,7 @@ with $\mu>0$. Then the limit $\mu\to 0$ produces the regularized
 conformal block $\tilde{\mathcal{G}}_{c, 0}^{(2)}(z)$ that
 provides, using Eq.~\eqref{character_conf_block}, the  character of the irreducible representation of the identity.
 
-The case $N=3$ works analogously. From Fig.~\ref{fig-g1}, one observes that you have three $G^{-1}$ and two $\pho$. Using the scheme \eqref{regularization} one regularizes the terms associated to the null- vectors as $\varepsilon^4/\varepsilon^3$, so vanishing in the limit $\varepsilon \to 0$. Explicit examples of $N=2$ and $N=3$ minimal models are given in Appendix.. 
+The case $N=3$ works analogously. From Fig.~\ref{fig-g1}, one observes that you have three $G^{-1}$ and two $\rho$. Using the scheme \eqref{regularization} one regularizes the terms associated to the null- vectors as $\varepsilon^4/\varepsilon^3$, so vanishing in the limit $\varepsilon \to 0$. Explicit examples of $N=2$ and $N=3$ minimal models are given in Appendix.. 
 
 
 \section{Higher genus conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
