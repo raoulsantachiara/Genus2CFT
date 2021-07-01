@@ -145,26 +145,27 @@ where $\boldsymbol{h}\equiv\{h_1, \dots, h_N\}$ with $h_j$ being the conformal d
 a primary in the seed theory.
 The function $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, defined below, are the so-called modular conformal blocks.  They are normalized such that: 
 \begin{equation}
+\label{G_asy}
 \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=z^{\;|\boldsymbol{h}| -2\; h_{\sigma_N}}\left(1+ O(z)\right),
 \end{equation}
 where $|\boldsymbol{h}|=\sum_j h_j$ and are fixed by the orbifold symmetry algebra. The $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ encode therefore the universal part of the orbifold correlation function  while  the structure constants  $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$  characterize the specific bootstrap solution under consideration. Note that in Eq.\eqref{conformal_block_decomposition_0}, we inserted one twist field at a general point $(z,\bar{z})$ on the Riemann sphere to stress the fact we are computing a standard CFT correlation function on the $z$-sphere. To recover the geometric interpretations of Eqs.~\eqref{riemann_surf} -\eqref{geom_inter}, one sets $z,\bar{z}\to x,\bar{x}$.
 
-\noindent We review the procedure, well described in \cite{Collier}, to obtain the small $z$ expansion  of  the modular conformal blocks.  Let us fix some notations. In the seed CFT $\mathcal{C}$, we denote by $\phi_{h}(z)$  an holomorphic primary fields of dimension $h$  and by $X_{h}^{M}(z)$ one of its descendants. We label with  $M\equiv\{m_1,\dots,m_q\}$ a partition of the integer  $|M|$.  In terms of the  Virasoro generators $L_{-m}(z)$, defined in Eq.~\eqref{vir_ln}, $\phi_{h}^{M}(z)$ takes the form:
+\noindent We review the procedure, well described in \cite{Collier}, to obtain the small $z$ expansion  of  the modular conformal blocks.  Let us fix some notations. Let us focus first on the holomorphic sector of the seed CFT $\mathcal{C}$. We denote by $\phi_{h}(z)$  the holomorphic primary field with conformal dimension $h$  and by $\phi_{h}^{M}(z)$ one of its descendants. The descendants are labeled by the partition  $M\equiv\{m_1,\dots,m_q\}$, $m_1\leq m_2\cdots\leq m_q$ of the integer  $|M|=\sum_{j} m_j$. Indeed, in terms of the  Virasoro generators $L_{-m}(z)$, defined in Eq.~\eqref{vir_ln}, the holomorphoc field $\phi_{h}^{M}(z)$ takes the form:
 \begin{equation}
 \label{desc}
  \phi_{h}^{M}(z):=L_{-M}(z)\;\phi_h(z)~~{\rm{where}}~~ L_{-M}(z):=L_{-m_1}(z)\dots L_{-m_q}(z).
  \end{equation}
-The field  $X_{h}^{M}(z)$ has conformal dimension $h+|M|$. Using the field-state correspondance $|\phi_{h}\rangle\equiv \lim_{z\to 0}\phi(z)|0\rangle$, with $|0\rangle$ the vacumm in $\mathcal{C}$ and the Virasoro scalar product \cite{DiFrancesco}, we denote by  $G^{h}_{M_1,M_2}$ the Virasoro Kac-Shapovalov matrix:
+The field  $\phi_{h}^{M}(z)$ has conformal dimension $h+|M|$. We use the field-state correspondance $|\phi_{h}\rangle\equiv \lim_{z\to 0}\phi(z)|0\rangle$, with $|0\rangle$ the vacumm in $\mathcal{C}$ and the Virasoro scalar product \cite{DiFrancesco}, that can be defined  by constructing the dual space  via correspondences of type  $\langle \phi_{h} |\equiv\lim_{z\rightarrow\infty}z^{2h}\langle 0|\phi_h(z)$ where $\langle 0|$ is the dual of the vacuum state. We denote by  $G^{h}_{M_1,M_2}$ the matrix of scalar product:
 \begin{equation}
 G^{h}_{M_1,M_2} = \langle \phi_{h}^{M_1}|\phi_{h}^{M_2}\rangle. 
 \end{equation}
-The scalar product can be written in terms of correlation function by using the correspondence  $\langle \phi_{h} |\equiv\lim_{z\rightarrow\infty}z^{2h}\langle 0|\phi(z)$ where $\langle 0|$ is the dual of the vaccuum state. If not explicitily stated otherwise, in what follows we consider irriducible Virasoro representation, i.e. without descendant states with vanishing norm, refered here as null-vectors. The role of null-vectors will be considered more in detail in Sec. (\ref{null_vec1}).  
+If not explicitily stated otherwise, in what follows we consider irriducible Virasoro representation, i.e. without descendant states with vanishing norm, refered here as null-vectors. The role of null-vectors will be considered more in detail in Sec. (\ref{null_vec1}).  
 
-\noindent In the replicated theory  $\mathcal{C}^{\otimes N}$, an holomorphic primary $\boldsymbol{\phi}_{\boldsymbol{h}}(z)$  is labelled by the vector of dimension $\boldsymbol{h}$ and it has conformal dimension $|\boldsymbol{h}|$. The primary in the replicated theory $\boldsymbol{\phi}_{\boldsymbol{h}}(z)$ is expressed in terms of the seed theory primaries as:
+\noindent In the replicated theory  $\mathcal{C}^{\otimes N}$, an holomorphic primary $\boldsymbol{\phi}_{\boldsymbol{h}}(z)$  is labelled by the vector $\boldsymbol{h}$ of conformal dimensions  and has conformal dimension $|\boldsymbol{h}|$, see Eq~\eqref{conformal_block_decomposition_0}-\eqref{G_asy}. The field $\boldsymbol{\phi}_{\boldsymbol{h}}(z)$ is expressed in terms of the seed theory primaries as:
 \begin{equation}
 \boldsymbol{\phi}_{\boldsymbol{h}}(z)=\phi_{h_1}(z)\otimes \cdots\otimes \phi_{h_N}(z).
 \end{equation}
-Using the symbol $\boldsymbol{M}$ to indicate a vector of $N$ partitions of  $|M_1|,\dots, |M_N|$, $\boldsymbol{M}\equiv\{M_1,\dots,M_N\}$,  the  $\mathcal{C}^{\otimes N}$ descendants are denoted by  $\boldsymbol{\phi}^{\boldsymbol{M}}_{\boldsymbol{h}}(z)$
+Using the symbol $\boldsymbol{M}$ to indicate a vector of $N$ partitions, $\boldsymbol{M}\equiv\{M_1,\dots,M_N\}$,  the  $\mathcal{C}^{\otimes N}$ descendants are denoted by  $\boldsymbol{\phi}^{\boldsymbol{M}}_{\boldsymbol{h}}(z)$:
  \begin{equation}
  \boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{M}}(z)=\phi_{h_1}^{M_1}(z)\otimes \dots \otimes \phi_{h_N}^{M_N}(z).
 \end{equation}
@@ -172,9 +173,9 @@ They have conformal dimension $|\boldsymbol{h}|+|\boldsymbol{M}|$, where $|\bold
 The corresponding scalar product matrix $\boldsymbol{G}^{\boldsymbol{h}}_{\boldsymbol{M}_1\boldsymbol{M}_2}$, of size $\prod_{j=1}^{N}|M_j|^2\times \prod_{j=1}^{N}|M_j|^2$, takes the following form:
 \begin{equation}
 \label{scal}
- \boldsymbol{G}^{\boldsymbol{h}}_{\boldsymbol{M}_1\boldsymbol{M}_2}:=\langle \boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{M}_1} | \boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{M}_2}\rangle=\prod_{j=1}^N G^{h_j}_{M_j,M_j'}.
+ \boldsymbol{G}^{\boldsymbol{h}}_{\boldsymbol{M}_1\boldsymbol{M}_2}=\langle \boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{M}_1} | \boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{M}_2}\rangle=\prod_{j=1}^N G^{h_j}_{M_j,M_j'}.
 \end{equation}
-We will also use $\boldsymbol{0}$ to indicate the empty partition $\boldsymbol{M}=\{\{0\},\cdots,\{0\}\}$. In these notations, $\boldsymbol{\phi}_{\boldsymbol{h}}=\boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{0}}$. Moreover the local descendant fields, entering in the correlation functions, are obtained by gluing the holomorphic and anti-holomorphic part:
+We will also use $\boldsymbol{0}$ to indicate the empty partition $\boldsymbol{M}=\{\{0\},\cdots,\{0\}\}$. In these notations, $\boldsymbol{\phi}_{\boldsymbol{h}}=\boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{0}}$. Finally, the fields that enter in the correlation functions are obtained by gluing the holomorphic and anti-holomorphic sectors.  The construction of the anti-holomorphic one is, under the replacement $z\to \bar{z}$, the same as the one presented above. One has:
 \begin{equation}
 \boldsymbol{\phi}^{\boldsymbol{M},\boldsymbol{\bar{M}}}_{\boldsymbol{h},\boldsymbol{\bar{h}}} (z,\bar{z})=\boldsymbol{\phi}^{\boldsymbol{M}}_{\boldsymbol{h}}(z)\boldsymbol{\phi}^{\boldsymbol{\bar{M}}}_{\boldsymbol{\bar{h}}}(\bar{z}), \quad 
 \end{equation} 
@@ -193,9 +194,9 @@ one has:
  \begin{equation}
 \Gamma_{\boldsymbol{h},\boldsymbol{M}} = \frac{\langle \boldsymbol{\phi}^{\boldsymbol{M},\boldsymbol{0}}_{\boldsymbol{h},\boldsymbol{\bar{h}}}| \sigma_{N}(1)|\bar{\sigma}_{N}\rangle}{C_{\boldsymbol{h},\boldsymbol{\bar{h}}}},\quad  \Gamma^{*}_{\boldsymbol{h},\boldsymbol{M}} = \frac{\langle  \sigma_{N}|\bar{\sigma}_{N}(1)|\boldsymbol{\phi}^{\boldsymbol{M},\boldsymbol{0}}_{\boldsymbol{h},\boldsymbol{\bar{h}}}\rangle}{C_{\boldsymbol{h},\boldsymbol{\bar{h}}}} .
  \end{equation}
- The matrix elements  $\Gamma_{\boldsymbol{h},\boldsymbol{M}}$ and $\Gamma^{*}_{\boldsymbol{h},\boldsymbol{M}}$ have an algebraic nature, in the sense that they are fixed by the orbifold algebra. The structur constants, on the other hand, can depend on the model under consideration. Comparing with the expansion Eq.\eqref{conformal_block_decomposition_0}, one has:
+ The matrix elements  $\Gamma_{\boldsymbol{h},\boldsymbol{M}}$ and $\Gamma^{*}_{\boldsymbol{h},\boldsymbol{M}}$ have an algebraic nature, in the sense that they are fixed by the orbifold algebra. The structure constants, on the other hand, can depend on the model under consideration. Comparing with the expansion Eq.\eqref{conformal_block_decomposition_0}, one has:
  \begin{equation}
- D_{\boldsymbol{h},\boldsymbol{\bar{h}}}= \left(C^{\boldsymbol{h},\boldsymbol{\bar{h}}}\right)^2
+ D_{\boldsymbol{h},\boldsymbol{\bar{h}}}= C_{\boldsymbol{h},\boldsymbol{\bar{h}}}^2
  \end{equation}
 \subsection{Computing the three point functions by unfolding}
 The computation of the orbifold correlation function reduces then to the one of the three-point function
@@ -206,20 +207,19 @@ In this respect, it is very useful, especially for $N=2$ and $N=3$,  to consider
 $t\mapsto z(t)$ with branch points at $z_{\text{branch}}=\{0, 1\}$  that behaves as $z-z_{\text{branch}}\sim (t-t_{\text{branch}})^N$~\cite{Lunin}.
 That is, the $t$-surface is a $N$-sheet cover with genus zero 
  of the $z$-Riemann sphere with a branch cut along 
-$(0,1)$. We will refer to the $t-$ surface as the $t$-Riemann sphere. Without losing in generality, let's consider the holomorphic part of the correlation function. The point $z=\infty$, where the field $\boldsymbol{\phi}^{\boldsymbol{M}}_{\boldsymbol{h}}$  is inserted, is mapped to $N$ different points $t_\infty=\{t_1, \dots, t_N\}$ in 
+$(0,1)$. We will refer to the $t-$ surface as the $t$-Riemann sphere. Again, for simplicity, we can consider just the holomorphic sector of the theory. The point $z=\infty$, where the field $\boldsymbol{\phi}^{\boldsymbol{M}}_{\boldsymbol{h}}$  is inserted, is mapped to $N$ different points $t_\infty=\{t_1, \dots, t_N\}$ in 
 the covering space. Let us denote by $\tilde{\phi}_{h_j}^{M_j}(t_j)$ the image
 of the field $\phi_{h_j}^{M_j}(\infty)$ under the covering map $t\mapsto z(t)$:
 \begin{equation}
 \label{Jac}
 \tilde{\phi}_{h_j}^{M_j}(t_j) = \left(\left.\frac{d z(t)}{d t}\right|_{t=t_j} \right)^{-h_j} \mathcal{L}_{-M_j}(t_j)\;\phi_{h_j} (z(t_j)),
 \end{equation}
-where the $\mathcal{L}_{-M_j}(t_j)$ are the transformed Virasoro generators living on the $t$- surface. Once the $\mathcal{L}_{-M}(\infty)$and  $\mathcal{L}_{-M}(0)$ are expressed in terms of the $L_{n}$ generators on the $z$ Riemann sphere, see Appendix. 
-The role of this map is therefore to unfold the field of the replicated theory living on the $z$- Riemann surface:
+where the $\mathcal{L}_{-M_j}(t_j)$ are the transformed Virasoro generators living on the $t$- surface that  $\mathcal{L}_{-M}(\infty)$ can be expressed as a linear combination of the $L_{n}(z_j)$ generators acting on the $z$ Riemann sphere, see Appendix. 
+It is clear that this map unfolds the field of the replicated theory living on the $z$- Riemann surface:
 \begin{equation}
 \{\tilde{\phi}_{h_j}^{M_j}(t_j)\}_{j=1,\cdots,N}\mapsto \boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{M}}(\infty),
 \end{equation}
-
- The  orbifold  three-point function (\ref{orbifold_three-point})  is then transformed into the $N$-point function on $t$-sphere:
+The  orbifold  three-point function (\ref{orbifold_three-point})  is then transformed into the $N$-point function on $t$-sphere:
 \begin{equation}\label{N-point}
 \langle \boldsymbol{\phi}^{\boldsymbol{M}}_{\boldsymbol{h}}(\infty) \sigma_{N}(1)\bar{\sigma}_{N}(0)\rangle=\langle \tilde{\phi}^{M_1}_{h_1}(t_1)\cdots\tilde{\phi}_{h_N}^{M_N}(t_N)\rangle.
 \end{equation}
@@ -243,11 +243,11 @@ where $\rho$ is the symmetric $|M_1|\times|M_1|$ matrix
 \label{rho}
  \rho^h_{M_1,M_2}:=\langle \mathcal{L}_{-M_1}\phi_{h}|\mathcal{L}_{-M_2}\phi_{h}\rangle.
 \end{equation}
-In the above expression,  the $\mathcal{L}$ are meant to be expressed in terms of the $L$  ones, see Eqs.~\eqref{g1_1} and~\eqref{g1_2},/ The matrix $\rho^h$  can be easily computed using the standard Ward identities, see Eq.~\eqref{wardvir1} and Eq.~\eqref{wardvir2}. 
+In the above expression,  the $\mathcal{L}_M$ generators are meant to be expressed in terms of the $L$  ones, see Eqs.~\eqref{g1_1} and~\eqref{g1_2},/ The matrix $\rho^h$  can be easily computed using the Virasoro scalar products.
 Using Eq.\eqref{C_2_X} in Eq.\eqref{conformal_block_decomposition}, one arrives at the expression
 \begin{equation}\label{genus_one_conf_block}
  \mathcal{G}_{c, h}^{(2)}(z)=\sum_{M_1, M_2}\sum_{N_1, N_2}
- z^{2h-c/8+|M_1|+|M_2|}[G^{h}_{M_1,N_1}]^{-1}[G^{h}_{ M_2,N_2}]^{-1}
+ z^{2h-\frac{c}{8}+|M_1|+|M_2|}[G^{h}_{M_1,N_1}]^{-1}[G^{h}_{ M_2,N_2}]^{-1}
  \rho^h_{M_2,M_1}\rho^h_{N_2,N_1}.
 \end{equation}
 By recalling that the matrices $G^h$ and $\rho^h$ are symmetric, the coefficients of the combinatorial 
