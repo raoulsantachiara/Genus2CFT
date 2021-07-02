@@ -385,11 +385,19 @@ provides, using Eq.~\eqref{character_conf_block}, the  character of the irreduci
 
 \section{Higher genus conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
 
-The computation of the small $z$ epxansion of $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ becomes effectively impossible to accomplish. For instance, for $N=3$ we could compute the expansion coefficients till to the order  $z^6$.  The global properties of the twist correlation functions, and in particular its crossing symmetry \eqref{cross_symmetry}, are missed by using in Eq.~\eqref{conformal_block_decomposition_0} the small $z$ expansion of the modular conformal block. The convergence of the series is slow near $|z|=1$.
-
-In \cite{Collier}, this problem was tackled by using the pillow frame. Here we show an slightly better procedure that is based on two steps: i) expanding the  $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ in terms of sphere conformal blocks of charge $N c$, ii) using the elliptic Zamolodchikov recursion relation. 
+The computation of the small $z$ epxansion of $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ becomes effectively impossible to accomplish. For instance, for $N=3$ we could compute the expansion coefficients till to the order  $z^6$. Moreover, the convergence of the series is slow near $|z|=1$.  This implies that the global properties of the twist correlation functions, and in particular its crossing symmetry \eqref{cross_symmetry}, are missed by using Eq.~\eqref{conformal_block_decomposition} in Eq.~\eqref{conformal_block_decomposition_0} 
+In \cite{Collier}, this problem was tackled by using the pillow frame and obtaining a series expansion in the $q(x)$ variable, where:
+\begin{equation}
+\label{defq}
+q(x)= e^{i \pi \tau(x)}.
+\end{equation} 
+This drastically improves the convergence properties of the twist correlation function.  Here we show how to improve the expansion obtained in \cite{Collier} by using a different procedure. This procedure is composed in two steps i) expanding the  $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ in terms of sphere conformal blocks of charge $N c$, ii) using the elliptic Zamolodchikov recursion relation. 
  
-In order to drastically impr ove the converge of the numerical bootstrap, it is necessary to expand the higher-genus conformal blocks $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ as a linear combination of sphere conformal blocks with central charge $Nc$. More specifically, we shall expect
+The orbifold algebra admits as a sub-algebra a Virasoro algebra of charge $3 c$\cite{Borisov}. Note that the fine stricture of this orbifold algebra was used in \cite{Dupic}  
+
+ the $N c$ Virasoro subalgebra of the orbifold algebra \cite{Borisov} 
+
+  More specifically, we shall expect
 \begin{equation}\label{expansion_sphere_conf_blocks}
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=\sum_{l=0}^{\infty}\alpha_{l}^{\boldsymbol{h}}
  \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z).
@@ -399,33 +407,7 @@ with central charge $Nc$, internal channel of conformal dimension $|\boldsymbol{
 $h_{\sigma_N}$. This function can be calculated
 recursively by means of Zamolodchikov formula~\cite{Zamolodchikov2, Zamolodchikov}, see Appendix~\ref{app_zamolodchikov}.
 
-In this Appendix, we discuss in more detail the expansion in Eq.~\eqref{expansion_sphere_conf_blocks} of the
-conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ in terms of the conformal 
-blocks on the sphere $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$.
 
-In each sheet of the orbifold theory $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$, we 
-can consider a copy $\boldsymbol{T}^{(j)}(z)$, $j=1,\dots, N$, of the stress-energy tensor of 
-the seed theory $\mathcal{C}$. Then the stress-energy tensor of the 
-orbifold theory $\boldsymbol{T}(z)$ is 
-\begin{equation}\label{hatT}
- \boldsymbol{T}(z)=\sum_{j=1}^N \boldsymbol{T}^{(j)}(z).
-\end{equation}
-It generates transformations affecting all the sheets in the same way. 
-Its Fourier modes,
-\begin{equation}
- \boldsymbol{L}_n=\oint_{C_0}\frac{dz}{2\pi i} z^{n+1}\boldsymbol{T}(z),
-\end{equation}
-where $C_0$ is a contour encircling the point $z=0$, are symmetric 
-under the exchange of sheets, 
-\begin{equation}
- \boldsymbol{L}_n=\sum_{j=1}^N \boldsymbol{L}_n^{(j)}, \quad 
- \boldsymbol{L}_n^{(j)}=\mathbb{I}\otimes \overset{j}{\cdots} \otimes L_{n}\otimes \cdots \otimes \mathbb{I},
-\end{equation}
-and form a Virasoro algebra, 
-\begin{equation}\label{symm_virasoro_alg}
- [\boldsymbol{L}_n, \boldsymbol{L}_{m}]=(n-m)\boldsymbol{L}_{n+m}+\frac{Nc}{12}n(n^2-1)\delta_{n+m, 0},
-\end{equation}
-with central charge $Nc$.
 
 The conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ is associated with 
 the field $\Phi_{\boldsymbol{h}}=\phi_{h_1}\otimes\cdots\otimes \phi_{h_N}$, where $\phi_{h_j}$ are 
@@ -791,7 +773,7 @@ There are a couple of possibile future directions that are worth to be mentioned
 Also it will be important to understand if a recursive formula for higher genus conformal blocks, such as that put forward in~\cite{Cho}, can be effectively implemented when $c<1$, due to the additional null vector resonances.
 
 \appendix
-\section{Recults from Virasoro algebra}\label{app_ward}
+\section{Tranformation properties}\label{app_ward}
 
 Consider a CFT on the Riemann sphere parameterized by $z$.
 The Virasoro generators are defined by their action on the fields:
@@ -874,9 +856,35 @@ and
 \end{equation}
 
 
+\section{Orbifold algebra}
 
+n this Appendix, we discuss in more detail the expansion in Eq.~\eqref{expansion_sphere_conf_blocks} of the
+conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ in terms of the conformal 
+blocks on the sphere $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$.
 
-
+In each sheet of the orbifold theory $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$, we 
+can consider a copy $\boldsymbol{T}^{(j)}(z)$, $j=1,\dots, N$, of the stress-energy tensor of 
+the seed theory $\mathcal{C}$. Then the stress-energy tensor of the 
+orbifold theory $\boldsymbol{T}(z)$ is 
+\begin{equation}\label{hatT}
+ \boldsymbol{T}(z)=\sum_{j=1}^N \boldsymbol{T}^{(j)}(z).
+\end{equation}
+It generates transformations affecting all the sheets in the same way. 
+Its Fourier modes,
+\begin{equation}
+ \boldsymbol{L}_n=\oint_{C_0}\frac{dz}{2\pi i} z^{n+1}\boldsymbol{T}(z),
+\end{equation}
+where $C_0$ is a contour encircling the point $z=0$, are symmetric 
+under the exchange of sheets, 
+\begin{equation}
+ \boldsymbol{L}_n=\sum_{j=1}^N \boldsymbol{L}_n^{(j)}, \quad 
+ \boldsymbol{L}_n^{(j)}=\mathbb{I}\otimes \overset{j}{\cdots} \otimes L_{n}\otimes \cdots \otimes \mathbb{I},
+\end{equation}
+and form a Virasoro algebra, 
+\begin{equation}\label{symm_virasoro_alg}
+ [\boldsymbol{L}_n, \boldsymbol{L}_{m}]=(n-m)\boldsymbol{L}_{n+m}+\frac{Nc}{12}n(n^2-1)\delta_{n+m, 0},
+\end{equation}
+with central charge $Nc$.
 \section{Zamolodchikov recursion for sphere conformal blocks}\label{app_zamolodchikov}
 The sphere conformal block $\mathcal{F}_{Nc, h}(z)$
 for central charge $Nc$, internal dimension $h$, and the four
@@ -1011,6 +1019,7 @@ for conformal blocks}, \href{https://doi.org/10.1088/1742-5468/aae5a8}{\emph{J. 
 \bibitem{Dupic} T. Dupic, B. Estienne, Y. Ikhlef, \emph{Entanglement entropies of minimal models from null-vectors}, 
 \href{https://scipost.org/10.21468/SciPostPhys.4.6.031}{\emph{SciPost Phys.} {\bf 4}, 031 (2018)}
 
+\bibitem{Borisov} L. Borisov, M. B. Halpern and C. Schweigert, \emph{Systematic approach to cyclic orbiforlds}
 
 % Please avoid comments such as "For a review'', "For some examples",
 % "and references therein" or move them in the text. In general,
