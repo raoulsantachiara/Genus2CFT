@@ -246,7 +246,7 @@ where $\rho$ is the symmetric $|M_1|\times|M_1|$ matrix
 In the above expression,  the $\mathcal{L}_M$ generators are meant to be expressed in terms of the $L$  ones, see Eqs.~\eqref{g1_1} and~\eqref{g1_2},/ The matrix $\rho^h$  can be easily computed using the Virasoro scalar products.
 Using Eq.\eqref{C_2_X} in Eq.\eqref{conformal_block_decomposition}, one arrives at the expression
 \begin{equation}\label{genus_one_conf_block}
- \mathcal{G}_{c, h}^{(2)}(z)=z^{2h-\frac{c}{8}}\sum_{M_1, M_2}\sum_{N_1, N_2}
+ \mathcal{G}_{c, \{h,h\}}^{(2)}(z)=z^{2h-\frac{c}{8}}\sum_{M_1, M_2}\sum_{N_1, N_2}
  z^{|M_1|+|M_2|}[G^{h}_{M_1,N_1}]^{-1}[G^{h}_{ M_2,N_2}]^{-1}
  \rho^h_{M_2,M_1}\rho^h_{N_2,N_1}.
 \end{equation}
@@ -322,6 +322,7 @@ of Ref.~\cite{Collier}. We have
 \end{align}
 where $C_{h_1 h_2 h_3}=\langle \phi_{h_1}(\infty)\phi_{h_2}(1)\phi_{h_3}(0)\rangle$ is a structure constant in the seed CFT, while the symmetric tensor $\rho^{h_1,h_2,h_3}$ is 
 \begin{equation}
+\label{rho2}
  \rho^{h_1,h_2,h_3}_{M_1,M_2,M_3}:=
  \frac{\langle \mathcal{L}_{-M_1}\phi_{h_1}|\mathcal{L}_{-M_2}(1)\phi_{h_2}(1)|\mathcal{L}_{-M_3}\phi_{h_3}\rangle}
  { \langle \phi_{h_1}|\phi_{h_2}(1)|\phi_{h_3}\rangle}.
@@ -352,17 +353,22 @@ c=c_{p,q}= 1 -6\frac{ (p-q)^2}{p q}, \quad p,q \in \mathbb{N}^*, \gcd(p,q)=1.
  \begin{equation}
  h^{p,q}_{r,s}=\frac{(q + p (-1 + r) - q s) (p (1 + r) - q (1 + s)}{4 p q}, \quad 1\leq r\leq q-1,  1\leq s\leq p-1,
  \end{equation}
-Due also to the resonance $h_{r,s}=h_{q-r,p-s}$, the representation $\phi_{h^{p,q}_{r,s}}$ has actually an infinite series of vanishing null-vectors at level $r s, (q-r)(p-s), \cdots$.  A modular conformal block having $\phi_{h^{p,q}_{rs}}$ is still given by an expansion of the form Eq.~\eqref{genus_one_conf_block} if a basis of non-vanishing descendants in the internal channel Verma module is used. However, even if there are closed expressions for the null vectors, it is quite complicated to implement this method, in particular considering the chain of resonances occuring at $c=c_{p,q}$. We refer the reader to \cite{Javerzat} to where this particular issue is discussed. The sum in Eq.~\eqref{genus_one_conf_block}, that is built on the standard basis of irreducible Verma modules,  is not defined for minimal models. Indeed, consider  $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ in  Eq.~\eqref{genus_one_conf_block},  where the vector $\boldsymbol{h}=\{h^{p,q}_{r_i,s_i}\}$ is fixed to contain some set of $N$ dimensions $h^{p.q}_{r_i,s_i}$ while the central charge $c$ can vary.  This modular blocks  has then $0/0$ type of singularities. Indeed poles $\sim (c-c_{p,q})^{-1}$ appear in the scalar product matrix  $\left[\boldsymbol{G}^{\boldsymbol{h}}\right]^{-1}$, due to the presence of null-vector states while terms $\sim(c-c_{p,q})$ are expected to appear in the matrix elements $\Gamma_{\boldsymbol{h}}$ and $\Gamma^{*}_{\boldsymbol{h}}$ due, for general $N\geq 3$ to the fusion rules associated to each null-vector. Here we propose a simple regularization scheme for $N=2$ and $N=3$ that assures that the contribution of the null-vectors and its descendants are  vanishing. This regularization is in the same spirit of the one used for instance to apply the AGT relation to the minimal models...
+ The representation $\phi_{h^{p,q}_{r,s}}$ has, also due to the chain of resonances $h_{r,s}=h_{q-r,p-s}=h_{q+r,p+s}\cdots$, an infinite series of vanishing null-vectors at levels $r s, (q-r)(p-s),(q+r)(p+s), \cdots$. In a minimal model modular conformal block $\mathcal{G}_{c_{p,s}, \boldsymbol{h}^{\text{deg}}}^{(N)}(z)$, the vector $\boldsymbol{h}^{\text{deg}}=\{h^{p,q}_{r_i,s_i}\}$ has elements $h^{p.q}_{r_i,s_i}, i=1,\cdots,N$ and, in  order to compute its small $z$ expansion, one has to find a basis of non-vanishing descendants in  each $h^{p,q}_{r_i,s_i}$ representation. Even if there are closed expressions for the null-vectors, it is quite complicated to implement this method, in particular considering the resonances mentioned above. We refer the reader to \cite{Javerzat} where this particular issue is discussed more in detail. 
+ 
+\noindent The sum in Eq.~\eqref{genus_one_conf_block} runs over  the standard basis of irreducible Verma modules: this sum  is not defined for minimal models. To see this consider  $\mathcal{G}_{c, \boldsymbol{h}^{\text{deg}}}^{(N)}(z)$, as given in Eq.~\eqref{conformal_block_decomposition} as a function of $c$, $c\neq c_{p,q}$.  This modular blocks  will present then $0/0$ type of singularities. Here we propose a simple regularization scheme for $N=2$ and $N=3$ that allows to use the expansion  assures that the contribution of the null-vectors and its descendants are  vanishing. This regularization is in the same spirit of the one used for instance to apply the AGT relation to the minimal models...
+
+\noindent The analytic properties of $\mathcal{G}_{c, \boldsymbol{h}^{\text{deg}}}^{(N)}(z)$ for $N=2,3$  can be better understood by looking at the unfolded expressions Eq.~\eqref{C_2_X} and Eq.~\eqref{C_3_X}. Poles $\sim (c-c_{p,q})^{-1}$ appear in the scalar product matrices  $ \left[G^{h^{p,q}_{r_i,s_i}}\right]^{-1}$, originating by the fact the null-vector is orthogonal to all states.  At the same time, vanishing terms $\sim(c-c_{p,q})$ are expected to appear in the $\rho$ terms. For $N=2$ this is related to the scalar products $\rho^{h_{r,s}}$ containing the null vector, see Eq.~\eqref{rho} while, for $N= 3$, the vanishing of the $\rho^{h_{r_1,s_1},h_{r_2,s_2},h_{r_3,s_3}}$ is related to to the minimal model fusion, see Eq.~\eqref{rho2}.  
+
+ 
 
 
-
-\noindent Let us illustrate this procedure in the $N=2$ case.  From Fig.~\ref{fig-g1}, one first observes that poles come from the inverse of the Gram matrix and zeros from the $\rho^h$. In order to eliminate the null vector contribution from Eq.~\eqref{genus_one_conf_block} is then
-enough, if $\boldsymbol{h}\neq {0,0}$ to regularize  the central charge differentely in the  
-$\rho^h$ and in the $G^h$. In particular if  
+\noindent  In order to eliminate the null vector contribution from Eq.~\eqref{genus_one_conf_block} is then
+enough, if $\boldsymbol{h}\neq \{0,0\}$ to regularize  the central charge differentely in the  
+$\rho^h$ and in the $G^h$, as in the following:  
 \begin{equation}\label{regularization}
  \rho^h|_{c_{p,q}+\varepsilon^2}, G^h|_{c_{p,q}+\varepsilon},
 \end{equation}
-with $\varepsilon>0$, the singularity associated to each null vectors are regularizied to $\varepsilon^4/\varepsilon^2$, such that in the limit $\varepsilon\to 0$ the total term vanishes, see also~\cite{SV, Alkalaev}.
+with $\varepsilon>0$. In this way the singularites associated to the null vectors are always regularizied and vanish in the limit  $\varepsilon\to 0$, see also~\cite{SV, Alkalaev}.
 
 The case of the identity is a litlle bit different as it contains a null-vector at level one for any valu of the central charge. So, 
 for the case of the identity  we can follow a similar strategy but regulirizing  the $G^h$ and 
@@ -374,12 +380,16 @@ with $\mu>0$. Then the limit $\mu\to 0$ produces the regularized
 conformal block $\tilde{\mathcal{G}}_{c, 0}^{(2)}(z)$ that
 provides, using Eq.~\eqref{character_conf_block}, the  character of the irreducible representation of the identity.
 
-The case $N=3$ works analogously. From Fig.~\ref{fig-g1}, one observes that you have three $G^{-1}$ and two $\rho$. Using the scheme \eqref{regularization} one regularizes the terms associated to the null- vectors as $\varepsilon^4/\varepsilon^3$, so vanishing in the limit $\varepsilon \to 0$. Explicit examples of $N=2$ and $N=3$ minimal models are given in Appendix.. 
+\noindent Explicit examples of $N=2$ and $N=3$ minimal models are given in Appendix.. 
 
 
 \section{Higher genus conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
 
-In order to drastically improve the converge of the numerical bootstrap, it is necessary to expand the higher-genus conformal blocks $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ as a linear combination of sphere conformal blocks with central charge $Nc$. More specifically, we shall expect
+The computation of the small $z$ epxansion of $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ becomes effectively impossible to accomplish. For instance, for $N=3$ we could compute the expansion coefficients till to the order  $z^6$.  The global properties of the twist correlation functions, and in particular its crossing symmetry \eqref{cross_symmetry}, are missed by using in Eq.~\eqref{conformal_block_decomposition_0} the small $z$ expansion of the modular conformal block. The convergence of the series is slow near $|z|=1$.
+
+In \cite{Collier}, this problem was tackled by using the pillow frame. Here we show an slightly better procedure that is based on two steps: i) expanding the  $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ in terms of sphere conformal blocks of charge $N c$, ii) using the elliptic Zamolodchikov recursion relation. 
+ 
+In order to drastically impr ove the converge of the numerical bootstrap, it is necessary to expand the higher-genus conformal blocks $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ as a linear combination of sphere conformal blocks with central charge $Nc$. More specifically, we shall expect
 \begin{equation}\label{expansion_sphere_conf_blocks}
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=\sum_{l=0}^{\infty}\alpha_{l}^{\boldsymbol{h}}
  \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z).
