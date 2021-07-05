@@ -198,6 +198,7 @@ one has:
  \end{equation}
  The matrix elements  $\Gamma_{\boldsymbol{h},\boldsymbol{M}}$ and $\Gamma^{*}_{\boldsymbol{h},\boldsymbol{M}}$ have an algebraic nature, in the sense that they are fixed by the orbifold algebra. The structure constants, on the other hand, can depend on the model under consideration. Comparing with the expansion Eq.\eqref{conformal_block_decomposition_0}, one has:
  \begin{equation}
+ \label{DC}
  D_{\boldsymbol{h},\boldsymbol{\bar{h}}}= C_{\boldsymbol{h},\boldsymbol{\bar{h}}}^2
  \end{equation}
 \subsection{Computing the three point functions by unfolding}
@@ -386,25 +387,35 @@ provides, using Eq.~\eqref{character_conf_block}, the  character of the irreduci
 
 
 \section{Higher genus conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
-
-The computation of the small $z$ expansion of $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ from  Eq. ~\eqref{conformal_block_decomposition} becomes quickly impossible to accomplish. For instance, for $N=3$ we could compute the contribution of the descendants till the level $6$. As the convergence of the series ~\eqref{conformal_block_decomposition} is slow near $|z|=1$,  the global properties of the twist correlation functions ~\eqref{conformal_block_decomposition_0}, and in particular its crossing symmetry \eqref{cross_symmetry}, are missed. 
-In \cite{Collier}, this problem was tackled by using the pillow frame and obtaining a series expansion in the $q(x)$ variable, where:
+The Eq. ~\eqref{conformal_block_decomposition} provides a small $z$ expansion of the modular conformal block of the type:
 \begin{equation}
-\label{defq}
-q(z)= e^{i \pi \tau(z)}.
-\end{equation} 
-This drastically improves the convergence properties of the twist correlation function.  
-
-\noindent We can improve the expansion obtained in \cite{Collier} by using a different procedure, composed in three steps i) computing the small $z$ expansion of  $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ by using Eq. ~\eqref{expansion_sphere_conf_blocks} ii) expanding the  $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ in terms of the sphere Virasoro conformal blocks of charge $N c$, iii) expanding these latter in the $q(x)$ variables by using the elliptic Zamolodchikov recursion relation. Let us explain these steps more in detail.  
- 
-\noindent The orbifold algebra admits as a sub-algebra a Virasoro algebra of charge $N c$\cite{Borisov}. We will denote by $\mathcal{F}_{N c, |h }(z)$ the Virasoro sphere conformal blocks with the four external dimensions fixed to  $h_{\sigma_N}$ and with internal channel of dimension $h$. The fine structure of the orbifold algebra was used in \cite{Dupic} to derive differential equation for certain twist correlation function.  
-It is natural to expand the modular conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ on the $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$. This expansion takes the following  form:
-\begin{equation}\label{expansion_sphere_conf_blocks}
- \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=\sum_{l=0}^{\infty}\alpha_{l}^{\boldsymbol{h}}
- \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z).
+\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) =z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=1}^{\infty} a_j \; z^j.
 \end{equation}
-By knowing  the small $z$ expansion $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ till at a given order, say $L$,  the coefficients $\alpha_{l}^{\boldsymbol{h}}$ for $l \leq L$ can be easily derived. The above expansion represents an improvement with respect to Eq. ~\eqref{expansion_sphere_conf_blocks}, as each  $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ can be computed till very great orders in $z$.
-This means that we can take into account the contributions of certain very low descendants of the orbifold algebra that were previously unaccessible.  A more detail discussion concerning the meaning of the above expansion as well as the orbifold algebra origin of the $\alpha_{l}^{\boldsymbol{h}}$ are discussed in \ref{deralpha}. We can finally  replace in Eq.~\eqref{expansion_sphere_conf_blocks} the following identity:
+The computation of the $a_j$ coefficients becomes quickly impossible to accomplish and one has to approximate $\mathcal{G}_{c,\boldsymbol{h}}^{(3)}(z)$ by truncating the above sum above some value $L$:
+\begin{equation}
+\label{trunc}
+\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=1}^{L} a_j \; z^j.
+\end{equation}
+For $N=3$, for instance, we are able to reach $L=6$.
+
+\noindent The main point here is that the convergence of the series ~\eqref{conformal_block_decomposition} is slow close to  $|z|=1$. This in turn implies that, by approximating the $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$  by truncated sums, one missed the global properties of the twist correlation functions and in particular the crossing symmetry \eqref{cross_symmetry}. 
+For $N=3$, in \cite{Collier}, this problem was tackled  by using a transformation from the frame $\Sigma_2(x)$ to the pillow frame. They  obtained a series expansion in the $q(z)$ variable:
+\begin{equation}
+\label{collierap}
+\mathcal{G}_{c,\boldsymbol{h}}^{(3)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=1}^{L} b_j \; q(z)^j, \quad q(z)= e^{i \pi \tau(z)}.
+\end{equation}
+where  $\tau(z)$ is defined in.. This drastically improves the convergence properties of the twist correlation function near $|z|=1$.
+
+\noindent Here we show how to improve the expansion in \cite{Collier} by using a similar but different procedure.  First we use the truncated sum \eqref{trunc} to express the $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ as  
+\begin{equation}\label{expansion_sphere_conf_blocks}
+ \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)\sim\sum_{l=0}^{L}\alpha_{l}^{\boldsymbol{h}}
+ \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z),
+\end{equation}
+where we have  denoted by $\mathcal{F}_{N c, |h }(z)$ the Virasoro sphere conformal blocks with the four external dimensions fixed to  $h_{\sigma_N}$ and with internal channel of dimension $h$.  From Eq. \eqref{trunc}, the coefficients $\alpha_{l}^{\boldsymbol{h}}$ can be easily derived. The Eq.\eqref{expansion_sphere_conf_blocks} is already a better approximations than with Eq. ~\eqref{expansion_sphere_conf_blocks}, as each  $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ can be computed till orders much bigger than $z^{|\boldsymbol{h}|-2h_{\sigma_N}+L}$. In other words,  this means that we can take into account the contributions of certain very low descendants of the orbifold algebra that were previously unaccessible.
+
+\noindent The expansion \eqref{expansion_sphere_conf_blocks} is natural as the orbifold algebra admits as a sub-algebra a Virasoro algebra of charge $N c$\cite{Borisov}. Note that the fine structure of the orbifold algebra was used in \cite{Dupic} to derive differential equation for certain twist correlation function. A more detail discussion concerning the meaning of  \eqref{expansion_sphere_conf_blocks}  as well as the orbifold algebra nature of the $\alpha_{l}^{\boldsymbol{h}}$ are discussed below in \ref{deralpha}.
+
+\noindent The second step is to express the $\mathcal{F}_{N c, |h }(z)$ as an expansion in the $q(z)$ variables by using the elliptic Zamolodchikov recursion relation:
 \begin{equation}
  \mathcal{F}_{Nc, h}(z)=
  f_N(q(z), c, h) \;H(Nc, h, h_{\sigma_N}, q(z)),
@@ -417,15 +428,19 @@ f_N(q, c, h) &= 16^{\frac{1-Nc}{24}}q(z)^{h-\frac{Nc-1}{24}}
  H_N(q, c, h)&=1+\sum_{j=1}^{\infty}d_j(c, h,N)\;q^j
 \end{align}
 The coefficients $d_j(c, h,N) $ can be computed recursively to very large ovalues of $j$, see...
-Tp resume  we  obtain an expansion of $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ that is exact till the order $q^{L}$ but can provide some sub-leading corrections that allows  to better approximate the exact function. 
+For $N=3$,  we obtained the following  approximation of  $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ 
+\begin{equation}
+\label{usap}
+\mathcal{G}_{c,\boldsymbol{h}}^{(3)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \left(\sum_{j=1}^{L} b_j \; q(z)^j+\sum_{j=L+1}^{L'} c_j q(z)^{j}\right), \quad q(z)= e^{i \pi \tau(z)} .
+\end{equation}
+that provides sub-leading corrections to Eq.~\eqref{collierap}. It is important to stress that both Eq.~\eqref{collierap} and Eq.~\eqref{usap} approximate the $ \mathcal{G}_{c,\boldsymbol{h}}^{(3)}(z)$  with an error  $o(q(z)^{L})$. However, the $q^{j}$, $j>L$ terms in  \eqref{usap} come from the contribution of (some of) the descending fields at level $j$, thus providing a better approximations than \eqref{collierap}.  
 \subsection{Orbifold algebra and algebraic nature of the $\alpha_{l}^{{\it {\bf h}}}$} 
 \label{deralpha}
-
-Recall that in the expression \eqref{conformal_block_decomposition},  the contribution to $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ comes from the primary $\boldsymbol{\phi}_{\boldsymbol{h}}$ and all the orbifold algebra  descendants. To illustrate the main idea behind ~\eqref{expansion_sphere_conf_blocks} it is sufficent to consider the first level contribution to  $\mathcal{G}_{c, \boldsymbol{h}}^{(3)}(z)$:
+To illustrate the main idea behind ~\eqref{expansion_sphere_conf_blocks}, it is sufficent to consider the first level contribution to  $\mathcal{G}_{c, \boldsymbol{h}}^{(3)}(z)$:
 \begin{equation}
-\mathcal{G}_{c, \boldsymbol{h}}^{(3)}(z)= z^{|\boldsymbol{h}|-2h_{\sigma_N}}\left[1+\left(\frac{2|\boldsymbol{h}|}{ 3 c}+\frac{1}{54}\left(\frac{(h_1-h_2)^2}{h_3}+\frac{(h_1-h_3)^2}{h_2}+\frac{(h_2-h_3)^2}{h_1}\right)\right)\;z+O(z^2)\right],
+\mathcal{G}_{c, \boldsymbol{h}}^{(3)}(z)= z^{|\boldsymbol{h}|-2h_{\sigma_N}}\left[1+\left(\frac{|\boldsymbol{h}|}{2}+\frac{1}{54}\left(\frac{(h_1-h_2)^2}{h_3}+\frac{(h_1-h_3)^2}{h_2}+\frac{(h_2-h_3)^2}{h_1}\right)\right)\;z+O(z^2)\right],
 \end{equation}
-where, we recall $\boldsymbol{\phi}_{\boldsymbol{h}}=\phi_{h_1}\otimes \phi_{h_2}\otimes \phi_{h_3} $,    $\boldsymbol{h}=\{h_1,h_2,h_3\}$ and $|\boldsymbol{h}|=h_1+h_2+h_3$. The $z^{|\boldsymbol{h}|-2h_{\sigma_N}+1}$ coefficient comes from the contribution of three descendants
+where we recall that  $\boldsymbol{\phi}_{\boldsymbol{h}}=\phi_{h_1}\otimes \phi_{h_2}\otimes \phi_{h_3} $,    $\boldsymbol{h}=\{h_1,h_2,h_3\}$ and $|\boldsymbol{h}|=h_1+h_2+h_3$. The $z^{|\boldsymbol{h}|-2h_{\sigma_N}+1}$ coefficient comes from the contribution of three descendants
 \begin{equation}
 |v_1\rangle =L_{-1}\phi_{h_1}\otimes \phi_{h_2}\otimes \phi_{h_3},   \quad |v_2\rangle =\phi_{h_1}\otimes  L_{-1}\phi_{h_2}\otimes \phi_{h_3},\quad |v_3\rangle=\phi_{h_1}\otimes \phi_{h_2}\otimes  L_{-1} \phi_{h_3}.
 \end{equation}
@@ -433,12 +448,11 @@ The symmetric combination of the above three states will correspond to a descend
 \begin{equation}
 \boldsymbol{L}_{-1}\boldsymbol{\phi}_{\boldsymbol{h}}=|v_1\rangle+|v_2\rangle+|v_3\rangle.
 \end{equation} 
-The contribution of this descendant, which corresponds to $2|\boldsymbol{h}|/3 c$, is therefore taken into account by the sphere conformal block, as it can be seen from the following expansion: 
+The contribution of this descendant, which corresponds to $|\boldsymbol{h}|/2 $, is therefore taken into account by the sphere conformal block, as it can be seen from the following expansion: 
 \begin{equation}
 \mathcal{F}_{3c, |\boldsymbol{h}|}(z)=z^{|\boldsymbol{h}|-2h_{\sigma_N}}\left[1+\left(\frac{2|\boldsymbol{h}|}{ 3 c}\right)\;z+O(z^2)\right].
 \end{equation}
-Let us consider now space the orthogonal to $\boldsymbol{L}_{-1}\boldsymbol{\phi}_{\boldsymbol{h}}$  
-orthogonal to $\boldsymbol{L}_{-1}\Phi_{\boldsymbol{h}}$: it is a two dimensional space parametrized by $\lambda \in \mathbb{C}$:
+Let us consider now  space of the states orthogonal to $\boldsymbol{L}_{-1}\boldsymbol{\phi}_{\boldsymbol{h}}$: this is a two dimensional space of states $|v\rangle_{\lambda}$ parametrized by $\lambda \in \mathbb{C}$:
 \begin{equation}
 \label{ortosub}
  |v\rangle_{\lambda}= |v_1\rangle+\lambda |v_2\rangle
@@ -457,14 +471,14 @@ where
 \label{alpha1}
 \alpha_{1}^{\boldsymbol{h}} =\frac{1}{54}\left[\frac{(h_1-h_2)^2}{h_3}+\frac{(h_1-h_3)^2}{h_2}+\frac{(h_2-h_3)^2}{h_1}\right].
 \end{equation}
-that is the second term in the expansion of Eq.~\eqref{expansion_sphere_conf_blocks}. The coefficient $\alpha_{1}^{\boldsymbol{h}}$ can  be determined by choosing two values of $\lambda=(\lambda_1,\lambda_2)$  such that 
+The coefficient $\alpha_{1}^{\boldsymbol{h}}$ can  be determined by choosing two values of $\lambda=(\lambda_1,\lambda_2)$  such that 
 $\{|v\rangle_{\lambda_1}, |v\rangle_{\lambda_2}\}$ is an orthonormal basis in the subspace \eqref{ortosub}. Then one can obtain \eqref{alpha1} from the expression:
 \begin{eqnarray}
- \alpha_1^{\boldsymbol{h}}&=&\frac{1}{C_{\boldsymbol{h},\boldsymbol{\bar{h}}}}\left[(_{\lambda_1}\langle v |\otimes \langle \boldsymbol{\phi}_{\boldsymbol{\bar{h}}}|)\sigma_{3}(1)|\bar{\sigma}_3\rangle \;\langle \sigma_{3}|\bar{\sigma}_3(1) (|v\rangle_{\lambda_1}\otimes |\boldsymbol{\phi}_{\boldsymbol{\bar{h}}}\rangle)  \right.+\\ 
+ \alpha_1^{\boldsymbol{h}}&=&\frac{1}{D_{\boldsymbol{h},\boldsymbol{\bar{h}}}}\left[(_{\lambda_1}\langle v |\otimes \langle \boldsymbol{\phi}_{\boldsymbol{\bar{h}}}|)\sigma_{3}(1)|\bar{\sigma}_3\rangle \;\langle \sigma_{3}|\bar{\sigma}_3(1) (|v\rangle_{\lambda_1}\otimes |\boldsymbol{\phi}_{\boldsymbol{\bar{h}}}\rangle)  \right.+\\ 
  &+&\left.
  ( _{\lambda_2}\langle v| \otimes \langle \boldsymbol{\phi}_{\boldsymbol{\bar{h}}}|)|\sigma_{3}(1)|\bar{\sigma}_3\rangle \;\langle \sigma_{3}|\bar{\sigma}_3(1)(|v\rangle_{\lambda_2}\otimes |\boldsymbol{\phi}_{\boldsymbol{\bar{h}}}\rangle)  \right]
 \end{eqnarray}
-where $C_{\boldsymbol{h},\boldsymbol{\bar{h}}}$ is the structure constant defined in Eq.~\eqref{strucconst}. As we already pointed out for the matrix elements $\Gamma$ and $\Gamma^*$, defined in Eq.~\eqref{Gammas}, the coefficient $\alpha^{\boldsymbol{h}}_1$  is algebraic in nature, despite the fact in the above equation where holomorphic and anti-holomorphic fields appear. This can be seen from the fact they are rational functions of the central charge and of the holomorphic dimension $h_j$.
+where $D_{\boldsymbol{h},\boldsymbol{\bar{h}}}$ is related to the structure constant as in Eq.~\eqref{DC}. As we already pointed out for the matrix elements $\Gamma$ and $\Gamma^*$, defined in Eq.~\eqref{Gammas}, the coefficient $\alpha^{\boldsymbol{h}}_1$  is algebraic in nature, despite the fact in the above equation where holomorphic and anti-holomorphic fields appear. This can be seen from the fact they are rational functions of the central charge and of the holomorphic dimension $h_j$.
 
 \noindent The states 
 $\boldsymbol{L}_{-M}\boldsymbol{\phi}_{\boldsymbol{h}}$ and $\boldsymbol{L}_{-M} |v\rangle_{\lambda}$ do not span the full space of descendents for level greater than one. This is the reason why
@@ -492,7 +506,7 @@ to the genus $N-1$ conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$,
 according to Eq.~\eqref{expansion_sphere_conf_blocks}. The corresponding structure constant $\alpha_l^{\boldsymbol{h}}$
 is given by
 \begin{equation}
- \alpha_l^{\boldsymbol{h}}=\frac{1}{C_{\boldsymbol{h},\boldsymbol{\bar{h}}}}\sum_{j=1}^{\tilde{\mathcal{N}}_{N,l}}
+ \alpha_l^{\boldsymbol{h}}=\frac{1}{D_{\boldsymbol{h},\boldsymbol{\bar{h}}}}\sum_{j=1}^{\tilde{\mathcal{N}}_{N,l}}
  (_{\lambda_j}\langle v |\otimes \langle \boldsymbol{\phi}_{\boldsymbol{\bar{h}}}|)\sigma_{3}(1)|\bar{\sigma}_3\rangle \;\langle \sigma_{3}|\bar{\sigma}_3(1) (|v\rangle_{\lambda_j}\otimes |\boldsymbol{\phi}_{\boldsymbol{\bar{h}}}\rangle).
 \end{equation}
 The primary fields at 
