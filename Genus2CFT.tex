@@ -15,6 +15,10 @@
 \newdimen\R
 \R=1.5cm
 
+\def\Tr{\mathop{\mbox{\normalfont Tr}}\nolimits}
+\def\chartheta#1#2{\Theta\!\left[\begin{smallmatrix}#1\\#2\end{smallmatrix}\right]\!}
+
+
 \usepackage{dcolumn}
 \newcolumntype{L}{D{.}{.}{2,8}}
 
@@ -66,29 +70,30 @@ using the conformal bootstrap.}
 \section{CFT partition functions on Renyi surfaces}
 Let us consider a conformal field theory $\mathcal{C}$, with central charge 
 $c$, living on a Riemann surface $\Sigma_g$ of genus $g$. In the following we will refer to $\mathcal{C}$ as the seed theory. 
-Let us consider the family of Renyi Riemann surfaces $\Sigma_g(x)$ of 
+Let us consider the family of R\'enyi Riemann surfaces $\Sigma_g(x)$ of 
 genus $g=N-1$ described by the  complex algebraic curve
 \begin{equation}\label{riemann_surf}
 \Sigma_{N-1}(x): \quad  w^N=\frac{z(z-1)}{z-x},
 \end{equation}
-which has branch points of order $N$ at $z_{\text{branch}}=0$, $x$, $1$, and $\infty$. The Eq.~\eqref{riemann_surf} can be interpreted as an $N$-sheet cover of the Riemann sphere $\mathbb C\cup \{\infty\}$ parametrized by $z$. For a visualization of the surface on $\mathbb C^2$ we refer to~\cite{Dubrovin}. These Riemann surfaces are parametrized by  
+which has branch points of order $N$ at $z_{\text{branch}}=0$, $x$, $1$, and $\infty$. 
+Eq.~\eqref{riemann_surf} can be interpreted as an $N$-sheet cover of the Riemann sphere $\mathbb C\cup \{\infty\}$ parametrized by $z$. For a visualization of the surface on $\mathbb C^2$ we refer to~\cite{Dubrovin}. These Riemann surfaces are parametrized by  
 the complex number $x$ and enjoy a symmetry $\mathbb{Z}_N$ since 
 Eq.~\eqref{riemann_surf} is invariant under the transformation 
 $w\mapsto e^{\frac{2\pi i k}{N}}w$, with $k\in\mathbb{N}$. 
 This transformation amounts to a cyclic permutation of the $N$ sheets of the surface, where each sheet is labelled by the choice of the branch of the $N$-root in Eq.~\eqref{riemann_surf}. 
 
-\noindent In the following we consider the following quantity:
+In the following, we consider the following quantity:
 \begin{equation}
-\mathcal{Z}_{N-1}(x)=\text{Partition function of $\mathcal{C}$ on the surface  $\Sigma_{N-1}(x)$, defined in \ref{riemann_surf}}.
+\mathcal{Z}_{N-1}(x)=\text{Partition function of $\mathcal{C}$ on the surface  $\Sigma_{N-1}(x)$, defined in \eqref{riemann_surf}}.
  \end{equation}
-The CFT partition function on $\Sigma_{N-1}(x)$ is strictly related to the orbiforld CFT $\mathcal{C}^{\otimes N}/Z_N$ that lives on the Riemann sphere $z$ \cite{Dixon, Knizhnik}. In this respect a crucial role is played by the $\mathbb Z_N$ twist and anti-twist field $\sigma_N$ and $\bar{\sigma}_N$, that are  spinless primary fields of conformal dimension~\cite{Knizhnik}
+The CFT partition function on $\Sigma_{N-1}(x)$ is strictly related to the orbifold CFT $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$ that lives on the Riemann sphere $z$ \cite{Dixon, Knizhnik}. In this respect, a crucial role is played by the $\mathbb{Z}_N$ twist and anti-twist fields $\sigma_N$ and $\bar{\sigma}_N$, that are  spinless primary fields of conformal dimension~\cite{Knizhnik}
 \begin{equation}
- h_{\sigma_N}=\bar{h}_{\sigma_N}=\frac{c}{24}\left(N-\frac{1}{N}\right);
+ h_{\sigma_N}=\bar{h}_{\sigma_N}=\frac{c}{24}\left(N-\frac{1}{N}\right).
 \end{equation}
-\noindent More specifically, the partition function $\mathcal{Z}_{N-1}(x)$ is given by the four-point function of twist fields inserted at the branch points $z=z_{branch}=\{0,1,x,\infty\}$: 
+More specifically, the partition function $\mathcal{Z}_{N-1}(x)$ is given by the four-point function of twist fields inserted at the branch points $z= z_{\text{branch}}=\{0,1,x,\infty\}$,
 \begin{equation}
 \label{geom_inter}
-\mathcal{Z}_{N-1}(x)=\langle \sigma_N (\infty) \bar{\sigma}_N(1)\sigma_N(x,\bar{x}) \bar{\sigma}_N(0)\rangle,
+\mathcal{Z}_{N-1}(x)=\langle \sigma_N (\infty) \bar{\sigma}_N(1)\sigma_N(x,\bar{x}) \bar{\sigma}_N(0)\rangle.
  \end{equation}
 
 %Given for instance a  $\mathcal C^{\otimes N}$ primary $\boldsymbol{O}^{(k)}(z)=\mathbb I^{(1)}\otimes\mathbb I\dots\otimes O^{(k)}(z)\otimes\dots\otimes\mathbb I^{(N)}$, the multivaluedness of its correlation functions under the analytic continuation $(z-z_{\text{branch}})\mapsto e^{2\pi i}(z-z_{\text{branch}})$ is implemented by the twist field inserted at the branch point:
@@ -102,13 +107,14 @@ The CFT partition function on $\Sigma_{N-1}(x)$ is strictly related to the orbif
 % \boldsymbol {O}^{(k)}(e^{2\pi i}(z-z_{\text{branch}}))\bar{\sigma}_N(z_{\text{branch}})\mapsto \boldsymbol{O}^{(k-1)}(z-z_{\text{branch}})\bar{\sigma}_N(z_{\text{branch}}).
 %\end{equation}
 
-\noindent Note that, due to the tranformation Eq.(\ref{riemann_surf}), the metric in $\Sigma_{N-1}(x)$ is non trivial.  Via a Weyl transformation, the corresponding partition function $\mathcal{Z}_{N-1}$ can then be put in relation to the partition function $\mathcal{\hat{Z}}_{N-1}$ on a Riemann surfaces with a flat metric\cite{Lunin}:  
+Note that, due to the branch points of Eq.(\ref{riemann_surf}), the metric in $\Sigma_{N-1}(x)$ is non trivial.  Via a Weyl transformation, the corresponding partition function $\mathcal{Z}_{N-1}$ can be then related to the partition function $\mathcal{\hat{Z}}_{N-1}$ on a Riemann surface with a flat metric~\cite{Lunin}:  
 \begin{equation}\label{partition_twist_correl}
  \mathcal{\hat{Z}}_{N-1}(x)=e^{cS_{\text{anom.}}(x)} \mathcal{Z}_{N-1}(x),
 \end{equation}
-where the prefactor $e^{cS_{\text{anom.}}(x)}$ in Eq.~\eqref{partition_twist_correl} is the Weyl anomaly originating from the metric transformation.
+where the prefactor $e^{cS_{\text{anom.}}(x)}$ in Eq.~\eqref{partition_twist_correl} is the Weyl anomaly that arises in the 
+transformation of the metric.
 %It takes into account that in the orbifold approach the metric employed to determine the partition function on $\Sigma_{N-1}(x)$ is a flat metric on each sheet of the surface with conical singularities at the branch points of the covering map. The partition function with a flat metric $\mathcal{Z}_{N-1}$ is then related to the latter by  the prefactor in Eq.~\eqref{partition_twist_correl} which can be explicitely calculated.  
-\noindent The Weyl anomaly can be explictely calculated. Take for instance the case $N=2$, where, under the Abel-Jacobi map, $\Sigma_{1}(x)$ is conformally equivalent to a flat torus of modulus 
+\noindent The Weyl anomaly can be explicitly calculated. Take for instance the case $N=2$, for which, under the Abel-Jacobi map, $\Sigma_{1}(x)$ is conformally equivalent to a flat torus of modulus 
 \begin{equation}\label{tau}
  \tau(x)=i\frac{K(1-x)}{K(x)}, 
 \end{equation}
@@ -134,23 +140,22 @@ the symmetry $x\mapsto 1-x$ of the twist field correlation function for $N=3$.
 
 
 \section{Modular conformal blocks}\label{sec:conf_blocks}
-The twist fields four-point 
-function of the orbifold theory admits the following expansion:
+The twist field four-point function of the $\mathcal{C}^{\times N}/\mathbb{Z}_N$ orbifold 
+theory admits the following expansion
 \begin{equation}\label{conformal_block_decomposition_0}
  \langle \sigma_N (\infty)  \bar{\sigma}_N(1) \sigma_N (z, \bar{z})\bar{\sigma}_N(0)\rangle=
  \sum_{\boldsymbol{h},\boldsymbol{\bar{h}}} D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)\mathcal{G}_{c,\boldsymbol{\bar{h}}}^{(N)}(\bar{z}),
 \end{equation}
-where $\boldsymbol{h}\equiv\{h_1, \dots, h_N\}$ with $h_j$ being the conformal dimension of  
-a primary in the seed theory.
-The function $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, defined below, are the so-called modular conformal blocks.  They are normalized such that: 
+where $\boldsymbol{h}\equiv\{h_1, \dots, h_N\}$ and $h_j$ is the conformal dimension of  
+a primary field of the seed theory $\mathcal{C}$. The function $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, defined below, are the so-called modular conformal blocks. They are normalized such that
 \begin{equation}
 \label{G_asy}
-\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=z^{\;|\boldsymbol{h}| -2\; h_{\sigma_N}}\left(1+ O(z)\right),
+\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=z^{\;|\boldsymbol{h}| -2\; h_{\sigma_N}}\left[1+ O(z)\right],
 \end{equation}
-where $|\boldsymbol{h}|=\sum_j h_j$ and are fixed by the orbifold symmetry algebra. The $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ encode therefore the universal part of the orbifold correlation function  while  the structure constants  $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$  characterize the specific bootstrap solution under consideration. Note that in Eq.\eqref{conformal_block_decomposition_0}, we inserted one twist field at a general point $(z,\bar{z})$ on the Riemann sphere to stress the fact we are computing a standard CFT correlation function on the $z$-sphere. To recover the geometric interpretations of Eqs.~\eqref{riemann_surf} -\eqref{geom_inter}, one sets $z,\bar{z}\to x,\bar{x}$.
+where $|\boldsymbol{h}|=\sum_j h_j$ and are fixed by the orbifold symmetry algebra. Therefore, the conformal blocks $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ encode the universal part of the orbifold correlation function  while  the structure constants  $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$  characterize the specific bootstrap solution under consideration. Note that in Eq.~\eqref{conformal_block_decomposition_0}, we inserted one twist field at a general point $(z,\bar{z})$ on the Riemann sphere to stress the fact we are computing a standard CFT correlation function on the $z$-sphere. To recover the geometric interpretations of Eqs.~\eqref{riemann_surf}-\eqref{geom_inter}, one sets $(z,\bar{z})\to (x,\bar{x})$.
 
-\noindent We review the procedure, well described in \cite{Collier}, to obtain the small $z$ expansion  of  the modular conformal blocks.  Let us fix some notations. Let us focus first on the holomorphic sector of the seed CFT $\mathcal{C}$. We denote by $\phi_{h}(z)$  the holomorphic primary field with conformal dimension $h$  and by $\phi_{h}^{M}(z)$ one of its descendants. The descendants are labeled by the partition  $M\equiv\{m_1,\dots,m_q\}$, $m_1\leq m_2\cdots\leq m_q$ of the integer  $|M|=\sum_{j} m_j$. Indeed, in terms of the  Virasoro generators $L_{-m}(z)$, defined in Eq.~\eqref{vir_ln}, the holomorphoc field $\phi_{h}^{M}(z)$ takes the form:
+We will now review the procedure, well described in Ref.~\cite{Collier}, to obtain the small $z$ expansion  of  the modular conformal blocks.  Let us fix some notations. We focus first on the holomorphic sector of the seed CFT $\mathcal{C}$. We denote by $\phi_{h}(z)$  the holomorphic primary field with conformal dimension $h$  and by $\phi_{h}^{M}(z)$ one of its descendants. The descendants are labelled by the partition  $M\equiv\{m_1,\dots,m_q\}$, $m_1\leq m_2\cdots\leq m_q$ of the integer  $|M|=\sum_{j} m_j$. Indeed, in terms of the  Virasoro generators $L_{-m}(z)$, defined in Eq.~\eqref{vir_ln}, the holomorphoc field $\phi_{h}^{M}(z)$ takes the form:
 \begin{equation}
 \label{desc}
  \phi_{h}^{M}(z):=L_{-M}(z)\;\phi_h(z)~~{\rm{where}}~~ L_{-M}(z):=L_{-m_1}(z)\dots L_{-m_q}(z).
@@ -373,7 +378,7 @@ $\rho^h$ and in the $G^h$, as in the following:
 \end{equation}
 with $\varepsilon>0$. In this way the singularites associated to the null vectors are always regularizied and vanish in the limit  $\varepsilon\to 0$, see also~\cite{SV, Alkalaev}.
 
-The case of the identity is a litlle bit different as it contains a null-vector at level one for any valu of the central charge. So, 
+The case of the identity is a little bit different as it contains a null-vector at level one for any value of the central charge. So, 
 for the case of the identity  we can follow a similar strategy but regulirizing  the $G^h$ and 
 $\rho^h$ by varying  $h$ instead of $c$ such as
 \begin{equation}\label{regularization_identity}
@@ -386,17 +391,17 @@ provides, using Eq.~\eqref{character_conf_block}, the  character of the irreduci
 \noindent Explicit examples of $N=2$ and $N=3$ minimal models are given in Appendix.. 
 
 
-\section{Higher genus conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
-The Eq. ~\eqref{conformal_block_decomposition} provides a small $z$ expansion of the modular conformal block of the type:
+\section{Higher-genus conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
+Eq.~\eqref{conformal_block_decomposition} provides a small $z$ expansion of the modular conformal block of the type
 \begin{equation}
 \mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) =z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=1}^{\infty} a_j \; z^j.
 \end{equation}
-The computation of the $a_j$ coefficients becomes quickly impossible to accomplish and one has to approximate $\mathcal{G}_{c,\boldsymbol{h}}^{(3)}(z)$ by truncating the above sum above some value $L$:
+The computation of the $a_j$ coefficients becomes quickly impossible to accomplish and one has to approximate $\mathcal{G}_{c,\boldsymbol{h}}^{(3)}(z)$ by truncating the above sum at some value $L$,
 \begin{equation}
 \label{trunc}
 \mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=1}^{L} a_j \; z^j.
 \end{equation}
-For $N=3$, for instance, we are able to reach $L=6$.
+In the case $N=3$, for instance, we are able to reach $L=6$.
 
 \noindent The main point here is that the convergence of the series ~\eqref{conformal_block_decomposition} is slow close to  $|z|=1$. This in turn implies that, by approximating the $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$  by truncated sums, one missed the global properties of the twist correlation functions and in particular the crossing symmetry \eqref{cross_symmetry}. 
 For $N=3$, in \cite{Collier}, this problem was tackled  by using a transformation from the frame $\Sigma_2(x)$ to the pillow frame. They  obtained a series expansion in the $q(z)$ variable:
@@ -406,14 +411,24 @@ For $N=3$, in \cite{Collier}, this problem was tackled  by using a transformatio
 \end{equation}
 where  $\tau(z)$ is defined in.. This drastically improves the convergence properties of the twist correlation function near $|z|=1$.
 
-\noindent Here we show how to improve the expansion in \cite{Collier} by using a similar but different procedure.  First we use the truncated sum \eqref{trunc} to express the $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ as  
+\noindent Here we show how to improve the expansion in \cite{Collier} by using a similar but different procedure.  
+We expand the higher-genus conformal blocks $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ as a linear combination
+of sphere conformal blocks with central charge $Nc$. More specifically,
 \begin{equation}\label{expansion_sphere_conf_blocks}
+ \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=\sum_{l=0}^\infty\alpha_l^{\boldsymbol{h}}\mathcal{F}_{Nc, |\boldsymbol{h}+l}(z),
+\end{equation}
+where we have  denoted by $\mathcal{F}_{Nc, h }(z)$ the Virasoro sphere conformal blocks with the four external dimensions fixed to  $h_{\sigma_N}$ and with internal channel of dimension $h$.
+
+\noindent If we truncate Eq.~\eqref{expansion_sphere_conf_blocks}  
+\begin{equation}\label{expansion_sphere_conf_blocks_trunc}
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)\sim\sum_{l=0}^{L}\alpha_{l}^{\boldsymbol{h}}
  \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z),
 \end{equation}
-where we have  denoted by $\mathcal{F}_{N c, |h }(z)$ the Virasoro sphere conformal blocks with the four external dimensions fixed to  $h_{\sigma_N}$ and with internal channel of dimension $h$.  From Eq. \eqref{trunc}, the coefficients $\alpha_{l}^{\boldsymbol{h}}$ can be easily derived. The Eq.\eqref{expansion_sphere_conf_blocks} is already a better approximations than with Eq. ~\eqref{expansion_sphere_conf_blocks}, as each  $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ can be computed till orders much bigger than $z^{|\boldsymbol{h}|-2h_{\sigma_N}+L}$. In other words,  this means that we can take into account the contributions of certain very low descendants of the orbifold algebra that were previously unaccessible.
+then the coefficients $\alpha_{l}^{\boldsymbol{h}}$ can be easily derived from Eq.~\eqref{trunc}.
+Eq.~\eqref{expansion_sphere_conf_blocks_trunc} is already a better approximation than 
+Eq.~\eqref{trunc}, as each  $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ can be computed till orders much bigger than $z^{|\boldsymbol{h}|-2h_{\sigma_N}+L}$. In other words, this means that we can take into account the contributions of certain very low descendants of the orbifold algebra that were previously unaccessible.
 
-\noindent The expansion \eqref{expansion_sphere_conf_blocks} is natural as the orbifold algebra admits as a sub-algebra a Virasoro algebra of charge $N c$\cite{Borisov}. Note that the fine structure of the orbifold algebra was used in \cite{Dupic} to derive differential equation for certain twist correlation function. A more detail discussion concerning the meaning of  \eqref{expansion_sphere_conf_blocks}  as well as the orbifold algebra nature of the $\alpha_{l}^{\boldsymbol{h}}$ are discussed below in \ref{deralpha}.
+\noindent The expansion of Eq.~\eqref{expansion_sphere_conf_blocks} is natural as the orbifold algebra admits as a sub-algebra a Virasoro algebra of central charge $N c$~\cite{Borisov}. Note that the fine structure of the orbifold algebra was used in Ref.~\cite{Dupic} to derive differential equations for certain twist-field correlation functions. A more detail discussion concerning the meaning of Eq.~\eqref{expansion_sphere_conf_blocks}  as well as the algebraic nature of the coefficients $\alpha_{l}^{\boldsymbol{h}}$ can be found in subsection\ref{deralpha}.
 
 \noindent The second step is to express the $\mathcal{F}_{N c, |h }(z)$ as an expansion in the $q(z)$ variables by using the elliptic Zamolodchikov recursion relation:
 \begin{equation}
@@ -425,7 +440,7 @@ where
 f_N(q, c, h) &= 16^{\frac{1-Nc}{24}}q(z)^{h-\frac{Nc-1}{24}}
  [z(1-z)]^{\frac{Nc-1}{24}-2h_{\sigma_N}}
  \vartheta_3(q(z))^{\frac{Nc-1}{2}-16h_{\sigma_N}}, \\
- H_N(q, c, h)&=1+\sum_{j=1}^{\infty}d_j(c, h,N)\;q^j
+ H_N(q, c, h)&=1+\sum_{j=1}^{\infty}d_j(c, h,N)\;q^j.
 \end{align}
 The coefficients $d_j(c, h,N) $ can be computed recursively to very large ovalues of $j$, see...
 For $N=3$,  we obtained the following  approximation of  $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ 
@@ -519,7 +534,238 @@ since they belong to different representations of the Virasoro algebra of Eq.~\e
 %\end{equation}
 \section{Applications}\label{sec:num_bootstrap}
 
-\subsection{Negativity}
+\subsection{Entanglement of disjoint intervals}
+
+A first application of the results of the previous sections is in 
+the analysis of the entanglement between two disjoint intervals in the ground 
+state of the theory $\mathcal{C}$. In order to proceed, we must first introduce some basic 
+definitions and entanglement quantifiers. Let us consider for the moment a generic quantum 
+system that can be divided into two spatial regions, which we call $A$ and $B$, 
+such that the total Hilbert space factorizes as $\mathcal{H}=\mathcal{H}_A\otimes \mathcal{H}_B$.
+We suppose that the system is in a pure state $|\Psi\rangle\in\mathcal{H}$. 
+Hence the state of susbsytem $A$ is described by the reduced density matrix
+\begin{equation}
+\rho_A=\Tr_{\mathcal{H}_B}|\Psi\rangle\langle\Psi|,
+\end{equation}
+with $\Tr_{\mathcal{H}_B}$ denoting the partial trace in the space $\mathcal{H}_B$. 
+The entanglement between regions $A$ and $B$ can be characterized by the moments of the 
+reduced density matrix, $\Tr\rho_A^N$. In particular, the entanglement entropy 
+\begin{equation}
+ S_A=-\Tr(\rho_A\log \rho_A)
+\end{equation}
+can be obtained from the R\'enyi entanglement entropies 
+\begin{equation}
+ S_A^{(N)}=\frac{1}{1-N}\log\Tr\rho_A^N
+\end{equation}
+by performing the replica trick
+\begin{equation}
+ S_A=\lim_{N\to 1^+}S_A^{(N)}=-\lim_{N\to1^+}\frac{\partial}{\partial N}\Tr\rho_A^N.
+\end{equation}
+We will further consider that subsystem $A$ consists of two disjoint regions $A_1$ and $A_2$, 
+such that $A=A_1\cup A_2$ and $\mathcal{H}_A=\mathcal{H}_{A_1}\otimes\mathcal{H}_{A_2}$. 
+Then one can also study the entanglement between $A_1$ and $A_2$, which can be quantified by 
+the moments of the partial transpose of $\rho_A$, $\Tr(\rho_A^{T_2})^N$. If $\{|e_j^{(l)}\rangle\}$
+denotes a basis of the space $\mathcal{H}_{A_l}$, then the matrix elements of the partial transpose 
+$\rho_A^{T_2}$ are defined as 
+\begin{equation}
+\langle e_{j_1}^{(1)}e_{k_1}^{(2)}| \rho_A^{T_2} |e_{j_2}^{(1)}e_{k_2}^{(2)}\rangle=
+\langle e_{j_1}^{(1)}e_{k_2}^{(2)}| \rho_A |e_{j_2}^{(1)}e_{k_1}^{(2)}\rangle.
+\end{equation}
+A particular measure of the entanglement between $A_1$ and $A_2$ is for instance the logarithmic negativity,
+\begin{equation}
+ \mathcal{E}=\log|\Tr_A^{T_2}|,
+\end{equation}
+which can also be calculated through the replica trick 
+\begin{equation}
+ \mathcal{E}=\lim_{n_{\rm e}\to 1^+}\log\Tr(\rho_A^{T_2})^{n_{\rm e}},
+\end{equation}
+by taking the analytic continuation of the moments $\Tr(\rho_A^{T_2})^N$
+with even exponent $N=n_{\rm e}$.
+
+Now we consider that $|\Psi\rangle$ is the ground state of the conformal field
+theory $\mathcal{C}$. Without loss of generality, we can take as regions $A_1$ 
+and $A_2$ the intervals $A_1=(0, x)$ and $A_2=(1, \infty)$, with $0<x<1$. Then
+the moments $\Tr\rho_A^N$ and $\Tr(\rho_A^{T_2})^N$ are equal to 
+ \begin{equation}\label{red_mat_ft}
+ \Tr\rho_A^N=\langle \sigma_N(0)\bar{\sigma}_N(x)\sigma_N(1)\bar{\sigma}_N(\infty)\rangle,
+ \end{equation}
+ and
+ \begin{equation}\label{partial_trans_ft}
+ \Tr(\rho_A^{T_2})^N=\langle \sigma_N(0)\bar{\sigma}_N(x)\bar{\sigma}_N(1)\sigma_N(\infty)\rangle.
+ \end{equation}
+Note that the partial transposition crucially exchanges the twist and anti-twist operators 
+at the points $z=1$ and $\infty$. The crossing transformation $z\mapsto 1-z$ maps subsystem 
+$A=(0, x)\cup(1, \infty)$ into its complement $B=(-\infty, 0)\cup(1-x, 1)$. Thus
+the crossing invariance of the four point correlation function $\langle \sigma_N(0)
+\bar{\sigma}_N(x) \sigma_N(1) \bar{\sigma}_N(\infty)\rangle$ implies that $\Tr\rho_A^N=\Tr\rho_B^N$
+and, therefore, the well-known property that for a pure state the entanglement entropies of a 
+subsystem and its complementary are equal, $S_A=S_B$. This is not true for the moments $\Tr(\rho_A^{T_2})^N$
+and, in fact, the four point function $ \langle \sigma_N(0)\bar{\sigma}_N(x)\bar{\sigma}_N(1)\sigma_N(\infty)\rangle$
+is not crossing invariant. For the case $N=2$, since the twist and anti-twist fields are identical, $\sigma_2=\bar{\sigma}_2$, 
+then $\Tr\rho_A^2=\Tr(\rho_A^{T_2})^2$. 
+
+The correlation functions of Eqs.~\eqref{red_mat_ft} and \eqref{partial_trans_ft} are
+related by the conformal transformation
+\begin{equation}
+ y(z)=\frac{z}{z-1},
+\end{equation}
+which maps the points $(0, x, 1, \infty)$ into $(0, x/(x-1), \infty, 1)$, such that
+\begin{equation}
+ \langle \sigma_N(0)\bar{\sigma}_N(x)\bar{\sigma}_N(1)\sigma_N(\infty)\rangle=
+ (1-x)^{-4h_\sigma}\langle \sigma_N(0)\bar{\sigma}_N(x/(x-1))\sigma_N(1)\bar{\sigma}_N(\infty)\rangle,
+\end{equation}
+and we can rewrite Eq.~\eqref{partial_trans_ft} in the form 
+\begin{equation}\label{partial_trans_ft_2}
+ \Tr(\rho_A^{T_2})^N=(1-x)^{-4h_\sigma}\langle \sigma_N(0)\bar{\sigma}_N(x/(x-1))\sigma_N(1)\bar{\sigma}_N(\infty)\rangle.
+ \end{equation}
+Thus, while for $\Tr\rho_A^N$ we need to calculate the correlation function 
+$\langle\sigma_N(0)\bar{\sigma}_N(x)\sigma_N(1)\bar{\sigma}_N(\infty)\rangle$
+in the interval $0<x<1$, the computation of $\Tr(\rho_A^{T_2})^N$ requires to consider it
+for $x/(x-1)<0$. Therefore, in the case of the moments $\Tr\rho_A^N$, we can directly apply 
+the results of the previous sections, in particular Eqs.~\eqref{conformal_block_decomposition_0}
+and \eqref{expansion_sphere_conf_blocks}, and we have
+\begin{equation}\label{red_mat_cb}
+ \Tr\rho_A^N=\sum_{\boldsymbol{h}, \boldsymbol{\bar{h}}}\sum_{l, l'} 
+ \tilde{D}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^{l, l'} 
+ \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(x)\mathcal{F}_{Nc, |\boldsymbol{\bar{h}}|+l'}(x)
+\end{equation}
+with $\tilde{D}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^{l, l'}=D_{\boldsymbol{h}, 
+\boldsymbol{\bar{h}}}\alpha_l^{\boldsymbol{h}}\alpha_{l'}^{\boldsymbol{\bar{h}}}.$
+On the other hand, to obtain a similar result for $\Tr(\rho_A^{T_2})^N$, 
+one must find the analytic continuation of the twist-field correlation function to 
+the negative axis. This can be straightforwardly done from the expression of conformal 
+blocks in terms of the elliptic nome $q(x)=e^{i\pi \tau(x)}$. In fact, note that
+\begin{equation}\label{tau_p_1}
+ \tau\left(\frac{x}{x-1}\right)=\tau(x)+1, \quad \text{and} \quad 
+ q\left(\frac{x}{x-1}\right)=e^{i\pi} q(x).
+\end{equation}
+Hence $\Tr(\rho_A^{T_2})^N$ can also be expanded by using Eqs.~\eqref{conformal_block_decomposition_0} 
+and \eqref{expansion_sphere_conf_blocks} but evaluating now
+the Virasoro conformal blocks at $e^{i\pi}q(x)$,
+\begin{equation}\label{partial_trans_cb}
+ \Tr(\rho_A^{T_2})^N=(1-x)^{-4h_\sigma}\sum_{\boldsymbol{h}, \boldsymbol{\bar{h}}}\sum_{l, l'} 
+ \tilde{D}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^{l, l'} 
+ \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(e^{i\pi}q)\mathcal{F}_{Nc, |\boldsymbol{\bar{h}}|+l'}(e^{-i\pi}q).
+\end{equation}
+Note that, for convenience, we have changed here $x$ for the elliptic nome $q$ 
+as the argument of $\mathcal{F}_{Nc, h}$, we will only maintain this notation in 
+the following equations. Observe that, for $N=2$, Eq.~\eqref{tau_p_1} corresponds to perform the modular 
+transformation $\tau(x)\mapsto \tau(x)+1$ on the modulus of the torus $\Sigma_1(x)$.
+Then $\hat{\mathcal{Z}}_1(x)$ and $\hat{\mathcal{Z}}_1(x/(x-1))$ are the partition functions
+of $\mathcal{C}$ on a flat torus of moduli $\tau(x)$ and $\tau(x)+1$ respectively. Taking into account Eqs.
+\eqref{red_mat_ft} and \eqref{partial_trans_ft_2}, the invariance of the partition function on the torus under modular transformations, 
+$\hat{\mathcal{Z}}_1(x)=\hat{\mathcal{Z}}_1(x/(x-1))$, leads to the identity $\Tr\rho_A^2=\Tr(\rho_A^{T_2})^2$ anticipated before.
+
+We can cast Eq.~\eqref{partial_trans_cb} in a simpler and suggestive form. If we take the 
+Zamolodchikov recursion for the Virasoro conformal blocks and we apply 
+the following identities of the Jacobi theta functions
+\begin{equation}
+ \vartheta_2(e^{\pm i\pi}q)=e^{\pm i\pi/4}\vartheta_2(q), \quad 
+ \vartheta_3(e^{\pm i\pi}q)=\vartheta_4(q), \quad 
+ \vartheta_4(e^{\pm i\pi}q)=\vartheta_3(q),
+\end{equation}
+and 
+\begin{equation}
+ x=\left(\frac{\vartheta_2(q)}{\vartheta_3(q)}\right)^4, \quad 
+ 1-x=\left(\frac{\vartheta_4(q)}{\vartheta_3(q)}\right)^4,
+\end{equation}
+one can show that 
+\begin{equation}
+ \mathcal{F}_{Nc, h}(e^{\pm i\pi}q)=e^{\pm i\pi(h-2h_{\sigma_N})}
+ (1-x)^{2h_{\sigma_N}}\mathcal{F}_{Nc, h}(q).
+\end{equation}
+Plugging this identity into Eq.~\eqref{partial_trans_cb}, the conformal block
+expansion of the moments $\Tr(\rho_A^{T_2})^N$ can be rewritten
+in the form
+\begin{equation}\label{partial_trans_cb_2}
+ \Tr(\rho_A^{T_2})^N=\sum_{\boldsymbol{h}, \boldsymbol{\bar{h}}}\sum_{l, l'} 
+ e^{i\pi(|\boldsymbol{h}|-|\boldsymbol{\bar{h}}|+l-l')}\tilde{D}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^{l, l'} 
+ \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(x)\mathcal{F}_{Nc, |\boldsymbol{\bar{h}}|+l'}(x).
+\end{equation}  
+If we compare this result with Eq.~\eqref{red_mat_cb}, the moments $\Tr(\rho_A^{T_2})^N$
+have the same Virasoro conformal block decomposition as $\Tr(\rho_A^{T_2})^N$, 
+but with the structure constants multiplied by a phase that depends on
+the spin $|\boldsymbol{h}|-|\boldsymbol{\bar{h}}|+l-l'$ of the corresponding primary field. 
+Then we conclude that
+\begin{equation}
+ \Tr\rho_A^N-\Tr(\rho_A^{T_2})^N=\text{sum over the channels with spin}\,\,
+ |\boldsymbol{h}|-|\boldsymbol{\bar{h}}|+l-l'\neq 2k,\quad k\in\mathbb{Z}.
+\end{equation}
+Note that, in the case $N=2$, due 
+to the identity $\Tr\rho_A^2=\Tr(\rho_A^{T_2})^2$, the channels indicated above cannot appear in the 
+conformal block decompositions of $\Tr\rho_A^2$ and $\Tr(\rho_A^{T_2})^2$.
+
+
+To the best of our knowledge, analytic expressions of $\Tr\rho_A^N$ and $\Tr(\rho_A^{T_2})^N$ have  
+only been obtained for the compactified massless boson, the massless Dirac 
+model and the Ising field theory. Here we shall consider the latter. Let 
+us write the moments $\Tr\rho_A^N$ and $\Tr(\rho_A^{T_2})^N$ in the form,
+\begin{equation}\label{F_n_cc}
+\Tr\rho_A^N=x^{-4h_\sigma}(1-x)^{-4h_\sigma}\mathcal{R}_N(x)
+\end{equation}
+and 
+\begin{equation}\label{G_n_cc}
+ \Tr(\rho_A^{T_2})^N=x^{-4h_\sigma}(1-x)^{4h_\sigma}\mathcal{R}_N\left(\frac{x}{x-1}\right).
+\end{equation}
+In Refs. xxx and xxx, an exact expression of the function
+$\mathcal{R}_N(z)$, $z\in\mathbb{C}$, was obtained for the Ising field theory, 
+which can be found in Eq.~\eqref{R_n_ising} of Appendix~\ref{app_ising}. 
+We have checked that Eq.~\eqref{R_n_ising} is exactly reproduced in the intervals $0<x<1$ and $x/(x-1)<0$ by the 
+conformal block expansions of Eqs.~\eqref{red_mat_cb} and \eqref{partial_trans_cb_2} 
+respectively. In Appendix~\ref{app_ising}, we write the explicit 
+conformal block decomposition, with the values of the structure constants, 
+of the twist-field four-point function in the Ising model for $N=3$ up to sixth order. 
+
+\begin{figure}[t]
+ \begin{minipage}{0.5\linewidth}
+ \centering 
+ \includegraphics[width=\textwidth]{renyi_entropy_3_ising.pdf}
+\end{minipage}
+ \begin{minipage}{0.5\linewidth}
+ \centering 
+ \includegraphics[width=\textwidth]{quotient_negativity_entropy_3_ising.pdf}
+\end{minipage}
+\caption{}\label{fig:ent_ising}
+\end{figure}
+
+
+In Fig.~\ref{fig:ent_ising} left, we plot the function $\mathcal{R}_3^{\text{Ising}}(x)$. 
+The solid line has been drawn by employing the conformal block expansion of Eq.~\eqref{red_mat_cb} 
+for $\Tr\rho_A^3$ and the dots are the exact values given by Eq.~\eqref{R_n_ising}. 
+The agreement between both results is excellent. Note that, due to the crossing symmetry of the 
+twist-field four-point function and, therefore, of $\Tr\rho_A^N$, $\mathcal{R}_N(x)$ must 
+satisfy in general that $\mathcal{R}_N(x)=\mathcal{R}_N(1-x)$.
+In Fig.~\ref{fig:ent_ising} right, we plot the quotient $\Tr(\rho_A^{T_2})^3/\Tr\rho_A^3$. 
+The solid curve has been obtained using the conformal block expansions of Eq.~\eqref{red_mat_cb} 
+and \eqref{partial_trans_cb_2} for $\Tr\rho_A^3$ and $\Tr(\rho_A^{T_2})^3$ while 
+the dots have been calculated from the quotient of Eqs.~\eqref{F_n_cc} and \eqref{G_n_cc} 
+and applying Eq.~\eqref{R_n_ising} for the function $\mathcal{R}_3$. Again the conformal block
+expansion perfectly matches with the former known results.
+
+\begin{figure}[t]
+ \begin{minipage}{0.5\linewidth}
+ \centering 
+ \includegraphics[width=\textwidth]{renyi_entropy_3_tricritical.pdf}
+\end{minipage}
+ \begin{minipage}{0.5\linewidth}
+ \centering 
+ \includegraphics[width=\textwidth]{quotient_negativity_entropy_3_tricritical.pdf}
+\end{minipage}
+\caption{}\label{fig:ent_tricritical}
+\end{figure}
+
+In Fig.~\ref{fig:ent_tricritical}, we consider the moments $\Tr\rho_A^3$ and 
+$\Tr(\rho_A^{T_2})^3$ for the Tricritical Ising model, for which there are not 
+previous results in the literature. In Fig.~\ref{fig:ent_tricritical} left, we plot 
+the function $\mathcal{R}_3(x)$ for this theory, obtained from the corresponding conformal block 
+decomposition of $\Tr\rho_A^3$. In Appendix xxx, one can find the explict conformal block expansion, 
+as well as the values of the structure constants, of the twist-field four-point function for the 
+Tricrtical Ising model when $N=3$ up to sixth order. In the inset, we check the crossing-symmetry 
+of $\mathcal{R}_3^{\text{Tric.}}(x)$ using the conformal block expansion. We obtain a very good 
+symmetry when we change $x$ by $1-x$. In Fig.~\ref{fig:ent_tricritical} right, we plot the quotient 
+of moments $\Tr(\rho_A^{T_2})^3/\Tr\rho_A^3$ using the conformal block decomposition of Eqs.~\eqref{red_mat_cb} and \eqref{partial_trans_cb_2}.  Here we also compare with the results found for the Ising model, the dashed line. 
+
+
 
 \subsection{Bounds on structure constants}
 
@@ -921,22 +1167,82 @@ and form a Virasoro algebra,
  [\boldsymbol{L}_n, \boldsymbol{L}_{m}]=(n-m)\boldsymbol{L}_{n+m}+\frac{Nc}{12}n(n^2-1)\delta_{n+m, 0},
 \end{equation}
 with central charge $Nc$.
-\section{Zamolodchikov recursion for sphere conformal blocks}\label{app_zamolodchikov}
-The sphere conformal block $\mathcal{F}_{Nc, h}(z)$
-for central charge $Nc$, internal dimension $h$, and the four
-external legs with the same dimension $h_{\sigma_N}$ can be efficiently computed 
-using the formula \cite{Zamolodchikov}
+\section{Ising model}\label{app_ising}
 
-where $\vartheta_3(q)$ is the Jacobi theta function and $H(Nc, h, h_{\sigma_N}, q)$
-satisfies the recursion relation 
+For the Ising field theory, the conformal block decomposition of 
+Eq.~\eqref{conformal_block_decomposition_0} for the twist-field 
+four-point function with $N=3$ takes the form,
 \begin{equation}
- H(Nc, h, h_{\sigma_N}, q)=
- 1+\sum_{m, n}\frac{(16q)^{mn}R_{m,n}(Nc, h_{\sigma_N})H(Nc, h_{m,n}+mn, h_{\sigma_N}, q)}
- {h-h_{m,n}(Nc)}.
+ \langle \sigma_3(0)\bar{\sigma}_3(z, \bar{z})\sigma_3(1)\bar{\sigma}_3(\infty)\rangle=
+ |\mathcal{G}_{\frac{1}{2},\mathbb{I}\mathbb{I}\mathbb{I}}^{(3)}(z)|^2+
+ 3D_{\sigma\sigma\mathbb{I}}|\mathcal{G}_{\frac{1}{2},\sigma\sigma\mathbb{I}}^{(3)}(z)|^2+
+ 3D_{\varepsilon\varepsilon\mathbb{I}}|\mathcal{G}_{\frac{1}{2},\varepsilon\varepsilon\mathbb{I}}^{(3)}(z)|^2+
+ 3D_{\sigma\sigma\varepsilon}|\mathcal{G}_{\frac{1}{2},\sigma\sigma\varepsilon}^{(3)}(z)|^2.
 \end{equation}
-The explicit expressions of $h_{m,n}(Nc)$ and $R_{m, n}(Nc, h_{\sigma_N})$
-are given by Eqs. (3) and (17) of Ref.~\cite{Zamolodchikov} respectively.  
+The genus-three conformal blocks above have the following 
+expansions in terms of Virasoro sphere conformal blocks up to level $L=6$,
+\begin{equation}
+ \mathcal{G}_{\frac{1}{2},\mathbb{I}\mathbb{I}\mathbb{I}}^{(3)}(z)\sim
+ \mathcal{F}_{\frac{3}{2}, 0}(z) + 
+ \frac{3211264}{10451673} \mathcal{F}_{\frac{3}{2}, 4}(z) + 
+ \frac{2097152}{4782969} \mathcal{F}_{\frac{3}{2}, 5}(z) + 
+ \frac{68719476736}{114891698349}\mathcal{F}_{\frac{3}{2}, 6}(z),
+\end{equation}
+\begin{multline}
+ \mathcal{G}_{\frac{1}{2},\sigma\sigma\mathbb{I}}^{(3)}(z)\sim
+ \mathcal{F}_{\frac{3}{2},\frac{1}{8}}(z) + 
+ \frac{1}{27} \mathcal{F}_{\frac{3}{2}, \frac{9}{8}}(z) + 
+ \frac{2209}{10206} \mathcal{F}_{\frac{3}{2}, \frac{17}{8}}(z) + 
+ \frac{590597}{1456542} \mathcal{F}_{\frac{3}{2}, \frac{25}{8}}(z) + 
+ \frac{61593283775}{143065334376}\mathcal{F}_{\frac{3}{2}, \frac{33}{8}}(z) \\ + 
+ \frac{13237693484267}{23444417678328}\mathcal{F}_{\frac{3}{2}, \frac{41}{8}}(z) + 
+ 0.23567191378271496433 \mathcal{F}_{\frac{3}{2}, \frac{49}{8}}(z),
+\end{multline}
+\begin{multline}
+ \mathcal{G}_{\frac{1}{2},\varepsilon\varepsilon\mathbb{I}}^{(3)}(z)\sim
+ \mathcal{F}_{\frac{3}{2}, 1}(z)+ 
+ \frac{8}{27} \mathcal{F}_{\frac{3}{2}, 2}(z)+ 
+ \frac{128}{1701}\mathcal{F}_{\frac{3}{2}, 3}(z) + 
+ \frac{2458624}{2027349}\mathcal{F}_{\frac{3}{2}, 4}(z) + 
+ \frac{204636160}{749863251}\mathcal{F}_{\frac{3}{2}, 5}(z) \\+ 
+ \frac{141295616}{3008487501}\mathcal{F}_{\frac{3}{2},6}(z) + 
+ 0.39631743847866107572\mathcal{F}_{\frac{3}{2}, 7}(z),
+\end{multline}
+and
+\begin{multline}
+ \mathcal{G}_{\frac{1}{2},\sigma\sigma\varepsilon}^{(3)}(z)\sim
+ \mathcal{F}_{\frac{3}{2}, \frac{5}{8}}(z) + 
+ \frac{49}{27}\mathcal{F}_{\frac{3}{2}, \frac{13}{8}}(z) + 
+ \frac{637}{486}\mathcal{F}_{\frac{3}{2}, \frac{21}{8}}(z) + 
+ \frac{176647}{485514}\mathcal{F}_{\frac{3}{2}, \frac{29}{8}}(z) + 
+ \frac{6395744863}{16585210728}\mathcal{F}_{\frac{3}{2}, \frac{37}{8}}(z) \\ + 
+ \frac{528656973059}{285256271160}\mathcal{F}_{\frac{3}{2}, \frac{45}{8}}(z) + 
+ 1.29430156184648710695\mathcal{F}_{\frac{3}{2}, \frac{53}{8}}(z).
+\end{multline}
 
+For the Ising model, the function $\mathcal{R}_N(z)$ that appears in Eqs.~\eqref{F_n_cc}
+and $\eqref{G_n_cc}$ is of the form
+\begin{equation}\label{R_n_ising}
+\mathcal{R}_N^{\text{Ising}}(z)=\frac{1}{2^{N-1}|\chartheta{\boldsymbol{0}}{\boldsymbol{0}}(\Omega(z))|}
+\sum_{\boldsymbol{\varepsilon},\boldsymbol{\delta}}
+\left|\chartheta{\boldsymbol{\varepsilon}}{\boldsymbol{\delta}} (\Omega(z))\right|,\quad z\in\mathbb{C},
+\end{equation}
+where
+$$\chartheta{\boldsymbol{\varepsilon}}{\boldsymbol{\delta}} (\Omega)=
+\sum_{\boldsymbol{m}\in\mathbb{C}^{N-1}}
+e^{i\pi({\bf m}+{\bf \varepsilon})^t
+\cdot \Omega({\bf m}+{\bf \varepsilon})+2\pi i 
+({\bf m}+\boldsymbol{\varepsilon})^t\cdot \boldsymbol{\delta}}.
+$$
+The caracteristics $\boldsymbol{\varepsilon},\boldsymbol{\delta}\in\mathbb{C}^{N-1}$
+have as components $0$ or $1/2$, and $\Omega(z)$ is the symmetric $(N-1)\times (N-1)$
+matrix 
+\begin{equation}\label{period_matrix}
+\Omega_{rs}(z)=\frac{2 i}{N}\sum_{k=1}^{N-1}\sin\left(\frac{\pi k}{N}\right)
+\cos\left[\frac{2\pi k}{N}(r-s)\right]\beta_{k/N}(z),
+\end{equation}
+in which
+$$\beta_{k/N}(z)=\frac{_2F_1(k/N, 1-k/N, 1; 1-z)}{_2F_1(k/N, 1-k/N, 1; z)}.$$
 
 \acknowledgments
 We thank Andrea Cappelli and Sylvain Ribault for discussions.
