@@ -67,30 +67,31 @@ using the conformal bootstrap.}
 \section{Introduction}
 \label{sec:intro}
 
-\section{CFT partition functions on Renyi surfaces}
+\section{CFT partition functions on R\'enyi surfaces}
 Let us consider a conformal field theory $\mathcal{C}$, with central charge 
-$c$, living on a Riemann surface $\Sigma_g$ of genus $g$. In the following we will refer to $\mathcal{C}$ as the seed theory. 
-Let us consider the family of R\'enyi Riemann surfaces $\Sigma_g(x)$ of 
-genus $g=N-1$ described by the  complex algebraic curve
+$c$, defined on a Riemann surface $\Sigma_g$ of genus $g$. In the following, 
+we will refer to $\mathcal{C}$ as the seed theory and we will restrict to the 
+family of R\'enyi Riemann surfaces $\Sigma_g(x)$ of genus $g=N-1$ described 
+by the  complex algebraic curve
 \begin{equation}\label{riemann_surf}
 \Sigma_{N-1}(x): \quad  w^N=\frac{z(z-1)}{z-x},
 \end{equation}
-which has branch points of order $N$ at $z_{\text{branch}}=0$, $x$, $1$, and $\infty$. 
-Eq.~\eqref{riemann_surf} can be interpreted as an $N$-sheet cover of the Riemann sphere $\mathbb C\cup \{\infty\}$ parametrized by $z$. For a visualization of the surface on $\mathbb C^2$ we refer to~\cite{Dubrovin}. These Riemann surfaces are parametrized by  
-the complex number $x$ and enjoy a symmetry $\mathbb{Z}_N$ since 
+which has branch points of order $N$ at $z=0$, $x$, $1$, and $\infty$. 
+Eq.~\eqref{riemann_surf} can be interpreted as a $N$-sheet cover of the Riemann sphere $\mathbb C\cup \{\infty\}$ parametrized by $z$. For a visualization of the surface on $\mathbb C^2$ we refer to~\cite{Dubrovin}. These Riemann surfaces are parametrized by  
+the complex number $x$ and enjoy an additional $\mathbb{Z}_N$ symmetry since 
 Eq.~\eqref{riemann_surf} is invariant under the transformation 
 $w\mapsto e^{\frac{2\pi i k}{N}}w$, with $k\in\mathbb{N}$. 
 This transformation amounts to a cyclic permutation of the $N$ sheets of the surface, where each sheet is labelled by the choice of the branch of the $N$-root in Eq.~\eqref{riemann_surf}. 
 
-In the following, we consider the following quantity:
+We now consider the following quantity:
 \begin{equation}
 \mathcal{Z}_{N-1}(x)=\text{Partition function of $\mathcal{C}$ on the surface  $\Sigma_{N-1}(x)$, defined in \eqref{riemann_surf}}.
  \end{equation}
-The CFT partition function on $\Sigma_{N-1}(x)$ is strictly related to the orbifold CFT $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$ that lives on the Riemann sphere $z$ \cite{Dixon, Knizhnik}. In this respect, a crucial role is played by the $\mathbb{Z}_N$ twist and anti-twist fields $\sigma_N$ and $\bar{\sigma}_N$, that are  spinless primary fields of conformal dimension~\cite{Knizhnik}
+The CFT partition function on $\Sigma_{N-1}(x)$ is strictly related to the orbifold CFT $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$ that lives on the $z$-Riemann sphere \cite{Dixon, Knizhnik}. In this respect, a crucial role is played by the $\mathbb{Z}_N$ twist and anti-twist fields $\sigma_N$ and $\bar{\sigma}_N$, that are  spinless primary fields of conformal dimension~\cite{Knizhnik}
 \begin{equation}
  h_{\sigma_N}=\bar{h}_{\sigma_N}=\frac{c}{24}\left(N-\frac{1}{N}\right).
 \end{equation}
-More specifically, the partition function $\mathcal{Z}_{N-1}(x)$ is given by the four-point function of twist fields inserted at the branch points $z= z_{\text{branch}}=\{0,1,x,\infty\}$,
+More specifically, the partition function $\mathcal{Z}_{N-1}(x)$ is given by the four-point function of twist fields inserted at the branch points $z=0$, $1$, $x$ and $\infty$,
 \begin{equation}
 \label{geom_inter}
 \mathcal{Z}_{N-1}(x)=\langle \sigma_N (\infty) \bar{\sigma}_N(1)\sigma_N(x,\bar{x}) \bar{\sigma}_N(0)\rangle.
@@ -107,14 +108,14 @@ More specifically, the partition function $\mathcal{Z}_{N-1}(x)$ is given by the
 % \boldsymbol {O}^{(k)}(e^{2\pi i}(z-z_{\text{branch}}))\bar{\sigma}_N(z_{\text{branch}})\mapsto \boldsymbol{O}^{(k-1)}(z-z_{\text{branch}})\bar{\sigma}_N(z_{\text{branch}}).
 %\end{equation}
 
-Note that, due to the branch points of Eq.(\ref{riemann_surf}), the metric in $\Sigma_{N-1}(x)$ is non trivial.  Via a Weyl transformation, the corresponding partition function $\mathcal{Z}_{N-1}$ can be then related to the partition function $\mathcal{\hat{Z}}_{N-1}$ on a Riemann surface with a flat metric~\cite{Lunin},  
+Note that, due to the presence of branch points of Eq.(\ref{riemann_surf}), the metric in $\Sigma_{N-1}(x)$ is not trivial.  Via a Weyl transformation, the corresponding partition function $\mathcal{Z}_{N-1}$ can be then related to the partition function $\mathcal{\hat{Z}}_{N-1}$ on a Riemann surface with a flat metric~\cite{Lunin},  
 \begin{equation}\label{partition_twist_correl}
  \mathcal{\hat{Z}}_{N-1}(x)=e^{cS_{\text{anom.}}(x)} \mathcal{Z}_{N-1}(x),
 \end{equation}
 where the prefactor $e^{cS_{\text{anom.}}(x)}$ in Eq.~\eqref{partition_twist_correl} is the Weyl anomaly that arises in the 
 transformation of the metric.
 %It takes into account that in the orbifold approach the metric employed to determine the partition function on $\Sigma_{N-1}(x)$ is a flat metric on each sheet of the surface with conical singularities at the branch points of the covering map. The partition function with a flat metric $\mathcal{Z}_{N-1}$ is then related to the latter by  the prefactor in Eq.~\eqref{partition_twist_correl} which can be explicitely calculated.  
-\noindent The Weyl anomaly can be explicitly calculated. Take for instance the case $N=2$, for which, under the Abel-Jacobi map, $\Sigma_{1}(x)$ is conformally equivalent to a flat torus of modulus 
+It can be explicitly calculated. Take for instance the case $N=2$, for which, under the Abel-Jacobi map, $\Sigma_{1}(x)$ is conformally equivalent to a flat torus of modulus 
 \begin{equation}\label{tau}
  \tau(x)=i\frac{K(1-x)}{K(x)}, 
 \end{equation}
@@ -125,6 +126,7 @@ with modulus $\tau(x)$ is~\cite{Lunin}
  \mathcal{\hat{Z}}_1(x)=|2^8 x(1-x)|^{c/12} \mathcal{Z}_{1}(x)
  =|2^8 x(1-x)|^{c/12} \langle \sigma_2 (\infty)\bar{\sigma}_2(1)\sigma_2(x, \bar{x})\bar{\sigma}_2(0)\rangle.
 \end{equation}
+
 Finally, $\mathcal{Z}_{N-1}$ must be invariant  
 under modular transformations~\cite{CardyMod, Cappelli, Cappelli2}.  For the class of surfaces $\Sigma_{N-1}(x)$, the moduli space is one-dimensional and modular invariance implies the crossing
 symmetry of the twist field four-point correlation function~\cite{Cardy},
@@ -155,40 +157,43 @@ defined below, will be referred as orbifold conformal blocks. They are normalize
 \label{G_asy}
 \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=z^{\;|\boldsymbol{h}| -2\; h_{\sigma_N}}\left[1+ O(z)\right],
 \end{equation}
-where $|\boldsymbol{h}|=\sum_j h_j$ and are fixed by the orbifold symmetry algebra. Therefore, the conformal blocks $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ encode the universal part of the orbifold correlation function  while  the structure constants  $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$  characterize the specific bootstrap solution under consideration. Note that in Eq.~\eqref{conformal_block_decomposition_0}, we inserted one twist field at a general point $(z,\bar{z})$ on the Riemann sphere to stress the fact we are computing a standard CFT correlation function on the $z$-sphere. To recover the geometric interpretations of Eqs.~\eqref{riemann_surf}-\eqref{geom_inter}, one sets $(z,\bar{z})\to (x,\bar{x})$.
+where $|\boldsymbol{h}|=\sum_j h_j$, and are fixed by the orbifold symmetry algebra. Therefore, the conformal blocks $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ encode the universal part of the orbifold correlation function  while  the structure constants  $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$  characterize the specific bootstrap solution under consideration. Note that in Eq.~\eqref{conformal_block_decomposition_0}, we inserted one twist field at a general point $(z,\bar{z})$ on the Riemann sphere to stress the fact that we are computing a standard CFT correlation function on the $z$-sphere. To recover the geometric interpretations of Eqs.~\eqref{riemann_surf}-\eqref{geom_inter}, one sets $(z,\bar{z})\to (x,\bar{x})$.
 
-We will now review the procedure, well described in Ref.~\cite{Collier}, to obtain the small $z$ expansion  of  the modular conformal blocks.  Let us fix some notations. We focus first on the holomorphic sector of the seed CFT $\mathcal{C}$. We denote by $\phi_{h}(z)$  the holomorphic primary field with conformal dimension $h$  and by $\phi_{h}^{M}(z)$ one of its descendants. The descendants are labelled by the partition  $M\equiv\{m_1,\dots,m_q\}$, $m_1\leq m_2\cdots\leq m_q$ of the integer  $|M|=\sum_{j} m_j$. Indeed, in terms of the  Virasoro generators $L_{-m}(z)$, defined in Eq.~\eqref{vir_ln}, the holomorphic field $\phi_{h}^{M}(z)$ takes the form
+We will now review the procedure, well described in Ref.~\cite{Collier} for the case $N=3$, to obtain the expansion about $z=0$ of the orbifold conformal blocks.  Let us fix some notations. We focus first on the holomorphic sector of the seed CFT $\mathcal{C}$. We denote by $\phi_{h}(z)$  the holomorphic primary field with conformal dimension $h$  and by $\phi_{h}^{M}(z)$ one of its descendants. The descendants are labelled by the partition  $M\equiv\{m_1,\dots,m_q\}$, $m_1\leq m_2\cdots\leq m_q$ of the integer  $|M|=\sum_{j} m_j$. In terms of the  Virasoro generators $L_{-m}(z)$, defined in Eq.~\eqref{vir_ln}, the holomorphic field $\phi_{h}^{M}(z)$ is defined by
 \begin{equation}
 \label{desc}
- \phi_{h}^{M}(z):=L_{-M}(z)\;\phi_h(z)~~{\rm{where}}~~ L_{-M}(z):=L_{-m_1}(z)\dots L_{-m_q}(z).
+ \phi_{h}^{M}(z):=L_{-M}(z)\;\phi_h(z),~~{\rm{where}}~~ L_{-M}(z):=L_{-m_1}(z)\dots L_{-m_q}(z).
  \end{equation}
-The field  $\phi_{h}^{M}(z)$ has conformal dimension $h+|M|$. We use the field-state correspondence $|\phi_{h}\rangle\equiv \lim_{z\to 0}\phi(z)|0\rangle$, with $|0\rangle$ the vacumm in $\mathcal{C}$ and the Virasoro scalar product \cite{DiFrancesco}, that can be defined  by constructing the dual space  via correspondences of type  $\langle \phi_{h} |\equiv\lim_{z\rightarrow\infty}z^{2h}\langle 0|\phi_h(z)$ where $\langle 0|$ is the dual of the vacuum state. We denote by  $G^{h}_{M_1,M_2}$ the matrix of scalar product:
+The field  $\phi_{h}^{M}(z)$ has conformal dimension $h+|M|$. We will make use of the field-state correspondence $|\phi_{h}\rangle\equiv \lim_{z\to 0}\phi(z)|0\rangle$, with $|0\rangle$ the vacumm in $\mathcal{C}$, and of the Virasoro scalar product \cite{DiFrancesco}. 
+The latter can be defined  by constructing the dual space  via correspondences of type  $\langle \phi_{h} |\equiv\lim_{z\rightarrow\infty}z^{2h}\langle 0|\phi_h(z)$, where $\langle 0|$ is the dual of the vacuum state. We denote by  $G^{h}_{M_1,M_2}$ the matrix of scalar products
 \begin{equation}
 G^{h}_{M_1,M_2} = \langle \phi_{h}^{M_1}|\phi_{h}^{M_2}\rangle. 
 \end{equation}
-If not explicitly stated otherwise, in what follows we consider irreducible Virasoro representations, i.e. there are not descendant states with vanishing norm, referred here as null vectors. The role of null vectors will be considered in more detail in Sec.~\ref{null_vec1}.  
+If not explicitly stated otherwise, in what follows we consider irreducible Virasoro representations, i.e. there are not descendant states with vanishing norm, referred here as null vectors. The role of null vectors will be analyzed in more detail in Sec.~\ref{null_vec1}.  
 
-In the replicated theory $\mathcal{C}^{\otimes N}$, an holomorphic primary $\boldsymbol{\phi}_{\boldsymbol{h}}(z)$ is labelled by a set $\boldsymbol{h}$ of conformal dimensions and has conformal dimension $|\boldsymbol{h}|$, see Eqs.~\eqref{conformal_block_decomposition_0}-\eqref{G_asy}. The field $\boldsymbol{\phi}_{\boldsymbol{h}}(z)$ is expressed in terms of the seed theory primaries as
+In the replicated theory $\mathcal{C}^{\otimes N}$, an holomorphic primary $\boldsymbol{\phi_{h}}$, labelled by a set $\boldsymbol{h}$ of conformal dimensions, is the tensor product of primary fields of the seed theory
 \begin{equation}
-\boldsymbol{\phi}_{\boldsymbol{h}}(z)=\phi_{h_1}(z)\otimes \cdots\otimes \phi_{h_N}(z).
+\boldsymbol{\phi}_{\boldsymbol{h}}(z)=\phi_{h_1}(z)\otimes \cdots\otimes \phi_{h_N}(z),
 \end{equation}
-Using the symbol $\boldsymbol{M}$ to indicate a set of $N$ partitions, $\boldsymbol{M}\equiv\{M_1,\dots,M_N\}$,  the  $\mathcal{C}^{\otimes N}$ descendants are denoted by  $\boldsymbol{\phi}^{\boldsymbol{M}}_{\boldsymbol{h}}(z)$,
+and has conformal dimension $|\boldsymbol{h}|$. If $\boldsymbol{M}\equiv\{M_1,\dots,M_N\}$ indicates a collection of $N$ partitions of the integers $|M_1|,\dots,|M_N|$, then the descendants of $\boldsymbol{\phi}_{\boldsymbol{h}}$ will be denoted by $\boldsymbol{\phi}^{\boldsymbol{M}}_{\boldsymbol{h}}(z)$,
  \begin{equation}
  \boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{M}}(z)=\phi_{h_1}^{M_1}(z)\otimes \dots \otimes \phi_{h_N}^{M_N}(z).
 \end{equation}
 They have conformal dimension $|\boldsymbol{h}|+|\boldsymbol{M}|$, where $|\boldsymbol{M}|=\sum_j |M_j|$. 
-The corresponding scalar product matrix $\boldsymbol{G}^{\boldsymbol{h}}_{\boldsymbol{M}_1\boldsymbol{M}_2}$, of size $\prod_{j=1}^{N}|M_j|^2\times \prod_{j=1}^{N}|M_j'|^2$, takes the form
+We will also use $\boldsymbol{0}$ to indicate the empty partition $\boldsymbol{0}=\{\{0\},\cdots,\{0\}\}$. In terms of this notation, 
+$\boldsymbol{\phi}_{\boldsymbol{h}}=\boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{0}}$.
+The corresponding scalar product matrix $\boldsymbol{G}^{\boldsymbol{h}}_{\boldsymbol{M}_1\boldsymbol{M}_2}$, of size $\prod_{j=1}^{N}|M_j|^2\times \prod_{j=1}^{N}|M_j'|^2$, is defined from the scalar product in $\mathcal{C}$ as
 \begin{equation}
 \label{scal}
  \boldsymbol{G}^{\boldsymbol{h}}_{\boldsymbol{M}_1\boldsymbol{M}_2}=\langle \boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{M}_1} | \boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{M}_2}\rangle=\prod_{j=1}^N G^{h_j}_{M_j,M_j'}.
 \end{equation}
-We will also use $\boldsymbol{0}$ to indicate the empty partition $\boldsymbol{0}=\{\{0\},\cdots,\{0\}\}$. In terms of this notation, 
-$\boldsymbol{\phi}_{\boldsymbol{h}}=\boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{0}}$. Finally, the fields that enter in the correlation functions are obtained by glueing the holomorphic and anti-holomorphic sectors.  The construction of the anti-holomorphic one is, under the replacement $z\to \bar{z}$, the same as the one presented above. Finally, one has 
+
+ Finally, the fields that enter in the correlation functions are obtained by glueing the holomorphic and anti-holomorphic sectors.  The construction of the anti-holomorphic one is, under the replacement $z\to \bar{z}$, the same as the one presented above. Then one has that
 \begin{equation}
 \boldsymbol{\phi}^{\boldsymbol{M},\boldsymbol{\bar{M}}}_{\boldsymbol{h},\boldsymbol{\bar{h}}} (z,\bar{z})=\boldsymbol{\phi}^{\boldsymbol{M}}_{\boldsymbol{h}}(z)\boldsymbol{\phi}^{\boldsymbol{\bar{M}}}_{\boldsymbol{\bar{h}}}(\bar{z}).
 \end{equation} 
 
-As it is well known in the theory of conformal blocks \cite{DiFrancesco}, the small $z$ representation of $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ can be obtained by inserting the resolution of the identity in the representation $\boldsymbol{h}$. Then we obtain the power series expansion
+As it is well known in the theory of conformal blocks \cite{DiFrancesco}, the expansion about $z=0$ of $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ can be obtained by inserting the resolution of the identity in the representation $\boldsymbol{h}$. Then we obtain the power series expansion
 \begin{equation}\label{conformal_block_decomposition}
  \mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)=
  z^{|\boldsymbol{h}|-2h_{\sigma_N}}\sum_{\substack{\boldsymbol{M}_1, \boldsymbol{M}_2 \\ |\boldsymbol{M}_1|=|\boldsymbol{M}_2|} } z^{|\boldsymbol{M}_1|}\;\Gamma^{*}_{\boldsymbol{h}, \boldsymbol{M}_1}\; [\boldsymbol{G}^{\boldsymbol{h}}_{\boldsymbol{M}_1,\boldsymbol{M}_2}]^{-1}\;\Gamma_{\boldsymbol{h},\boldsymbol{M}_2},
@@ -234,18 +239,16 @@ It is clear that the map $t\mapsto z(t)$ unfolds the field of the replicated the
 \begin{equation}
 \{\tilde{\phi}_{h_j}^{M_j}(t_j)\}_{j=1,\cdots,N}\mapsto \boldsymbol{\phi}_{\boldsymbol{h}}^{\boldsymbol{M}}(\infty).
 \end{equation}
-The three-point function of the $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$ orbifold in Eq.~\eqref{orbifold_three-point}
-is then equal to the $N$-point function of the seed theory $\mathcal{C}$ on the $t$-sphere,
+The holomorphic part of the three-point function of the $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$ orbifold in Eq.~\eqref{orbifold_three-point}
+is then equal to the $N$-point function of the seed theory $\mathcal{C}$ on the $t$-sphere
 \begin{equation}\label{N-point}
 \langle \boldsymbol{\phi}^{\boldsymbol{M}}_{\boldsymbol{h}}(\infty) \sigma_{N}(1)\bar{\sigma}_{N}(0)\rangle=\langle \tilde{\phi}^{M_1}_{h_1}(t_1)\cdots\tilde{\phi}_{h_N}^{M_N}(t_N)\rangle.
 \end{equation}
 
+\subsection{Case $N=2$ (genus one)}\label{sec:genus_one}
 
- 
-
-\subsection{Case $N=2$ (genus one)}
-We now illustrate the unfolding method discussed in the previous subsection when $N=2$. 
-In this case, the three-point function of Eq.~\eqref{orbifold_three-point} can be calculated
+We now illustrate the method discussed in the previous subsection when $N=2$. 
+In this case, the three-point function of Eq.~\eqref{N-point} can be calculated
 by considering the two-to-one map
 \begin{equation}\label{g_one_covering_map}
  z(t)=\frac{(t+1)^2}{4t},
@@ -262,8 +265,8 @@ where $\rho$ is the symmetric $|M_1|\times|M_1|$ matrix
  \rho^h_{M_1,M_2}:=\langle \mathcal{L}_{-M_1}\phi_{h}|\mathcal{L}_{-M_2}\phi_{h}\rangle.
 \end{equation}
 The explicit expression of $\mathcal{L}_{-n}$ for the map of Eq.~\eqref{g_one_covering_map}
-is written in Eq.~xxx of Appendix~\ref{app_ward}. The matrix $\rho^h$  can be easily computed 
-using the Virasoro scalar products.
+is written in Eq.~\eqref{vir_g1_1} of Appendix~\ref{app_ward}. The matrix $\rho^h$ in Eq.~\eqref{rho} 
+above can be easily calculated by exploiting the Virasoro algebra commutation relations.
 
 Applying Eq.\eqref{C_2_X} in Eq.\eqref{conformal_block_decomposition}, we finally obtain an 
 expression for the $N=2$ orbifold conformal block
@@ -275,7 +278,7 @@ expression for the $N=2$ orbifold conformal block
 By recalling that the matrices $G^h$ and $\rho^h$ are symmetric, the coefficients of the combinatorial 
 expansion in Eq.~\eqref{genus_one_conf_block} can be organized as matrix products, presented in the diagram 
 of Fig.~\ref{fig-g1}. This observation, which helps with the organization of the bookkeeping of the states, 
-is translated into the diagram of Fig. 1.
+is translated into the diagram of Fig.~\ref{fig-g1}.
 
 Note that Eq.~\eqref{C_2_X} shows that the number of $N=2$ orbifold conformal blocks is the same as the number
 of conformal families of the seed theory $\mathcal{C}$ . This conclusion is of course consistent with
@@ -331,22 +334,21 @@ and
 \caption{On the left: Matrix product representation of the genus one conformal block in Eq.~\eqref{genus_one_conf_block}. On the right: Matrix product representation of the genus two conformal block in Eq.~\eqref{genus_two_conf_block}.}
 \label{fig-g1}
 \end{figure}
-\subsection{Case $N=3$ (genus two)}
+
+\subsection{Case $N=3$ (genus two)}\label{sec:genus_two}
 
 For $N=3$, the orbifold three-point correlation 
-function of Eq.~\eqref{orbifold_three-point} can be computed 
+function of Eq.~\eqref{N-point} can be computed 
 by considering the three-to-one map~\cite{Collier}
 \begin{equation}\label{g_two_covering_map}
- t\mapsto z =\frac{(t+\omega)^3}{3\omega(1-\omega)t(t-1)},\quad \omega=e^{\frac{2\pi i}{3}}.
+ z(t) =\frac{(t+\omega)^3}{3\omega(1-\omega)t(t-1)},\quad \omega=e^{\frac{2\pi i}{3}}.
 \end{equation}
 This transformation has branch points of order three at 
-$z=0$ and $1$ and maps $t_{\infty}=\{0, 1, \infty\} \mapsto z=\infty$ 
-The images $\mathcal{L}_{-n}(t_{\infty})$ of the Virasoro descendent $L_{-n}(z=\infty)$ 
-under Eq.~\eqref{g_two_covering_map} can be obtained, as in the 
-case of genus one, by using Eq.~\eqref{Virasoro_transf}, see also Eq.~(2.9)
-of Ref.~\cite{Collier}. We have 
+$z=0$ and $1$ and maps the points $t_{\infty}=\{0, 1, \infty\}$ in the $t$-surface into $z=\infty$. 
+Then we have that the orbifold three-point function in Eq.~\eqref{N-point} is in this case the three-point 
+function of $\mathcal{C}$ on the sphere
 \begin{align}\label{C_3_X}
- \langle \boldsymbol{\phi}^{\{M_1,M_2,M_3\}}_{\{h_1,h_2,h_3\}}(\infty) \sigma_{N}(1)\bar{\sigma}_{N}(0)\rangle &=\langle \tilde{\phi}_{h_1}^{M_1} (\infty) \tilde{\phi}_{h_2}^{M_2}(1) \tilde{\phi}_{h_3}^{M_3}(0)\rangle
+ \langle \boldsymbol{\phi}^{\{M_1,M_2,M_3\}}_{\{h_1,h_2,h_3\}}(\infty) \sigma_{N}(1)\bar{\sigma}_{N}(0)\rangle &=\langle \tilde{\phi}_{h_1}^{M_1} (\infty) \tilde{\phi}_{h_2}^{M_2}(1) \tilde{\phi}_{h_3}^{M_3}(0)\rangle,
  = \\
  &=[3\omega(1-\omega)]^{-h_1-h_2-h_3}C_{h_1h_2h_3}\rho_{M1,M2,M3}^{h_1,h_2,h_3}
 \end{align}
@@ -357,7 +359,11 @@ where $C_{h_1 h_2 h_3}=\langle \phi_{h_1}(\infty)\phi_{h_2}(1)\phi_{h_3}(0)\rang
  \frac{\langle \mathcal{L}_{-M_1}\phi_{h_1}|\mathcal{L}_{-M_2}(1)\phi_{h_2}(1)|\mathcal{L}_{-M_3}\phi_{h_3}\rangle}
  { \langle \phi_{h_1}|\phi_{h_2}(1)|\phi_{h_3}\rangle}.
 \end{equation}
-The latter can be calculated by implementing in a computer algebra system the Ward identities of Appendix~\ref{app_ward}. 
+The images $\mathcal{L}_{-n}(t_{\infty})$ of the Virasoro descendent $L_{-n}(z=\infty)$ 
+under the conformal map in Eq.~\eqref{g_two_covering_map} can be obtained, as in the 
+case $N=2$, by using Eq.~\eqref{Virasoro_transf}, see also Eq.~\eqref{vir_g2}.
+The elements of Eq.~\eqref{rho2} can be calculated by implementing in a computer algebra system 
+the Ward identities of Appendix~\ref{app_ward}. 
 From Eq.~\eqref{C_3_X}, it follows that the $N=3$ orbifold conformal blocks are in one-to-one correspondence~\cite{Cardy, Collier} 
 with the non-zero structure constants of $\mathcal{C}$.
 After applying the map of Eq.~\eqref{g_two_covering_map} in Eq.~\eqref{conformal_block_decomposition},
@@ -445,47 +451,49 @@ once we apply the regularization of Eq.~\eqref{regularization} and it is then re
 limit $\varepsilon\to0$.
 
 
-\section{Orbifold conformal blocks in terms of sphere conformal blocks}\label{app_sphere_conf_blocks}
-Eq.~\eqref{conformal_block_decomposition} provides a small $z$ expansion of the modular conformal block of the type
+\section{Orbifold conformal blocks in terms of sphere conformal blocks}\label{sphere_conf_blocks}
+Eq.~\eqref{conformal_block_decomposition} provides a small $|z|$ expansion of the modular conformal block of the type
 \begin{equation}
-\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) =z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=1}^{\infty} a_j \; z^j.
+\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) =z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=0}^{\infty} a_j \; z^j.
 \end{equation}
-The computation of the $a_j$ coefficients becomes quickly impossible to accomplish and one has to approximate $\mathcal{G}_{c,\boldsymbol{h}}^{(3)}(z)$ by truncating the above sum at some value $L$,
-\begin{equation}
-\label{trunc}
-\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=1}^{L} a_j \; z^j.
+However, the computation of the coefficients $a_j$ becomes quickly impossible to accomplish and one has to approximate $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ by truncating the previous series at some value $L$,
+\begin{equation}\label{trunc}
+\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=0}^{L} a_j \; z^j.
 \end{equation}
 In the case $N=3$, for instance, we are able to reach $L=6$.
 
-\noindent The main point here is that the convergence of the series ~\eqref{conformal_block_decomposition} is slow close to  $|z|=1$. This in turn implies that, by approximating the $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$  by truncated sums, one missed the global properties of the twist correlation functions and in particular the crossing symmetry \eqref{cross_symmetry}. 
-For $N=3$, in \cite{Collier}, this problem was tackled  by using a transformation from the frame $\Sigma_2(x)$ to the pillow frame. They  obtained a series expansion in the $q(z)$ variable:
+A crucial point here is that the convergence of the series in Eq.~\eqref{conformal_block_decomposition} is slow close to  $|z|=1$. This, in turn, implies that, if the conformal block $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ is approximated by the truncated sum of Eq.~\eqref{trunc}, one misses the global properties of the twist field four-point function and, in particular, the crossing symmetry of Eq.~\eqref{cross_symmetry}. 
+In Ref.~\cite{Collier}, this problem was tackled for $N=3$ by using a transformation from the frame $\Sigma_2(x)$ to the pillow frame. They  obtained then a series expansion in terms of the elliptic nome $q(z)=e^{i\pi\tau(z)}$, with $\tau(z)$ defined in Eq.~\eqref{tau}, 
+of the form
 \begin{equation}
 \label{collierap}
-\mathcal{G}_{c,\boldsymbol{h}}^{(3)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=1}^{L} b_j \; q(z)^j, \quad q(z)= e^{i \pi \tau(z)}.
+\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=0}^{L} b_j \; q(z)^j.
 \end{equation}
-where  $\tau(z)$ is defined in.. This drastically improves the convergence properties of the twist correlation function near $|z|=1$.
+This expansion drastically improves the convergence properties of the twist field correlation function near $|z|=1$.
 
-\noindent Here we show how to improve the expansion in \cite{Collier} by using a similar but different procedure.  
-We expand the higher-genus conformal blocks $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ as a linear combination
-of sphere conformal blocks with central charge $Nc$. More specifically,
+In this section, we will show how to improve the expansion of Ref.~\cite{Collier} by using a similar but different procedure.
+As we discuss in detail in Appendix~\ref{app_orbifold_algebra}, the orbifold algebra admits as a sub-algebra a Virasoro algebra with central charge $Nc$~\cite{Borisov}, generated by the symmetric stress energy tensor in Eq.~\eqref{hatT}. Then it is natural to expand the orbifold conformal blocks 
+$\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ as a linear combination of Virasoro sphere conformal blocks with central charge $Nc$. More specifically,
 \begin{equation}\label{expansion_sphere_conf_blocks}
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=\sum_{l=0}^\infty\alpha_l^{\boldsymbol{h}}\mathcal{F}_{Nc, |\boldsymbol{h}+l}(z),
 \end{equation}
-where we have  denoted by $\mathcal{F}_{Nc, h }(z)$ the Virasoro sphere conformal blocks with the four external dimensions fixed to  $h_{\sigma_N}$ and with internal channel of dimension $h$.
+where we have  denoted by $\mathcal{F}_{Nc, h }(z)$ the Virasoro sphere conformal blocks with the four external dimensions fixed to  $h_{\sigma_N}$ and with internal channel of dimension $h$. The conformal block $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ resums the 
+contribution of the conformal family generated by a field with conformal dimension $|\boldsymbol{h}|+l$, primary with respect to the 
+orbifold Virasoro sub-algebra of Eq.~\eqref{symm_virasoro_alg}. The coefficients $\alpha_l^{\boldsymbol{h}}$ can be thought as Clebsch-Gordan coefficients for a 
+decomposition of a $N$-fold tensor product of Virasoro algebra representations into a direct sum of irreducible representations with central charge $Nc$. A more detailed discussion concerning the meaning of Eq.~\eqref{expansion_sphere_conf_blocks}  as well as the algebraic nature of the coefficients $\alpha_{l}^{\boldsymbol{h}}$ can be found in subsection~\ref{deralpha}. The fine structure of the orbifold algebra was used in Ref.~\cite{Dupic} to derive differential equations for certain twist field correlation functions.
 
-\noindent If we truncate Eq.~\eqref{expansion_sphere_conf_blocks}  
+Now observe that, if we truncate Eq.~\eqref{expansion_sphere_conf_blocks}  
 \begin{equation}\label{expansion_sphere_conf_blocks_trunc}
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)\sim\sum_{l=0}^{L}\alpha_{l}^{\boldsymbol{h}}
  \mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z),
 \end{equation}
-then the coefficients $\alpha_{l}^{\boldsymbol{h}}$ can be easily derived from Eq.~\eqref{trunc}.
+then the coefficients $\alpha_{l}^{\boldsymbol{h}}$ can be easily derived by expanding $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ in power series and identifying order by order the sums of Eqs.~\eqref{trunc} and \eqref{expansion_sphere_conf_blocks_trunc}.
 Eq.~\eqref{expansion_sphere_conf_blocks_trunc} is already a better approximation than 
-Eq.~\eqref{trunc}, as each  $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ can be computed till orders much bigger than $z^{|\boldsymbol{h}|-2h_{\sigma_N}+L}$. In other words, this means that we can take into account the contributions of certain very low descendants of the orbifold algebra that were previously unaccessible.
+Eq.~\eqref{trunc}, as each  $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ can be computed until orders much bigger than $z^{|\boldsymbol{h}|-2h_{\sigma_N}+L}$. In other words, this means that we can take into account the contribution of certain very low descendants of the orbifold algebra that were previously unaccessible.
 
-\noindent The expansion of Eq.~\eqref{expansion_sphere_conf_blocks} is natural as the orbifold algebra admits as a sub-algebra a Virasoro algebra of central charge $N c$~\cite{Borisov}. Note that the fine structure of the orbifold algebra was used in Ref.~\cite{Dupic} to derive differential equations for certain twist-field correlation functions. A more detail discussion concerning the meaning of Eq.~\eqref{expansion_sphere_conf_blocks}  as well as the algebraic nature of the coefficients $\alpha_{l}^{\boldsymbol{h}}$ can be found in subsection\ref{deralpha}.
 
-\noindent The second step is to express the $\mathcal{F}_{N c, |h }(z)$ as an expansion in the $q(z)$ variables by using the elliptic Zamolodchikov recursion relation:
-\begin{equation}
+The second step is to express the $\mathcal{F}_{N c, |h }(z)$ as an expansion in terms of the elliptic nome $q(z)$ by using the elliptic Zamolodchikov recursion relation~\cite{Zamolodchikov2},
+\begin{equation}\label{zam_recursion}
  \mathcal{F}_{Nc, h}(z)=
  f_N(q(z), c, h) \;H(Nc, h, h_{\sigma_N}, q(z)),
 \end{equation}
@@ -496,42 +504,50 @@ f_N(q, c, h) &= 16^{\frac{1-Nc}{24}}q(z)^{h-\frac{Nc-1}{24}}
  \vartheta_3(q(z))^{\frac{Nc-1}{2}-16h_{\sigma_N}}, \\
  H_N(q, c, h)&=1+\sum_{j=1}^{\infty}d_j(c, h,N)\;q^j.
 \end{align}
-The coefficients $d_j(c, h,N) $ can be computed recursively to very large ovalues of $j$, see...
-For $N=3$,  we obtained the following  approximation of  $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ 
+The coefficients $d_j(c, h,N) $ can be computed recursively to very large values of $j$, see Ref.~\cite{Zamolodchikov2}. 
+
+Finally, combining Eqs.~\eqref{expansion_sphere_conf_blocks_trunc} and \eqref{zam_recursion}, we obtain the following approximation 
+for $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, 
 \begin{equation}
 \label{usap}
-\mathcal{G}_{c,\boldsymbol{h}}^{(3)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \left(\sum_{j=1}^{L} b_j \; q(z)^j+\sum_{j=L+1}^{L'} c_j q(z)^{j}\right), \quad q(z)= e^{i \pi \tau(z)} .
+\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \left(\sum_{j=0}^{L} b_j \; q(z)^j+\sum_{j=L+1}^{L'} c_j q(z)^{j}\right), 
 \end{equation}
-that provides sub-leading corrections to Eq.~\eqref{collierap}. It is important to stress that both Eq.~\eqref{collierap} and Eq.~\eqref{usap} approximate the $ \mathcal{G}_{c,\boldsymbol{h}}^{(3)}(z)$  with an error  $o(q(z)^{L})$. However, the $q^{j}$, $j>L$ terms in  \eqref{usap} come from the contribution of (some of) the descending fields at level $j$, thus providing a better approximations than \eqref{collierap}.  
-\subsection{Orbifold algebra and algebraic nature of the $\alpha_{l}^{{\it {\bf h}}}$} 
-\label{deralpha}
-To illustrate the main idea behind ~\eqref{expansion_sphere_conf_blocks}, it is sufficent to consider the first level contribution to  $\mathcal{G}_{c, \boldsymbol{h}}^{(3)}(z)$:
+that provides sub-leading corrections to Eq.~\eqref{collierap}. It is important to stress that both Eqs.~\eqref{collierap}~and~\eqref{usap} approximate the conformal block $ \mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ with an error $o(q(z)^{L})$. However, the $q^j$ terms with $j>L$  in Eq.~\eqref{usap} come from the contribution of (some of) the descendent fields at level $j$, thus it gives a better approximation than Eq.~\eqref{collierap}.  
+
+\subsection{Orbifold algebra and algebraic nature of the $\alpha_{l}^{{\bf h}}$}\label{deralpha}
+
+To illustrate the main idea behind Eq.~\eqref{expansion_sphere_conf_blocks}, it is sufficient to consider the first level contribution to  
+$\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ for the case $N=3$. If we explictly calculate the first order term in the expansion of Eq.~\eqref{genus_two_conf_block}, we have that
 \begin{equation}
 \mathcal{G}_{c, \boldsymbol{h}}^{(3)}(z)= z^{|\boldsymbol{h}|-2h_{\sigma_N}}\left[1+\left(\frac{|\boldsymbol{h}|}{2}+\frac{1}{54}\left(\frac{(h_1-h_2)^2}{h_3}+\frac{(h_1-h_3)^2}{h_2}+\frac{(h_2-h_3)^2}{h_1}\right)\right)\;z+O(z^2)\right],
 \end{equation}
-where we recall that  $\boldsymbol{\phi}_{\boldsymbol{h}}=\phi_{h_1}\otimes \phi_{h_2}\otimes \phi_{h_3} $,    $\boldsymbol{h}=\{h_1,h_2,h_3\}$ and $|\boldsymbol{h}|=h_1+h_2+h_3$. The $z^{|\boldsymbol{h}|-2h_{\sigma_N}+1}$ coefficient comes from the contribution of three descendants
+where we recall that here $\boldsymbol{h}=\{h_1,h_2,h_3\}$ and $|\boldsymbol{h}|=h_1+h_2+h_3$. The conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(3)}(z)$ is associated with the field $\boldsymbol{\phi}_{\boldsymbol{h}}=\phi_{h_1}\otimes\phi_{h_2}\otimes\phi_{h_3}$ and its descendents. In particular, the coefficient of the $z^{|\boldsymbol{h}|-2h_{\sigma_N}+1}$ term comes from the contribution of three descendants,
 \begin{equation}
 |v_1\rangle =L_{-1}\phi_{h_1}\otimes \phi_{h_2}\otimes \phi_{h_3},   \quad |v_2\rangle =\phi_{h_1}\otimes  L_{-1}\phi_{h_2}\otimes \phi_{h_3},\quad |v_3\rangle=\phi_{h_1}\otimes \phi_{h_2}\otimes  L_{-1} \phi_{h_3}.
 \end{equation}
-The symmetric combination of the above three states will correspond to a descendant of the orbifold Virasoro sub-algebra :
+
+The symmetric linear combination of the three states above corresponds to the descendant of the orbifold Virasoro sub-algebra
+of Eq.~\eqref{symm_virasoro_alg}
 \begin{equation}
 \boldsymbol{L}_{-1}\boldsymbol{\phi}_{\boldsymbol{h}}=|v_1\rangle+|v_2\rangle+|v_3\rangle.
 \end{equation} 
-The contribution of this descendant, which corresponds to $|\boldsymbol{h}|/2 $, is therefore taken into account by the sphere conformal block, as it can be seen from the following expansion: 
+This descendant contributes with the term with coefficient $|\boldsymbol{h}|/2$ to the expansion of Eq.~\eqref{usap}. This contribution is taken into account by the first Virasoro sphere conformal block in the expansion of Eq.~\eqref{expansion_sphere_conf_blocks}. In fact, 
 \begin{equation}
-\mathcal{F}_{3c, |\boldsymbol{h}|}(z)=z^{|\boldsymbol{h}|-2h_{\sigma_N}}\left[1+\left(\frac{2|\boldsymbol{h}|}{ 3 c}\right)\;z+O(z^2)\right].
+\mathcal{F}_{3c, |\boldsymbol{h}|}(z)=z^{|\boldsymbol{h}|-2h_{\sigma_N}}\left[1+\frac{|\boldsymbol{h}|}{2}z+O(z^2)\right].
 \end{equation}
-Let us consider now  space of the states orthogonal to $\boldsymbol{L}_{-1}\boldsymbol{\phi}_{\boldsymbol{h}}$: this is a two dimensional space of states $|v\rangle_{\lambda}$ parametrized by $\lambda \in \mathbb{C}$:
+
+Let us take now the space of states that are orthogonal to $\boldsymbol{L}_{-1}\boldsymbol{\phi}_{\boldsymbol{h}}$. This is a two dimensional space of states $|v\rangle_{\lambda}$ parametrized by $\lambda \in \mathbb{C}$ of the form
 \begin{equation}
 \label{ortosub}
  |v\rangle_{\lambda}= |v_1\rangle+\lambda |v_2\rangle
  -\frac{h_1+\lambda h_2}{h_3} |v_3\rangle.
 \end{equation}
 One can check
-that any vector in this orthogonal space is a primary of the $3 c$ Virasoro sub-algebra 
-i.e. $\boldsymbol{L}_n  |v\rangle_{\lambda}=0$ for all $n>0$
+that any vector in this orthogonal space is a primary of the $3 c$ Virasoro sub-algebra of 
+Eq.~\eqref{symm_virasoro_alg}, i.e. $\boldsymbol{L}_n  |v\rangle_{\lambda}=0$ for all $n>0$
 and $\boldsymbol{L}_0|v\rangle_{\lambda} = (h_1+h_2+h_3+1)|v\rangle_{\lambda}$.
-The contribution of these states and their symmetric descendents $\boldsymbol{L}_{-M}|v\rangle_{\lambda}$ is given by :
+The contribution of these states and their symmetric descendents $\boldsymbol{L}_{-M}|v\rangle_{\lambda}$ 
+to the conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(3)}(z)$ is given by
 \begin{equation}
 \alpha_{1}^{\boldsymbol{h}}\;\mathcal{F}_{3c, |\boldsymbol{h}|+1}(z),
 \end{equation}
@@ -540,21 +556,22 @@ where
 \label{alpha1}
 \alpha_{1}^{\boldsymbol{h}} =\frac{1}{54}\left[\frac{(h_1-h_2)^2}{h_3}+\frac{(h_1-h_3)^2}{h_2}+\frac{(h_2-h_3)^2}{h_1}\right].
 \end{equation}
-The coefficient $\alpha_{1}^{\boldsymbol{h}}$ can  be determined by choosing two values of $\lambda=(\lambda_1,\lambda_2)$  such that 
-$\{|v\rangle_{\lambda_1}, |v\rangle_{\lambda_2}\}$ is an orthonormal basis in the subspace \eqref{ortosub}. Then one can obtain \eqref{alpha1} from the expression:
+The coefficient $\alpha_{1}^{\boldsymbol{h}}$ can  be determined by choosing two particular values of $\lambda$, say $\lambda_1$ and $\lambda_2$, such that $\{|v\rangle_{\lambda_1}, |v\rangle_{\lambda_2}\}$ is an orthonormal basis of the orthogonal subspace of Eq.~\eqref{ortosub}. Then one can obtain the result of Eq.\eqref{alpha1} from the expression
 \begin{eqnarray}
  \alpha_1^{\boldsymbol{h}}&=&\frac{1}{D_{\boldsymbol{h},\boldsymbol{\bar{h}}}}\left[(_{\lambda_1}\langle v |\otimes \langle \boldsymbol{\phi}_{\boldsymbol{\bar{h}}}|)\sigma_{3}(1)|\bar{\sigma}_3\rangle \;\langle \sigma_{3}|\bar{\sigma}_3(1) (|v\rangle_{\lambda_1}\otimes |\boldsymbol{\phi}_{\boldsymbol{\bar{h}}}\rangle)  \right.+\\ 
  &+&\left.
  ( _{\lambda_2}\langle v| \otimes \langle \boldsymbol{\phi}_{\boldsymbol{\bar{h}}}|)|\sigma_{3}(1)|\bar{\sigma}_3\rangle \;\langle \sigma_{3}|\bar{\sigma}_3(1)(|v\rangle_{\lambda_2}\otimes |\boldsymbol{\phi}_{\boldsymbol{\bar{h}}}\rangle)  \right]
 \end{eqnarray}
-where $D_{\boldsymbol{h},\boldsymbol{\bar{h}}}$ is related to the structure constant as in Eq.~\eqref{DC}. As we already pointed out for the matrix elements $\Gamma$ and $\Gamma^*$, defined in Eq.~\eqref{Gammas}, the coefficient $\alpha^{\boldsymbol{h}}_1$  is algebraic in nature, despite the fact in the above equation where holomorphic and anti-holomorphic fields appear. This can be seen from the fact they are rational functions of the central charge and of the holomorphic dimension $h_j$.
+where $D_{\boldsymbol{h},\boldsymbol{\bar{h}}}$ is related to the structure constant as in Eq.~\eqref{DC}. As we already pointed out for the matrix elements $\Gamma$ and $\Gamma^*$, defined in Eq.~\eqref{Gammas}, the coefficient $\alpha^{\boldsymbol{h}}_1$  is algebraic in nature, despite the holomorphic and anti-holomorphic fields appear in the equation above. This can be seen from the fact they are rational functions of the central charge $c$ and of the holomorphic dimensions $h_j$.
 
-\noindent The states 
-$\boldsymbol{L}_{-M}\boldsymbol{\phi}_{\boldsymbol{h}}$ and $\boldsymbol{L}_{-M} |v\rangle_{\lambda}$ do not span the full space of descendents for level greater than one. This is the reason why
-other blocks appear and one finally gets the  Eq.~\eqref{expansion_sphere_conf_blocks}. In fact, if we denote by $\mathfrak{p}(l)$
-the number of partitions of the integer $l$, then there are $\mathfrak{p}(l)$ symmetric
-descendents at level $l$. However, assumming that there are no null vectors, it is easy to check that 
-at level $l$ the total number $\mathcal{N}_{N, l}$ of linear independent descendents of $\phi_{\boldsymbol{h}}$ is
+The states $\boldsymbol{L}_{-M}\boldsymbol{\phi}_{\boldsymbol{h}}$ and $\boldsymbol{L}_{-M} |v\rangle_{\lambda}$ 
+do not span the full space of descendents of $\boldsymbol{\phi}_{\boldsymbol{h}}$ for levels greater than one. 
+This is the reason why other Virasoro conformal blocks appear and one finally gets the expansion of Eq.~\eqref{expansion_sphere_conf_blocks}. 
+In fact, the previous analysis may be extended to deeper levels and generalized to any number of copies $N$.
+If we denote by $\mathfrak{p}(l)$ the number of partitions of the integer $l$, then there are $\mathfrak{p}(l)$ symmetric
+descendents $\boldsymbol{L}_{-M}\boldsymbol{\phi}_{\boldsymbol{h}}$ at level $l$. However,
+for an arbitrary number of copies $N$ and assumming that there are no null vectors, it is easy to check that 
+at level $l$ the total number $\mathcal{N}_{N, l}$ of linear independent descendents of $\boldsymbol{\phi}_{\boldsymbol{h}}$ is
 \begin{equation}
  \mathcal{N}_{N, l}=\sum_{\substack{Y, |Y|=l \\ |j_Y|\leq N}}\frac{N!}{(N-|j_Y|)!
  \prod_{i=1}^{|i_Y|}d_Y(i)!}\prod_{j=1}^{|j_Y|}\mathfrak{p}(i_Y(j)),
@@ -564,14 +581,13 @@ associated to $Y$, then $|i_Y|$ and  $|j_Y|$ denote its number of columns and
 rows respectively, $i_Y(j)$ is the number of columns in the row $j$ and 
 $d_Y(i)$ is the number of rows with $i$ columns.
 
-The previous analysis may be extended to deeper levels and generalized to
-any number of copies $N$. In general, at level $l$, we will find a set of 
-$\tilde{\mathcal{N}}_{N,l}$ orthonormal fields $|v\rangle_j$, $j=1,\dots, \tilde{\mathcal{N}}_{N,l}$,
+Therefore, at level $l$, we will find a set of $\tilde{\mathcal{N}}_{N,l}$ orthonormal fields 
+$|v\rangle_j$, $j=1,\dots, \tilde{\mathcal{N}}_{N,l}$,
 such that $\boldsymbol{L}_0 |v\rangle_j=(|\boldsymbol{h}|+l)|v\rangle_j$ and are primaries,
 $\boldsymbol{L}_n|v\rangle_j=0$ for all $n>0$. These primaries have associated the 
 sphere conformal block $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$, which gives the 
 contribution of these vectors and their symmetric descendents $\boldsymbol{L}_{-M}|v\rangle_j$
-to the genus $N-1$ conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, 
+to the orbifold conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, 
 according to Eq.~\eqref{expansion_sphere_conf_blocks}. The corresponding structure constant $\alpha_l^{\boldsymbol{h}}$
 is given by
 \begin{equation}
@@ -580,7 +596,7 @@ is given by
 \end{equation}
 The primary fields at 
 different levels, as well as their descendents, are orthogonal
-since they belong to different representations of the Virasoro algebra of Eq.~\eqref{symm_virasoro_alg}, t
+since they belong to different representations of the Virasoro algebra of Eq.~\eqref{symm_virasoro_alg}.
 %If there are no null vectors, then the number of primaries at level $l$ is
 %\begin{equation}
 % \tilde{\mathcal{N}}_{N, l}=\mathcal{N}_{N, l}
@@ -858,16 +874,6 @@ Now~\cite{SR} let us draw uniformly $N_c$ random points $\{z_{j}\}$ in the squar
 where $\kappa$ is an arbitrary positive number (which we will fix later). By imposing Eq.~\eqref{cross_symmetry_1} at each $z=z_j$, one obtains a linear system with $N_c$ unknowns and $N_c$ equations. By truncating the expansion of the conformal blocks $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$
 at level $\ell$, it is possible to obtain a set of structure constants $D_{\boldsymbol{h},\boldsymbol{\bar{h}}}(\ell)$ for any random realization of the points $\{z_j\}$. If the bootstrap converges,  we expect that the variance of the solutions $D_{\boldsymbol{h},\boldsymbol{\bar{h}}}(\ell)$ will be small and that $D_{\boldsymbol{h},\boldsymbol{\bar{h}}}(\ell)\to D_{\boldsymbol{h},\boldsymbol{\bar{h}}}$, for $\ell\to \infty$. 
 
- The conformal block   $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ resums the contribution of the conformal family generated by a field with conformal dimension $|\boldsymbol{h}|+l$, primary with respect to the Virasoro algebra generated by the symmetric stress enery tensor in Eq.~\eqref{hatT}. The coefficients $\alpha_l^{\boldsymbol{h}}$
-can be directly determined by expanding in power series both $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}$ 
-and $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ and identifying order by order the two 
-sides of Eq.~\eqref{expansion_sphere_conf_blocks}. 
-They can be thought as Clebsch-Gordan coefficients for a decomposition of a $N$-fold  tensor product of Virasoro algebra representations into a direct sum of irreducible representations with central charge $Nc$. A more algebraic way to obtain 
-these coefficients is described in Appendix~\ref{app_sphere_conf_blocks} and 
-gives a better understanding of Eq.~\eqref{expansion_sphere_conf_blocks}. There is a practical 
-advantage in recognizing the expansion of Eq.~\eqref{expansion_sphere_conf_blocks}: The variable $z$ 
-can be traded by its elliptic version~\cite{Zamolodchikov} $q(z)=e^{i\pi \tau(z)}$, see Eq.~\eqref{tau}, in which the convergence of the 
-sphere conformal blocks is faster. Summarizing, the series expansion of the higher genus conformal block allows us to determine the coefficients $\alpha_{l}^{\boldsymbol{h}}$ in Eq.~\eqref{expansion_sphere_conf_blocks}. At this point,  the crossing symmetry equation in Eq.~\eqref{cross_symmetry_1} is implemented in Zamolodchikov $q$-parameter to improve the numerical convergence. In the next Section, we present results of the bootstrap procedure.
 \subsection{Results}
 
 As a first benchmark of the method, we have considered the Tricritical 
@@ -1109,16 +1115,16 @@ There are a couple of possibile future directions that are worth to be mentioned
 Also it will be important to understand if a recursive formula for higher genus conformal blocks, such as that put forward in~\cite{Cho}, can be effectively implemented when $c<1$, due to the additional null vector resonances.
 
 \appendix
-\section{Transformation properties}\label{app_ward}
+\section{Transformation properties of Virasoro descendents}\label{app_ward}
 
-Consider a CFT on the Riemann sphere parameterized by $z$.
-The Virasoro generators are defined by their action on the fields:
+Consider a CFT on the Riemann sphere parameterized by $z$. The Virasoro 
+generators are defined by their action on the fields,
 \begin{equation}
 \label{vir_ln}
  L_{-n}(z)X^{M}_h(z)=-\oint_{C_{z}}\frac{dz'}{2\pi i}(z'-z)^{n+1}~T(z')~X^{M}_h(z),
 \end{equation}
 where $C_{z}$ is a closed contour containing $z$ and $T(z)$ is the stress energy tensor. 
-From the current-current OPE
+From the current-current OPE,
 \begin{equation}
 T(z) T(0)= \frac{c}{z^4}+ \frac{2}{z^2} T(0)+\frac{1}{z}\partial T (0)+\text{regular terms},
 \end{equation} 
@@ -1127,51 +1133,54 @@ one obtains the  Virasoro algebra
  [L_n(0), L_{m}(0)]X^{M}_h(0) =\left[(n-m) L_{n+m}(0)+\frac{c}{12}n(n^2-1)\delta_{n+m, 0}\right]X^{M}_h(0).
 \end{equation}
 
-We want to show now how the descendant fields transforms under a conformal map:
+The Virasoro generators acting on a field inserted at $z=\infty$ are given by
+\begin{equation}\label{L_infty}
+ L_{-n}(z=\infty)=-\oint_{C_{\infty}}\frac{dz}{2\pi i}z^{n+1}T(z).
+\end{equation}
+Let us see how these operators transform under a conformal map
+$t \mapsto z(t)$. By recalling the transformation of the stress energy tensor 
+when we apply it,
 \begin{equation}
-t \mapsto z(t)
+T(z)\mapsto \left(\frac{d z}{d t}\right)^{-2} T(t)-\frac{c}{12}\left\{z(t),t\right\},
 \end{equation}
-To do that, by using the transformation of the stress energy tensor under a conformal map,
+where $\{z(t),t\}$ is the Schwarzian derivative, the Virasoro descendent in Eq.~\eqref{L_infty}
+is then transformed into the linear combination of descendents acting on the point
+$t_\infty$ in the $t$-surface whose image is $z(t_\infty)=\infty$
+\begin{equation}\label{Virasoro_transf}
+ \mathcal{L}_{-n}(t_\infty)=-\oint_{C_{t_\infty}}\frac{dt}{2\pi i}
+ \left(\frac{dz}{dt}\right)^{-1}[z(t)]^{n+1}\left[T(t)-\frac{c}{12}\{z(t), t\}\right],
+\end{equation}
+where $C_{t_\infty}$ is a contour encircling the point $t_\infty$, and $T(t)$ can be 
+expressed as
 \begin{equation}
-T(z)\mapsto \left(\frac{d z}{d t}\right)^{-2} T(z(t))-\frac{c}{12}\left\{z(t),t\right\},
+ T(t)=\sum_{m\in\mathbb{Z}}(t-t_\infty)^{-n-2}L_m(t=t_\infty).
 \end{equation}
-where $\{z(t),t\}$ is the Shwartzian derivative,  in the Eq.(\ref{vir_ln}), one obtains the relation between the modes $L_{n}$ on the $z$ plane and the modes $\mathcal{L}_n(t)$ on the t plane:
-\begin{equation}\label{gengen}
-\begin{aligned}
- \mathcal{L}_{n}(t)&=\frac{c}{12} \oint_{\mathcal{C}_t}\frac{d t'}{2\pi i}\, (t'-t)^{n+1}\left\{z(t'),t'\right\} +\\
- & +\left(\frac{d z(t)}{d t}\right)^{-n} L_n^{(z(t))}
- +\frac{1-n}{2}\frac{\left.\frac{d^2 z(t)}{d t^2}\right|_{t=t'}}{\left(\frac{d z(t)}{d t}\right)^{n+2}}L_{n+1}^{(z(t))}+\cdots
- \end{aligned}
-\end{equation}
-We now illustrate an application of Eq.~\eqref{conformal_block_decomposition} to a flat torus. For $N=2$, the three-point function of Eq.~\eqref{orbifold_three-point} 
-can be calculated by considering the  one-to-two map (\ref{g_one_covering_map})
 
-which transforms $z=\infty$ into $t_{\infty}=\{0,\infty\}$
-in the $t$-plane and has branch points of order two at $z_b=\{0,1\}$.  For the mapping in Eq.~\eqref{g_one_covering_map}, 
-we can write down  the expansion of the Virasoro descendents in Eq.~\eqref{Virasoro_transf};
-if $n\geq 1$ it reads
-\begin{equation}
-\label{g1_1}
+
+In subsection~\ref{sec:genus_one}, we have employed the conformal map
+in Eq.~\eqref{g_one_covering_map} to compute the orbifold three-point function
+of Eq.~\eqref{C_2_X} in the case $N=2$. For this particular map, 
+we can write down the expansion of the Virasoro descendents in Eq.~\eqref{Virasoro_transf}
+by applying the residue theorem; if $n\geq 1$ it reads
+\begin{equation}\label{vir_g1_1}
  \mathcal{L}_{-n}(t_{\infty})=\sum_{m\geq -n} a_{nm} L_{m}(t=t_{\infty})+\frac{c}{32}(n-1), \quad t_{\infty}=\{0,\infty\},
 \end{equation}
 with
-\begin{equation}
-\label{g1_2}
+\begin{equation}\label{vir_g1_2}
  a_{nm}=\frac{1}{4^n}\left[2^{2n+1}-\binom{2n+1}{m+n+1}{}_2F_1(1, m-n, m+n+2, -1)\right].
 \end{equation}
 
-Under the conformal map of
-Eq.~\eqref{g_one_covering_map}, the Virasoro descendent in Eq.~\eqref{vir_infty}
-is then transformed into the linear combination of descendents in the $t$-plane
-\begin{equation}\label{Virasoro_transf}
- \mathcal{L}_{-n}(t_{\infty})=-\oint_{C_{t_{\infty}}}\frac{dt}{2\pi i}
- \left(\frac{dz}{dt}\right)^{-1}[z(t)]^{n+1}
- \left[T(t)-\frac{c}{12}\{z(t), t\}\right],
+In the case $N=3$, studied in subsection~\ref{sec:genus_two}, the orbifold three-point function of Eq.~\eqref{C_3_X} is calculated by
+applying the conformal map of Eq.~\eqref{g_two_covering_map}. The images $\mathcal{L}_{-n}(t_\infty)$ of the Virasoro descendents 
+$L_{-n}(z=\infty)$ under this map can be also obtained by using Eq.~\eqref{Virasoro_transf}. We have, for $n\geq 1$,
+\begin{equation}\label{vir_g2} 
+ \mathcal{L}_{-n}(t_\infty)=\sum_{m\geq n}a_{nm}^{t_\infty}L_{m}(t=t_{\infty})+\frac{c}{27}(n-1),
+ \quad t_\infty=\{0, 1, \infty\}
 \end{equation}
-where $C_{t_{\infty}}$ is a contour encircling the point $t_{\infty}$.
-The three-point correlations on the sphere which appear 
-in the expansion in Eq.~\eqref{genus_two_conf_block} of the genus two conformal block can be 
-computed recursively by employing the following Ward identities~\cite{Teschner},
+where the coefficients $a_{nm}^{t_\infty}$ can be determined in closed form from the residue theorem, see also Eq.~(2.9) of Ref.~\cite{Collier}.
+
+The three-point correlations on the sphere that appear in the expansion in Eq.~\eqref{genus_two_conf_block} of the $N=3$ orbifold 
+conformal block can be computed recursively by employing the following Ward identities~\cite{Teschner},
 \begin{multline}
 \label{wardvir1}
  \langle L_{-n}X_{h_1}^{M_1}|X_{h_2}^{M_2}(1)|X_{h_3}^{M_3}\rangle=
@@ -1192,11 +1201,7 @@ and
 \end{equation}
 
 
-\section{Orbifold algebra}
-
-n this Appendix, we discuss in more detail the expansion in Eq.~\eqref{expansion_sphere_conf_blocks} of the
-conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ in terms of the conformal 
-blocks on the sphere $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$.
+\section{Orbifold Virasoro sub-algebra}\label{app_orbifold_algebra}
 
 In each sheet of the orbifold theory $\mathcal{C}^{\otimes N}/\mathbb{Z}_N$, we 
 can consider a copy $\boldsymbol{T}^{(j)}(z)$, $j=1,\dots, N$, of the stress-energy tensor of 
@@ -1221,7 +1226,9 @@ and form a Virasoro algebra,
  [\boldsymbol{L}_n, \boldsymbol{L}_{m}]=(n-m)\boldsymbol{L}_{n+m}+\frac{Nc}{12}n(n^2-1)\delta_{n+m, 0},
 \end{equation}
 with central charge $Nc$.
-\section{Ising model}\label{app_ising}
+
+
+\section{$N=3$ orbifold conformal blocks for the Ising model}\label{app_ising}
 
 For the Ising field theory, the conformal block decomposition of 
 Eq.~\eqref{conformal_block_decomposition_0} for the twist-field 
@@ -1410,7 +1417,8 @@ for conformal blocks}, \href{https://doi.org/10.1088/1742-5468/aae5a8}{\emph{J. 
 \bibitem{Dupic} T. Dupic, B. Estienne, Y. Ikhlef, \emph{Entanglement entropies of minimal models from null-vectors}, 
 \href{https://scipost.org/10.21468/SciPostPhys.4.6.031}{\emph{SciPost Phys.} {\bf 4}, 031 (2018)}
 
-\bibitem{Borisov} L. Borisov, M. B. Halpern and C. Schweigert, \emph{Systematic approach to cyclic orbiforlds}
+\bibitem{Borisov} L. Borisov, M. B. Halpern and C. Schweigert, \emph{Systematic approach to cyclic orbifolds}, 
+\href{https://doi.org/10.1142/S0217751X98000044}{\emph{Int. J. Mod. Phys. A} {\bf 13}, 125 (1998)}
 
 % Please avoid comments such as "For a review'', "For some examples",
 % "and references therein" or move them in the text. In general,
