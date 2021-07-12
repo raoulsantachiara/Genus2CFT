@@ -9,6 +9,7 @@
 \usepackage{tikz}
 \usepackage{tikz-network}
 \usepackage{xcolor}
+\usepackage{mathrsfs}
 \usetikzlibrary{patterns}
 \usetikzlibrary{matrix,positioning,fit}
 \usetikzlibrary{calc}
@@ -441,9 +442,9 @@ and $h_3=0$; the result is
 \begin{equation}
  \mathcal{G}_{\frac{1}{2}, \{\frac{1}{16}, \frac{1}{16}, 0\}}^{(3)}(z)=
  z^{1/72}\left[1+\frac{7}{108}z^+\frac{1595}{46656}z^2+
- \frac{118405}{5038848}z^3+\frac{26160455}{1451188224}z^4+O(z^5)\right]
+ \frac{118405}{5038848}z^3+\frac{26160455}{1451188224}z^4+O(z^5)\right].
 \end{equation}
-Again, as in the previous example, when the null vector at second level 
+Again, when the null vector at the second level 
 of the representation $(c=1/2, h=1/16)$ appears in the sum of Eq.~\eqref{genus_two_conf_block} 
 simultaneously in the two copies of $\mathcal{C}$ with this representation, 
 it contributes to the $O(z^4)$ term. This spurious contribution is of order $O(\varepsilon^2)$ 
@@ -451,7 +452,7 @@ once we apply the regularization of Eq.~\eqref{regularization} and it is then re
 limit $\varepsilon\to0$.
 
 
-\section{Orbifold conformal blocks in terms of sphere conformal blocks}\label{sphere_conf_blocks}
+\section{Orbifold conformal blocks in terms of sphere conformal blocks}\label{sec:sphere_conf_blocks}
 Eq.~\eqref{conformal_block_decomposition} provides a small $|z|$ expansion of the modular conformal block of the type
 \begin{equation}
 \mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) =z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=0}^{\infty} a_j \; z^j.
@@ -465,8 +466,7 @@ In the case $N=3$, for instance, we are able to reach $L=6$.
 A crucial point here is that the convergence of the series in Eq.~\eqref{conformal_block_decomposition} is slow close to  $|z|=1$. This, in turn, implies that, if the conformal block $\mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)$ is approximated by the truncated sum of Eq.~\eqref{trunc}, one misses the global properties of the twist field four-point function and, in particular, the crossing symmetry of Eq.~\eqref{cross_symmetry}. 
 In Ref.~\cite{Collier}, this problem was tackled for $N=3$ by using a transformation from the frame $\Sigma_2(x)$ to the pillow frame. They  obtained then a series expansion in terms of the elliptic nome $q(z)=e^{i\pi\tau(z)}$, with $\tau(z)$ defined in Eq.~\eqref{tau}, 
 of the form
-\begin{equation}
-\label{collierap}
+\begin{equation}\label{collierap}
 \mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z) \sim z^{|\boldsymbol{h}|-2h_{\sigma_N}} \;\sum_{j=0}^{L} b_j \; q(z)^j.
 \end{equation}
 This expansion drastically improves the convergence properties of the twist field correlation function near $|z|=1$.
@@ -590,7 +590,7 @@ contribution of these vectors and their symmetric descendents $\boldsymbol{L}_{-
 to the orbifold conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$, 
 according to Eq.~\eqref{expansion_sphere_conf_blocks}. The corresponding structure constant $\alpha_l^{\boldsymbol{h}}$
 is given by
-\begin{equation}
+\begin{equation}\label{alpha_l}
  \alpha_l^{\boldsymbol{h}}=\frac{1}{D_{\boldsymbol{h},\boldsymbol{\bar{h}}}}\sum_{j=1}^{\tilde{\mathcal{N}}_{N,l}}
  (_{\lambda_j}\langle v |\otimes \langle \boldsymbol{\phi}_{\boldsymbol{\bar{h}}}|)\sigma_{3}(1)|\bar{\sigma}_3\rangle \;\langle \sigma_{3}|\bar{\sigma}_3(1) (|v\rangle_{\lambda_j}\otimes |\boldsymbol{\phi}_{\boldsymbol{\bar{h}}}\rangle).
 \end{equation}
@@ -837,23 +837,147 @@ of moments $\Tr(\rho_A^{T_2})^3/\Tr\rho_A^3$ using the conformal block decomposi
 
 
 
-\subsection{Bounds on structure constants}
+\subsection{Constraints on the structure constants}
 
-\subsection{Numerical Bootstrap}
-In the previous sections, we have seen how to decompose in terms of conformal blocks 
-the partition function of a CFT on a compact Riemann surface with $\mathbb{Z}_N$ symmetry. 
-In this Section, we will determine numerically the structure constants $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$
-of that decomposition by applying the crossing symmetry of the twist field four-point 
-correlation function.
+In Ref.~\cite{Collier}, the crossing symmetry of the twist field four-point 
+function for the case $N=3$ was employed to extract some non trivial constraints on the 
+structure constants of the seed theory $\mathcal{C}$. For this purpose, the authors mapped 
+the orbifold conformal block $\mathcal{G}_{c, \boldsymbol{h}}^{(3)}(z)$ from the 
+twist field frame to the 3-fold pillow frame, which makes apparent some positivity properties of 
+the block for unitary theories. As we already mentioned in Sec.~\ref{sec:sphere_conf_blocks}, this transformation
+produces a series for the orbifold conformal block in terms of the elliptic nome $q(z)$
+of the form of Eq.~\eqref{collierap}. In this subsection, we will see how to rederive 
+such constraints on the structure constants from the expansion of the orbifold 
+conformal blocks in terms of the ones on the sphere, studied in Sec.~\ref{sec:sphere_conf_blocks}. This 
+expansion results in a power series expansion in $q(z)$ of the form of Eq.~\eqref{usap}
+Therefore, as we will see, it provides slightly tighter contraints on the structure
+constants than the expansion used in Ref.~\cite{Collier}.
 
-Using the decomposition in Eq.~\eqref{conformal_block_decomposition_0} of the twist field correlation function in terms of conformal
-blocks, we can rewrite the crossing symmetry condition of Eq.~\eqref{cross_symmetry} in the form
+First, as in Ref.~\cite{Collier}, we must recast the Zamolodchikov recursion relation, Eq.~\eqref{zam_recursion}, 
+for the Virasoro conformal blocks $\mathcal{F}_{Nc, h}(z)$ in order to make manifest 
+certain positivity properties of it that we will need later. More specifically, the 
+coefficients $d_j$ of the factor $H(Nc, h, h_{\sigma_N}, q)$ are not in general positive
+definite. We can get it positive in unitary theories by reinterpreting the Zamolodchikov recursion
+relation as in Ref.~\cite{Maldacena}. In that paper, the conformal block $\mathcal{F}_{Nc, h}(z)$, 
+which is defined on the sphere, is mapped to the pillow (the quotient of a flat torus
+by $\mathbb{Z}_2$, which is topologically equivalent to a sphere with four conical singularities). 
+The important result for us is that the transformed blocks $\tilde{\mathcal{F}}_{Nc, h}(z)$ read 
+\begin{equation}
+ \tilde{\mathcal{F}}_{Nc, h}(q)=\mathcal{\vartheta}_3(q)^{16h_{\sigma_N}-\frac{Nc}{2}}
+ \left[z(1-z)\right]^{2h_{\sigma_N}-\frac{Nc}{24}}\mathcal{F}_{Nc, h}(z),
+\end{equation}
+and, if $\tilde{\mathcal{F}}_{Nc, h}(z)$ is interpreted as a sum over the states on the pillow, 
+then it admits the expansion
+\begin{equation}
+ \tilde{\mathcal{F}}_{Nc, h}(q)=q^{h-\frac{Nc}{24}}\sum_{l=0}^\infty \tilde{a}_n(h) q^{n},
+\end{equation}
+where the coefficients $\tilde{a}_n(h)$ are sums of scalar products between the descendent states at level $n$ 
+and, consequently, they are non-negative, $\tilde{a}_n(h)\geq 0$, for unitary theories. Therefore, we 
+can rewrite the Virasoro conformal blocks in the form
+\begin{equation}\label{Vir_cb_pillow}
+ \mathcal{F}_{Nc, h}(z)=q^{h-\frac{Nc}{24}}\left[z(1-z)\right]^{\frac{Nc}{24}-2h_{\sigma_N}}
+ \vartheta_3(q)^{\frac{Nc}{2}-16h_{\sigma_N}}\sum_{n=0}^\infty \tilde{a}_n(h) q^n.
+\end{equation}
+The coefficients $\tilde{a}_n(h)$ can be easily computed from the Zamolodchikov recursion relation.
+
+If we now truncate at order $L'>L$ the power series of Eq.~\eqref{Vir_cb_pillow} and insert it into the truncated
+expansion of $\mathcal{G}_{c, \boldsymbol{h}}(z)$ in terms of $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$
+of Eq.~\eqref{expansion_sphere_conf_blocks_trunc}, we obtain the following approximation for the orbifold conformal blocks
+\begin{equation}\label{orbifold_cb_pillow}
+ \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)
+ \sim q^{|\boldsymbol{h}|-\frac{Nc}{24}}\left[z(1-z)\right]^{\frac{Nc}{24}-2h_{\sigma_N}}
+ \vartheta_3(q)^{\frac{Nc}{2}-16h_{\sigma_N}}
+ \left(\sum_{l=0}^L A_l q^l+\sum_{l=L+1}^{L+L'} A_l' q^l\right).
+\end{equation}
+The coefficients $A_l$ and $A_l'$ are sums of terms of the form 
+$\alpha_m^{\boldsymbol{h}} a_{n}(|\boldsymbol{h}|+m)$,
+as one can easily conclude from the combination of Eqs.~\eqref{expansion_sphere_conf_blocks_trunc}~and~\eqref{Vir_cb_pillow}. 
+The structure constans $\alpha_m^{\boldsymbol{h}}$ are, by its definition 
+in Eq.~\eqref{alpha_l}, non-negative in unitary theories. This implies that both $A_l$ and $A_l'$ are also 
+non-negative for any $l$. We distinguish coefficients $A_l$ from $A_l'$ because the first take into account 
+the contribution from all the states at level $l$ while the second only include part of the descendent states at that level.
+If we only consider the term with coefficients $A_l$, the approximation of Eq.~\eqref{orbifold_cb_pillow} reduces to the one
+used in Ref.~\cite{Collier} for the case $N=3$. As we already remarked in Sec.~\eqref{sec:sphere_conf_blocks}, the expansion
+in Virasoro conformal blocks of Eq.~\eqref{expansion_sphere_conf_blocks_trunc}, together with the elliptic recursion of Eq.~\eqref{zam_recursion}, allows to further incorporate the contribution of some of the descendent states at deeper levels, the term with coefficients $A_l'$ in Eq.~\eqref{orbifold_cb_pillow}, improving the approximation of Ref.~\cite{Collier}.
+
+We can now apply the approximation of Eq.~\eqref{orbifold_cb_pillow} to derive 
+some constraints on the structure constants of the seed theory $\mathcal{C}$.
+Using the decomposition of Eq.~\eqref{conformal_block_decomposition} of the twist field correlation function 
+in terms of orbifold conformal blocks, we can rewrite the crossing symmetry condition 
+of Eq.~\eqref{cross_symmetry} in the form
 \begin{equation}\label{cross_symmetry_1}
  \sum_{\boldsymbol{h}, \boldsymbol{\bar{h}}} D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}\left[
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)\mathcal{G}_{c, \boldsymbol{\bar{h}}}^{(N)}(\bar{z})-
  \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(1-z)\mathcal{G}_{c, \boldsymbol{\bar{h}}}^{(N)}(1-\bar{z})\right]=0.
 \end{equation}
-If we normalize to one the structure constant of the channel $h_1=h_2=\cdots=h_N=0$, that is $D_{\boldsymbol{0}, \boldsymbol{0}}=1$
+In the rest of this subsection, we will restrict to the case $N=3$, for which the structure constants 
+$D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$ read $D_{\boldsymbol{h},\boldsymbol{\bar{h}}}
+=C_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^2/27^{|\boldsymbol{h}|+|\boldsymbol{\bar{h}}|}$, 
+with $\boldsymbol{h}=\{h_1, h_2, h_3\}$ and $C_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$ a 
+structure constant of $\mathcal{C}$. If, as in the usual numerical bootstrap approach \cite{Rattazzi, Poland}, 
+we act on Eq.~\eqref{cross_symmetry_1} with a linear functional
+\begin{equation}
+ \gamma(f)=\sum_{n, m} \gamma_{n, m}\partial_{z}^n\partial_{\bar{z}}^m f(z,\bar{z})\Bigr|_{z=\bar{z}=\frac{1}{2}},
+\end{equation}
+where $\gamma_{n, m}$ are real coefficients and $f(z,\bar{z})$ an arbitrary function, then 
+we can obtain a set of linear equations for $C_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^2$.
+To compare with the results of Ref.~\cite{Collier}, let us take the linear functional that only 
+contains the first derivative, $\gamma\equiv\partial_z|_{z=\bar{z}=\frac{1}{2}}$. If we apply it to 
+Eq.~\eqref{cross_symmetry_1} for $N=3$, we find the condition
+\begin{equation}\label{cross_symm_N_3}
+ \sum_{\boldsymbol{h},\boldsymbol{\bar{h}}} 27^{-|\boldsymbol{h}|-|\boldsymbol{\bar{h}}|}
+ C_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^2~\mathcal{G}_{\boldsymbol{\bar{h}}}^{(3)}\left(1/2\right)
+ \partial_z\mathcal{G}_{\boldsymbol{h}}^{(3)}(z)\Bigr|_{z=\frac{1}{2}}=0.
+\end{equation}
+For unitary theories, $C_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^2$ is positive and, 
+in order to Eq.~\eqref{cross_symm_N_3} be satisfied, the factor $\mathcal{G}_{\boldsymbol{\bar{h}}}^{(3)}(z)
+\partial_z\mathcal{G}_{\boldsymbol{h}}^{(3)}(z)\bigr|_{z=1/2}$ must be negative on a domain $\mathscr{D}$
+of the space of triplets of confomal dimensions $\{(h_1, h_2, h_3)\in \mathbb{R}^3~|~h_1, h_2, h_3\geq 0\}$,
+and non-negative otherwise. The points $(h_1, h_2, h_3)$ where this factor vanishes are the boundary
+of the domain $\mathscr{D}$ and typically form a compact surface. Thus Eq.~\eqref{cross_symm_N_3} implies that the structure constants 
+corresponding to points outside $\mathscr{D}$ are bounded by those associated to points inside it. 
+
+The condition of being a point in the boundary of  the domain $\mathscr{D}$
+can be rewritten as
+\begin{equation}
+ W_c(h_1, h_2, h_3)=0,\quad \text{with}\quad 
+ W_c(h_1, h_2, h_3):=\partial_z\log\mathcal{G}_{\boldsymbol{h}}^{(3)}(z)\Bigr|_{z=\frac{1}{2}}.
+\end{equation}
+If we now apply the approximation found in Eq.~\eqref{orbifold_cb_pillow} for 
+$\mathcal{G}_{\boldsymbol{h}}^{(3)}(z)$, then we find
+\begin{multline}\label{crit_surf_trunc}
+ W_c^{(L, L')}(h_1, h_2, h_3)=
+ \frac{\pi^2}{K(\frac{1}{2})^2}
+ \left[h_1+h_2+h_3-\left(\frac{1}{8}+\frac{5}{72\pi}\right)c\right. \\
+ \left.+\frac{\sum_{n=1}^L n A_n e^{-\pi n}+\sum_{n=L+1}^{L'} n A_n'e^{-\pi n}}
+ {\sum_{n=0}^L A_n e^{-\pi n}+\sum_{n=L+1}^{L'} A_n' e^{-\pi n}}\right]. 
+\end{multline}
+Observe that it is at this point where the positivity of the coefficients $A_n$ 
+and $A_n'$ for unitary theories previously discussed plays the crucial role, since 
+it implies that the last term in Eq.~\eqref{crit_surf_trunc} is positive too. This means that the 
+domain $\mathscr{D}_{L, L'}$ of points $(h_1, h_2, h_3)$ for which $W_c^{(L, L')}(h_1, h_2, h_3)<0$
+shrinks as $L$ and $L'$ increase and it converges with the domain $\mathscr{D}$, $\mathscr{D}_{L, L'}\to\mathscr{D}$,
+in the limit $L, L'\to\infty$. If in the last term we only include the sum over the coefficients 
+$A_n$, we recover the approximation considered in Ref.~\cite{Collier} (cf. Eq. (3.8) of that reference). 
+By including the contribution of some of the descendents at deeper levels of the quasi-primary fields at 
+the levels $l=1, \dots, L$, we improve the convergence of Eq.~\eqref{crit_surf_trunc} and produce a slightly smaller domain 
+$\mathscr{D}_{L, L'}$, as Fig. xxx shows. In any case, the convergence with the domain $\mathscr{D}$ is 
+very fast due to the exponential decay of those terms in Eq.~\eqref{crit_surf_trunc}.
+
+
+\subsection{Bootstrapping genus two partition functions}
+
+
+In this Section, we will apply the bootstrap approach proposed in Ref.~\cite{SR} 
+to determine numerically the structure constants $D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$ of the conformal block decomposition 
+of Eq.~\eqref{conformal_block_decomposition_0} for the twist field correlation function by making use of 
+the crossing symmetry and the expansion of orbifold conformal blocks 
+in Virasoro sphere conformal blocks.
+
+
+As we already saw, the combination of the decomposition of Eq.~\eqref{conformal_block_decomposition_0}
+and the crossing symmetry condition in Eq.~\eqref{cross_symmetry} leads to Eq.~\eqref{cross_symmetry_1}. 
+If we now normalize to one the structure constant of the channel $h_1=h_2=\cdots=h_N=0$, that is $D_{\boldsymbol{0}, \boldsymbol{0}}=1$
 where $\boldsymbol{0}\equiv \{0,\dots, 0\}$, then Eq.~\eqref{cross_symmetry_1} can be cast in the form
 \begin{multline}\label{cross_symmetry_2}
 \sum_{\substack{\boldsymbol{h},\boldsymbol{\bar{h}} \\ (\boldsymbol{h},\boldsymbol{\bar{h}})\neq(\boldsymbol{0},\boldsymbol{0})}}D_{\boldsymbol{h},\boldsymbol{\bar{h}}}
@@ -1121,7 +1245,7 @@ Consider a CFT on the Riemann sphere parameterized by $z$. The Virasoro
 generators are defined by their action on the fields,
 \begin{equation}
 \label{vir_ln}
- L_{-n}(z)X^{M}_h(z)=-\oint_{C_{z}}\frac{dz'}{2\pi i}(z'-z)^{n+1}~T(z')~X^{M}_h(z),
+ L_{-n}(z)\phi^{M}_h(z)=\oint_{C_{z}}\frac{dz'}{2\pi i}(z'-z)^{n+1}~T(z')~\phi^{M}_h(z),
 \end{equation}
 where $C_{z}$ is a closed contour containing $z$ and $T(z)$ is the stress energy tensor. 
 From the current-current OPE,
@@ -1130,7 +1254,7 @@ T(z) T(0)= \frac{c}{z^4}+ \frac{2}{z^2} T(0)+\frac{1}{z}\partial T (0)+\text{reg
 \end{equation} 
 one obtains the  Virasoro algebra
 \begin{equation}
- [L_n(0), L_{m}(0)]X^{M}_h(0) =\left[(n-m) L_{n+m}(0)+\frac{c}{12}n(n^2-1)\delta_{n+m, 0}\right]X^{M}_h(0).
+ [L_n(0), L_{m}(0)]\phi^{M}_h(0) =\left[(n-m) L_{n+m}(0)+\frac{c}{12}n(n^2-1)\delta_{n+m, 0}\right]\phi^{M}_h(0).
 \end{equation}
 
 The Virasoro generators acting on a field inserted at $z=\infty$ are given by
@@ -1183,16 +1307,16 @@ The three-point correlations on the sphere that appear in the expansion in Eq.~\
 conformal block can be computed recursively by employing the following Ward identities~\cite{Teschner},
 \begin{multline}
 \label{wardvir1}
- \langle L_{-n}X_{h_1}^{M_1}|X_{h_2}^{M_2}(1)|X_{h_3}^{M_3}\rangle=
- \langle X_{h_1}^{M_1}|X_{h_2}^{M_2}(1)|L_n X_{h_3}^{M_3}\rangle \\
- +\sum_{m= 1}^n \binom{n+1}{m+1}\langle X_{h_1}^{M_1}|L_m X_{h_2}^{M_2}(1)|X_{h_3}^{M_3}\rangle,
+ \langle L_{-n}\phi_{h_1}^{M_1}|\phi_{h_2}^{M_2}(1)|\phi_{h_3}^{M_3}\rangle=
+ \langle \phi_{h_1}^{M_1}|\phi_{h_2}^{M_2}(1)|L_n \phi_{h_3}^{M_3}\rangle \\
+ +\sum_{m= 1}^n \binom{n+1}{m+1}\langle \phi_{h_1}^{M_1}|L_m \phi_{h_2}^{M_2}(1)|\phi_{h_3}^{M_3}\rangle,
 \end{multline}
 \begin{multline}
 \label{wardvir2}
- \langle X_{h_1}^{M_1}|L_{-n}X_{h_2}^{M_2}(1)|X_{h_3}^{M_3}\rangle=
+ \langle \phi_{h_1}^{M_1}|L_{-n}\phi_{h_2}^{M_2}(1)|\phi_{h_3}^{M_3}\rangle=
  \sum_{m=0}^\infty\binom{n+m-2}{m}
- \left[\langle L_{m+n} X_{h_1}^{M_1}|X_{h_2}^{M_2}(1)|X_{h_3}^{M_3}\rangle \right.\\ +
- \left. (-1)^n\langle X_{h_1}^{M_1}|X_{h_2}^{M_2}(1)|L_{m-1} X_{h_3}^{M_3}\rangle\right],
+ \left[\langle L_{m+n} \phi_{h_1}^{M_1}|\phi_{h_2}^{M_2}(1)|\phi_{h_3}^{M_3}\rangle \right.\\ +
+ \left. (-1)^n\langle \phi_{h_1}^{M_1}|\phi_{h_2}^{M_2}(1)|L_{m-1} \phi_{h_3}^{M_3}\rangle\right],
 \end{multline}
 and
 \begin{equation}
@@ -1417,8 +1541,17 @@ for conformal blocks}, \href{https://doi.org/10.1088/1742-5468/aae5a8}{\emph{J. 
 \bibitem{Dupic} T. Dupic, B. Estienne, Y. Ikhlef, \emph{Entanglement entropies of minimal models from null-vectors}, 
 \href{https://scipost.org/10.21468/SciPostPhys.4.6.031}{\emph{SciPost Phys.} {\bf 4}, 031 (2018)}
 
-\bibitem{Borisov} L. Borisov, M. B. Halpern and C. Schweigert, \emph{Systematic approach to cyclic orbifolds}, 
+\bibitem{Borisov} L. Borisov, M. B. Halpern, C. Schweigert, \emph{Systematic approach to cyclic orbifolds}, 
 \href{https://doi.org/10.1142/S0217751X98000044}{\emph{Int. J. Mod. Phys. A} {\bf 13}, 125 (1998)}
+
+\bibitem{Maldacena} J. Maldacena, D. Simmons-Duffin, A. Zhiboedov, \emph{Looking for a bulk point},
+\href{ https://doi.org/10.1007/JHEP01(2017)013}{\emph{JHEP} {\bf 01} (2017) 013}
+
+\bibitem{Rattazzi} R. Rattazzi, V. S. Rychkov, E. Tonni, A. Vichi, \emph{Bounding scalar operator dimensions in 4D CFT},
+\href{https://doi.org/10.1088/1126-6708/2008/12/031}{\emph{JHEP} {\bf 12} (2008) 031}
+
+\bibitem{Poland} D. Poland, S. Rychkov, A. Vichi, \emph{The Conformal Bootstrap: Theory, Numerical Techniques, and Applications},
+\href{https://doi.org/10.1103/RevModPhys.91.015002}{\emph{Rev. Mod. Phys.} {\bf 91}, 015002 (2019)}
 
 % Please avoid comments such as "For a review'', "For some examples",
 % "and references therein" or move them in the text. In general,
