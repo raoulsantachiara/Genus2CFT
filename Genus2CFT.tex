@@ -9,7 +9,7 @@
 \usepackage{tikz}
 \usepackage{tikz-network}
 \usepackage{xcolor}
-\usepackage{mathrsfs, amsbsy}
+\usepackage{mathrsfs, amssymb, amsbsy}
 
 \usetikzlibrary{patterns}
 \usetikzlibrary{matrix,positioning,fit}
@@ -199,21 +199,25 @@ The corresponding scalar product matrix $\boldsymbol{G}^{\boldsymbol{h}}_{\bolds
 As it is well known in the theory of conformal blocks \cite{DiFrancesco}, the expansion about $z=0$ of $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ can be obtained by inserting the resolution of the identity in the representation $\boldsymbol{h}$. Then we obtain the power series expansion
 \begin{equation}\label{conformal_block_decomposition}
  \mathcal{G}_{c,\boldsymbol{h}}^{(N)}(z)=
- z^{|\boldsymbol{h}|-2h_{\sigma_N}}\sum_{\substack{\boldsymbol{M}_1, \boldsymbol{M}_2 \\ |\boldsymbol{M}_1|=|\boldsymbol{M}_2|} } z^{|\boldsymbol{M}_1|}\;\Gamma^{*}_{\boldsymbol{h}, \boldsymbol{M}_1}\; [\boldsymbol{G}^{\boldsymbol{h}}_{\boldsymbol{M}_1,\boldsymbol{M}_2}]^{-1}\;\Gamma_{\boldsymbol{h},\boldsymbol{M}_2},
+ z^{|\boldsymbol{h}|-2h_{\sigma_N}}\sum_{\boldsymbol{M}_1, \boldsymbol{M}_2} z^{|\boldsymbol{M}_1|}\;\bar{\rho}^{\boldsymbol{h}}_{\boldsymbol{M}_1}\; [\boldsymbol{G}^{\boldsymbol{h}}_{\boldsymbol{M}_1,\boldsymbol{M}_2}]^{-1}\;\rho^{\boldsymbol{h}}_{\boldsymbol{M}_2},
 \end{equation}
-where $\Gamma_{\boldsymbol{h},\boldsymbol{M}}$ and $\Gamma^{*}_{\boldsymbol{h},\boldsymbol{M}}$ are matrix elements between descendant fields. In terms of the orbifold structure constant,
+where $\rho_{\boldsymbol{M}}^{\boldsymbol{h}}$ and $\bar{\rho}^{\boldsymbol{h}}_{\boldsymbol{M}}$ are matrix elements between descendant fields. In terms of the orbifold structure constants,
 \begin{equation}
 \label{strucconst}
-C_{\boldsymbol{h},\boldsymbol{\bar{h}}}=\langle  \sigma_{N}|\bar{\sigma}_{N}(1)|\boldsymbol{\phi}_{\boldsymbol{h},\boldsymbol{\bar{h}}}\rangle,
+C_{\boldsymbol{h},\boldsymbol{\bar{h}}}=\langle \boldsymbol{\phi}_{\boldsymbol{h},\boldsymbol{\bar{h}}}| \sigma_{N}(1)|\bar{\sigma}_N\rangle, \quad 
+\bar{C}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}=\langle \boldsymbol{\phi}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}|\bar{\sigma}_N(1)|\sigma_N\rangle
 \end{equation}
 one has
  \begin{equation}
  \label{Gammas}
-\Gamma_{\boldsymbol{h},\boldsymbol{M}} = \frac{\langle \boldsymbol{\phi}^{\boldsymbol{M},\boldsymbol{0}}_{\boldsymbol{h},\boldsymbol{\bar{h}}}| \sigma_{N}(1)|\bar{\sigma}_{N}\rangle}{C_{\boldsymbol{h},\boldsymbol{\bar{h}}}},\quad  \Gamma^{*}_{\boldsymbol{h},\boldsymbol{M}} = \frac{\langle  \sigma_{N}|\bar{\sigma}_{N}(1)|\boldsymbol{\phi}^{\boldsymbol{M},\boldsymbol{0}}_{\boldsymbol{h},\boldsymbol{\bar{h}}}\rangle}{C_{\boldsymbol{h},\boldsymbol{\bar{h}}}} .
+\rho^{\boldsymbol{h}}_{\boldsymbol{M}} = \frac{\langle \boldsymbol{\phi}^{\boldsymbol{M},\boldsymbol{0}}_{\boldsymbol{h},\boldsymbol{\bar{h}}}| \sigma_{N}(1)|\bar{\sigma}_{N}\rangle}{C_{\boldsymbol{h},\boldsymbol{\bar{h}}}},\quad  
+\bar{\rho}^{\boldsymbol{h}}_{\boldsymbol{M}} = \frac{\langle\boldsymbol{\phi}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^{\boldsymbol{M}, \boldsymbol{0}}|\bar{\sigma}_{N}(1)|\sigma_N\rangle}{\bar{C}_{\boldsymbol{h},\boldsymbol{\bar{h}}}} .
  \end{equation}
- The matrix elements  $\Gamma_{\boldsymbol{h},\boldsymbol{M}}$ and $\Gamma^{*}_{\boldsymbol{h},\boldsymbol{M}}$ have an algebraic nature, in the sense that they are fixed by the orbifold algebra. In the case of unitary theories, $\Gamma^{*}_{\boldsymbol{h}, \boldsymbol{M}}$ is the complex conjugate of $\Gamma_{\boldsymbol{h}, \boldsymbol{M}}$. The structure constants, on the other hand, can depend on the model under consideration. Plugging Eq.~\eqref{conformal_block_decomposition} into Eq.\eqref{conformal_block_decomposition_0}, we conclude that 
+ The matrix elements  $\rho^{\boldsymbol{h}}_{\boldsymbol{M}}$ and $\bar{\rho}^{\boldsymbol{h}}_{\boldsymbol{M}}$ have an algebraic nature, in the sense that they are fixed by the orbifold algebra. We will show how to compute them in the next subsection. In general, they are complex 
+ numbers and $\bar{\rho}_{\boldsymbol{M}}^{\boldsymbol{h}}$ is the complex conjugate of $\rho_{\boldsymbol{M}}^{\boldsymbol{h}}$.
+ The structure constants, on the other hand, can depend on the model under consideration. Plugging Eq.~\eqref{conformal_block_decomposition} into Eq.\eqref{conformal_block_decomposition_0}, we conclude that 
  \begin{equation}\label{DC}
- D_{\boldsymbol{h},\boldsymbol{\bar{h}}}= C_{\boldsymbol{h},\boldsymbol{\bar{h}}}^2.
+ D_{\boldsymbol{h},\boldsymbol{\bar{h}}}= C_{\boldsymbol{h},\boldsymbol{\bar{h}}}\bar{C}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}.
  \end{equation}
 \subsection{Computation of the orbifold three-point functions}
 The computation of the twist field four-point function boils down then to determine the 
@@ -256,20 +260,32 @@ can be calculated by considering the two-to-one map
  z(t)=\frac{(t+1)^2}{4t},
 \end{equation}
 which transforms $t_{\infty}=\{0,\infty\}$ into $z=\infty$ and has branch points of 
-order two at $z_{\text{branch}}=\{0, 1\}$. For this map, Eq.~\eqref{orbifold_three-point} becomes
+order two at $z_{\text{branch}}=\{0, 1\}$. By applying the result of Eq.~\eqref{N-point} 
+with this map, the $N=2$ orbifold three-points functions reduce to scalar products,
+\begin{align}
+ C_{\boldsymbol{h},\boldsymbol{\bar{h}}}=
+ \langle\boldsymbol{\phi}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}| 
+ \sigma_{2}(1)|\bar{\sigma}_{2}\rangle
+ =\langle \tilde{\phi}_{h_1,\bar{h}_1}|\tilde{\phi}_{h_2,\bar{h}_2}\rangle
+ =\delta_{h_1, h_2}\delta_{\bar{h}_1,\bar{h}_2}2^{-4(h_1+\bar{h}_1)},
+\end{align}
+and Eq.~\eqref{orbifold_three-point} becomes
 \begin{align}\label{C_2_X}
  \langle \boldsymbol{\phi}^{\boldsymbol{M},\boldsymbol{0}}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}| 
- \sigma_{2}(1)\bar{\sigma}_{2}(0)\rangle&=\langle \tilde{\phi}_{h_1, \bar{h}_1}^{M_1,0} | \tilde{\phi}_{h_2, \bar{h}_2}^{M_2, 0}\rangle \nonumber\\
- &=\delta_{h_1, h_2}\delta_{\bar{h}_1, \bar{h}_2}\delta_{|M_1|,|M_2|}\;2^{-4(h_1+\bar{h}_1)} \;\rho^{h_1}_{M_1,M_2},
+ \sigma_{2}(1)\bar{\sigma}_{2}(0)\rangle&=\langle \tilde{\phi}_{h_1, \bar{h}_1}^{M_1,0} | \tilde{\phi}_{h_2, \bar{h}_2}^{M_2, 0}\rangle
+ =C_{\boldsymbol{h}, \boldsymbol{\bar{h}}} \;\rho^{h_1}_{M_1,M_2},
 \end{align}
 where $\rho$ is the symmetric $|M_1|\times|M_1|$ matrix
 \begin{equation}
 \label{rho}
- \rho^h_{M_1,M_2}:=\langle \mathcal{L}_{-M_1}\phi_{h}|\mathcal{L}_{-M_2}\phi_{h}\rangle.
+ \rho^h_{M_1,M_2}=\langle \mathcal{L}_{-M_1}\phi_{h}|\mathcal{L}_{-M_2}\phi_{h}\rangle.
 \end{equation}
 The explicit expression of $\mathcal{L}_{-n}$ for the map of Eq.~\eqref{g_one_covering_map}
 is written in Eq.~\eqref{vir_g1_1} of Appendix~\ref{app_ward}. The matrix $\rho^h$ in Eq.~\eqref{rho} 
-above can be easily calculated by exploiting the Virasoro algebra commutation relations.
+above can be easily calculated by exploiting the Virasoro algebra commutation relations. 
+In the case $N=2$, the twist and anti-twist fields are equal, $\sigma_2=\bar{\sigma}_2$, and, 
+according to Eqs.~\eqref{strucconst} and \eqref{Gammas}, we have that $\bar{C}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}=C_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$ and $\bar{\rho}_{M_1, M_2}^h=\rho_{M_1, M_2}^h$.
+
 
 Applying Eq.\eqref{C_2_X} in Eq.\eqref{conformal_block_decomposition}, we finally obtain an 
 expression for the $N=2$ orbifold conformal block
@@ -347,13 +363,19 @@ by considering the three-to-one map~\cite{Collier}
 \end{equation}
 This transformation has branch points of order three at 
 $z=0$ and $1$ and maps the points $t_{\infty}=\{0, 1, \infty\}$ in the $t$-surface into $z=\infty$. 
-Then we have that the orbifold three-point function in Eq.~\eqref{N-point} is in this case the three-point 
-function of $\mathcal{C}$ on the sphere
-\begin{align}\label{C_3_X}
- \langle \boldsymbol{\phi}^{\boldsymbol{M}, \boldsymbol{0}}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}|\sigma_{3}(1)|\bar{\sigma}_{3}\rangle &=\langle \tilde{\phi}_{h_1,\bar{h}_1}^{M_1,0}|\tilde{\phi}_{h_2,\bar{h}_2}^{M_2,0}(1)|\tilde{\phi}_{h_3,\bar{h}_3}^{M_3,0}\rangle,
- \nonumber \\
- &=[3\omega(1-\omega)]^{-h_1-h_2-h_3}[3\omega^2(1-\omega^2)]^{-\bar{h}_1-\bar{h}_2-\bar{h}_3}C_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^{{\rm seed}}\rho_{M1,M2,M3}^{h_1,h_2,h_3}
+Then, if we consider this map in Eq.~\eqref{N-point}, we have that the $N=3$ orbifold three-point 
+function are equal to three-point function of $\mathcal{C}$ on the sphere. In particular,
+\begin{align}\label{C_3_0}
+ C_{\boldsymbol{h}, \boldsymbol{\bar{h}}}&=
+ \langle \boldsymbol{\phi}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}|\sigma_3(1)|\bar{\sigma}_3\rangle
+  =\langle \tilde{\phi}_{h_1, \bar{h_1}}|\tilde{\phi}_{h_2, \bar{h}_2}(1)|\tilde{\phi}_{h_3, \bar{h}_3}\rangle \nonumber \\
+ &=[3\omega(1-\omega)]^{-h_1-h_2-h_3}[3\omega^2(1-\omega^2)]^{-\bar{h}_1-\bar{h}_2-\bar{h}_3}C_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^{{\rm seed}},
 \end{align}
+and Eq.~\eqref{orbifold_three-point} reads
+\begin{equation}\label{C_3_X}
+ \langle \boldsymbol{\phi}^{\boldsymbol{M}, \boldsymbol{0}}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}|\sigma_{3}(1)|\bar{\sigma}_{3}\rangle =\langle \tilde{\phi}_{h_1,\bar{h}_1}^{M_1,0}|\tilde{\phi}_{h_2,\bar{h}_2}^{M_2,0}(1)|\tilde{\phi}_{h_3,\bar{h}_3}^{M_3,0}\rangle
+ =C_{\boldsymbol{h}, \boldsymbol{\bar{h}}} \rho_{M1,M2,M3}^{h_1,h_2,h_3},
+\end{equation}
 where $C_{\boldsymbol{h},\boldsymbol{\bar{h}}}^{{\rm seed}}=\langle \phi_{h_1, \bar{h}_1}|\phi_{h_2,\bar{h}_2}(1)|\phi_{h_3,\bar{h}_3}\rangle$ is a structure constant in the seed CFT, while the symmetric tensor $\rho^{h_1,h_2,h_3}$ is 
 \begin{equation}
 \label{rho2}
@@ -365,8 +387,24 @@ The images $\mathcal{L}_{-n}(t_{\infty})$ of the Virasoro descendent $L_{-n}(z=\
 under the conformal map in Eq.~\eqref{g_two_covering_map} can determined, as in the 
 case $N=2$, by using Eq.~\eqref{Virasoro_transf}, see also Eq.~\eqref{vir_g2}.
 The elements of Eq.~\eqref{rho2} can be calculated by implementing in a computer 
-algebra system the Ward identities of Appendix~\ref{app_ward}. After applying the 
-map of Eq.~\eqref{g_two_covering_map} in Eq.~\eqref{conformal_block_decomposition},
+algebra system the Ward identities of Appendix~\ref{app_ward}.
+
+The structure constant $\bar{C}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}$ 
+and matrix elements $\bar{\rho}_{M_1, M_2, M_3}^{\;h_1, h_2, h_3}$, which 
+correspond to exchange the twist and anti-twist fields in Eqs.~\eqref{C_3_0} 
+and \eqref{C_3_X}, can be computed as before but taking the complex conjugate 
+of the map of Eq.~\eqref{g_two_covering_map}. Then we obtain 
+\begin{align}\label{C_3_0_bar}
+ \bar{C}_{\boldsymbol{h}, \boldsymbol{\bar{h}}}&=
+ \langle \phi_{\boldsymbol{h}, \boldsymbol{\bar{h}}}|\bar{\sigma}_N(1)|\sigma_N\rangle  \nonumber \\
+ &=[3\omega^2(1-\omega^2)]^{-h_1-h_2-h_3}[3\omega(1-\omega)]^{-\bar{h}_1-\bar{h}_2-\bar{h}_3}C_{\boldsymbol{h}, \boldsymbol{\bar{h}}}^{{\rm seed}},
+\end{align}
+and 
+\begin{equation}
+\bar{\rho}_{M_1, M_2, M_3}^{\; h_1, h_2, h_3}=[\rho_{M_1, M_2, M_3}^{h_1, h_2, h_3}]^*.
+\end{equation}
+
+After taking all the previous considerations in Eq.~\eqref{conformal_block_decomposition},
 we eventually obtain the following matrix-product representation for the $N=3$ orbifold 
 conformal block \cite{Collier}
 \begin{equation}\label{genus_two_conf_block}
@@ -374,16 +412,15 @@ conformal block \cite{Collier}
 z^{\sum_{j=1}^3 h_j-\frac{2c}{9}}\sum_{\substack{\{M_j\}, \{N_j\}}}
  z^{\sum\limits_{j=1}^3 |M_j|}
  \prod_{j=1}^3 [G_{M_j,N_j}^{h_j}]^{-1}
- \rho^{h_1,h_2,h_3}_{M_1,M_2,M_3}\rho_{N_3,N_2,N_1}^{h_3,h_2,h_1},
+ \rho^{h_1,h_2,h_3}_{M_1,M_2,M_3}[\rho_{N_1,N_2,N_3}^{h_1,h_2,h_3}]^*,
 \end{equation}
 which is also illustrated in Fig.~\ref{fig-g1}.
 The conformal block $\mathcal{G}_{c, \{h_1, h_2, h_3\}}^{(3)}$ in Eq.~\eqref{genus_two_conf_block} is
 manifestly symmetric under permutations of $h_1$, $h_2$ and $h_3$, consistently with the $\mathbb Z_3$ 
 (in fact $S_3$) symmetry of the untwisted orbifold sector. From Eq.~\eqref{C_3_X}, it follows that the 
-$N=3$ orbifold conformal blocks are in one-to-one correspondence~\cite{Cardy, Collier} with the non-zero structure constants 
-of $\mathcal{C}$. In fact, by comparing Eqs.~\eqref{DC} and \eqref{C_3_X}, we conclude that the $N=3$ structure constants 
-in the conformal block decomposition of Eq.~\eqref{conformal_block_decomposition_0} 
-read
+$N=3$ orbifold conformal blocks are in one-to-one correspondence~\cite{Cardy, Collier} with the non-zero 
+structure constants of $\mathcal{C}$. In fact, if we insert the results of Eqs.~\eqref{C_3_0} and \eqref{C_3_0_bar} 
+in Eq.~\eqref{DC}, we conclude that the $N=3$ structure constants in the conformal block decomposition of Eq.~\eqref{conformal_block_decomposition_0} read
 \begin{equation}\label{D_3}
  D_{\boldsymbol{h}, \boldsymbol{\bar{h}}}=
  27^{-|\boldsymbol{h}|-|\boldsymbol{\bar{h}}|}
@@ -491,7 +528,7 @@ In this section, we will show how to improve the expansion of Ref.~\cite{Collier
 As we discuss in detail in Appendix~\ref{app_orbifold_algebra}, the orbifold algebra admits as a sub-algebra a Virasoro algebra with central charge $Nc$~\cite{Borisov}, generated by the symmetric stress energy tensor in Eq.~\eqref{hatT}. Then it is natural to expand the orbifold conformal blocks 
 $\mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)$ as a linear combination of Virasoro sphere conformal blocks with central charge $Nc$. More specifically,
 \begin{equation}\label{expansion_sphere_conf_blocks}
- \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=\sum_{l=0}^\infty\alpha_l^{\boldsymbol{h}}\mathcal{F}_{Nc, |\boldsymbol{h}+l}(z),
+ \mathcal{G}_{c, \boldsymbol{h}}^{(N)}(z)=\sum_{l=0}^\infty\alpha_l^{\boldsymbol{h}}\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z),
 \end{equation}
 where we have  denoted by $\mathcal{F}_{Nc, h }(z)$ the Virasoro sphere conformal blocks with the four external dimensions fixed to  $h_{\sigma_N}$ and with internal channel of dimension $h$. The conformal block $\mathcal{F}_{Nc, |\boldsymbol{h}|+l}(z)$ resums the 
 contribution of the conformal family generated by a field with conformal dimension $|\boldsymbol{h}|+l$, primary with respect to the 
@@ -963,9 +1000,14 @@ in the limit $L, L'\to\infty$. If in the last term we only include the sum over 
 $A_n$, we recover the approximation considered in Ref.~\cite{Collier} (cf. Eq. (3.8) of that reference). 
 By including the contribution of some of the descendents at deeper levels of the quasi-primary fields at 
 the levels $l=1, \dots, L$, we improve the convergence of Eq.~\eqref{crit_surf_trunc} and produce a slightly smaller domain 
-$\mathscr{D}_{L, L'}$, as Fig. xxx shows. In any case, the convergence with the domain $\mathscr{D}$ is 
+$\mathscr{D}_{L, L'}$, as Fig.~\ref{fig:constraints_strt} shows. In any case, the convergence with the domain $\mathscr{D}$ is 
 very fast due to the exponential decay of those terms in Eq.~\eqref{crit_surf_trunc}.
 
+\begin{figure}[t]
+ \centering 
+ \includegraphics[width=\textwidth]{constraints_strt.pdf}
+\caption{}\label{fig:constraints_strt}
+\end{figure}
 
 \subsection{Bootstrapping genus two partition functions}
 
